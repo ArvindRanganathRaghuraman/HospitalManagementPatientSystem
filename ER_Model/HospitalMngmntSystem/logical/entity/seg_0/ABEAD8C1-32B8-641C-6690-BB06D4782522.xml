@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ABEAD8C1-32B8-641C-6690-BB06D4782522" name="Insurance">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 18:43:12 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Insurance_Id" id="48573871-13BA-CDAF-6BF2-5D7AC84D4481">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 18:44:24 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Provider_name" id="EFAD43D2-DD4B-D5BA-419B-B983C87D65B9">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 18:47:08 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Policy_Number" id="D5C6F399-6AAE-2FDB-74BA-E8819D359EEA">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 18:47:27 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Coverage_Percentage" id="D1C93634-D38F-4ED8-4C39-E936D577C055">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 18:47:50 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Policy_Start_Date" id="5F82875D-9F3B-05D0-30CB-6E1F0B791C11">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 18:49:06 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Policy_Expiry_Date" id="96C76502-8F71-F64D-13D3-073CC315123E">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:27:27 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="21DF6584-9F98-995E-8C31-779ADD889969">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:27:42 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

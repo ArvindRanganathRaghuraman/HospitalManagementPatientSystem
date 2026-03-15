@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D5209ED-BAFE-8B8A-5B9F-7CACDC39F005" name="Doctor_Schedule">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:36:52 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Schedule_Id" id="ECD3AC89-30C5-CBA2-A74E-572D42D10FA0">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:39:31 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Doctor_Id" id="8E1F5E45-BD86-B25A-A25B-FC8DD395B11E">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:39:47 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Day_Of_Week" id="E24AB639-7255-4644-9167-0E576335E657">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:40:25 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Start_Time" id="B56BCD3B-C12E-CBCD-CEBA-B173348E226D">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:40:53 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="End_Time" id="B0C2021D-6C34-049B-8664-C8F91679DE07">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:41:18 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Max_Appointments" id="0E0B22CD-C267-3109-5DEF-01E07940D885">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:41:32 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8B6043F-F8A4-2920-D1ED-500E78388401" name="Appointment_History">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:52:58 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="History_Id" id="2ED2F23F-3C73-6EB7-F966-FBD8046F7DCE">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:53:12 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Appointment_Id" id="6F35DFC5-31A7-B3ED-99DC-E6F0947112FE">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:53:30 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Changed_Date" id="44BB569B-4387-5E19-F87A-40E05640EC79">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:53:48 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Previous_Date" id="10ECEE08-9593-7301-5876-05B1C8B08A84">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:54:04 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Previous_Time" id="F1B1DEE2-8172-75A1-AF02-C4DEE90503C7">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:54:18 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="New_Date" id="43D46C44-9625-D1CF-9C90-553CF54AA32D">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:54:42 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="New_Time" id="C0D1EDBB-FAAD-2EA0-8715-37BBF816DD40">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:55:01 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Previous_Status" id="7AD00849-A3EA-75B0-BC8E-BF33C70AC531">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:55:13 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="New_Status" id="6FD6E229-495B-B96C-8790-2DCE07733D35">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:56:13 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Change_Type" id="DDEF83CB-C32B-6515-477A-CEF99B578C96">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:56:42 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Change_Reason" id="88B23A12-5A86-B84C-E981-FC5C4E65B730">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:56:59 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Changed_By" id="FCFCBCA0-B4EC-46B1-1296-17813011B2C9">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-15 19:57:16 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
