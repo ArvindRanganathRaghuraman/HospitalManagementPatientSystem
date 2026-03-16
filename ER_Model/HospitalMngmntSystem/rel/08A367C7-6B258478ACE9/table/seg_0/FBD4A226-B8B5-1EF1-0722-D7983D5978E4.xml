@@ -13,19 +13,6 @@
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>2ED2F23F-3C73-6EB7-F966-FBD8046F7DCE</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="Appointment_Id" id="BB33E5FF-7901-E502-41B5-325427B8F98D">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>6F35DFC5-31A7-B3ED-99DC-E6F0947112FE</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -145,9 +132,51 @@
 <generatorID>FCFCBCA0-B4EC-46B1-1296-17813011B2C9</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Appointment_Id" id="5AF74379-0D13-4541-4A92-7BFF22D0F01C">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:46:13 UTC</createdTime>
+<generatorID>57A7ABDF-538B-3958-0D29-CCFCDB9A5D7E</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1E90749E-CD93-5290-430E-4968DD0B7971" referredColumn="67F12569-EAA9-D620-3EC6-E3501C6A8F71"/>
+</associations>
+</Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ECB8B117-316F-7984-08DC-3A0C8F9959A0" name="Appointment_History_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:46:13 UTC</createdTime>
+<generatorID>ACF6A906-0796-62E9-7F56-3ED3E70E5481</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0B52EE8-BB56-8114-CB64-0C8203519C72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A3B2580E-C67B-3BF2-09F9-E86E16F289A1" name="Appointment_History_Appointment_FK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:46:13 UTC</createdTime>
+<generatorID>31C22E8B-5ABE-4B37-65F0-933C10D29DC7</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AF74379-0D13-4541-4A92-7BFF22D0F01C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>

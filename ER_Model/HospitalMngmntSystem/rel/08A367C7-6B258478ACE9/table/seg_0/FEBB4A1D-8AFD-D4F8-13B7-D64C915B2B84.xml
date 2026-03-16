@@ -92,5 +92,45 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Patient_id" id="0190B212-0594-5E8A-B1C3-ACD4258DC713">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 18:57:38 UTC</createdTime>
+<generatorID>3034A820-E57A-3778-3AAC-F24196664447</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1527F324-13DD-605C-C58F-FB86CEF7E690" referredColumn="9768D49E-DFE4-59F5-C0D0-6F25422E02C5"/>
+</associations>
+</Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A573D4D1-6E6A-A08A-782E-7316D873C90A" name="Guardian_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 18:58:38 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD10C02F-F391-C93F-F728-842972DB6591"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="944D071A-804B-0A42-D164-5C68C3B0367B" name="Guardian_Patient_FK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 18:57:38 UTC</createdTime>
+<generatorID>8616C94D-2228-916D-D2F7-4265F50C9469</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0190B212-0594-5E8A-B1C3-ACD4258DC713"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>

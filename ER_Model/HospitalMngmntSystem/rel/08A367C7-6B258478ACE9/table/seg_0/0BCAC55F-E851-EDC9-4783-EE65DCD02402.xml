@@ -13,7 +13,6 @@
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -92,18 +91,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Department_Id" id="30CDB6B7-D0D3-614B-8B26-705430BE18AA">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>1A9CE941-BF92-87DC-DF1F-18EE9CA4AA04</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Join_Date" id="7AB55E3D-64DB-C45D-EEE7-1CDEB0624C31">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
@@ -128,5 +115,45 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Department_Id" id="6F632EE2-A8D0-8904-8B4D-7DDAF947DBF2">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:24:13 UTC</createdTime>
+<generatorID>7D6DB150-F97C-7B2A-39D5-6E182A158F47</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FC959B7D-2637-D98B-25D1-E210BC0F8983" referredColumn="2778A711-4502-23A1-11CC-CEADB29775A2"/>
+</associations>
+</Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D8B54B60-4B1F-1C4D-742F-971E095413B9" name="Doctor_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:32:01 UTC</createdTime>
+<generatorID>52CEDFE3-AB5B-A6B1-AA18-6F59C2BDCB43</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BD0ED34-EC26-4F06-EB66-B0FCAF422A76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C44D2EFA-6A8B-C278-C00D-09DE90368FBD" name="Doctor_Department_FK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:26:36 UTC</createdTime>
+<generatorID>47E4473C-0748-9B16-2E1E-4CC602FFBAF5</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F632EE2-A8D0-8904-8B4D-7DDAF947DBF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>

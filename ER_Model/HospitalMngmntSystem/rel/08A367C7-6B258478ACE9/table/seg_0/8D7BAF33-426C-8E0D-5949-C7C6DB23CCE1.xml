@@ -19,29 +19,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Patient_Id" id="CF52A11F-5887-6FE6-C9A0-FBD25BD971B3">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>FC9EC552-0E86-AFCE-EB3F-C53D0476FBF2</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="Bed_Id" id="DDC8668D-DB5E-BBE4-6FF3-73AF0A5D28BC">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>C5ED6964-0542-612E-F948-7D27D235C6BC</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Doctor_Id" id="E3C49146-6E0C-8D9E-09C9-E2B945BAE068">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
@@ -141,6 +118,36 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Bed_Id" id="0980EE2F-F7B7-E470-D50D-337B74199161">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:57:32 UTC</createdTime>
+<generatorID>C4101E05-4ACD-16BD-A73F-2C71AEC52578</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0CAF277D-F7D7-FAE7-0F5A-40280E5DF0EB" referredColumn="3198329E-A802-AED2-411F-D587A1C2E478"/>
+</associations>
+</Column>
+<Column name="Patient_id" id="C208DCAA-A3AA-DAA0-F56C-1F9C53559AD4">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 20:03:11 UTC</createdTime>
+<generatorID>6B565658-5DA2-0C57-27C3-EC90D5709444</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ABBC6B7E-5853-E2BA-7099-084302998CD9" referredColumn="9768D49E-DFE4-59F5-C0D0-6F25422E02C5"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="ECABDAEC-98C6-2D2E-F0AF-C043CFA64150" name="Admission_PK">
@@ -153,6 +160,28 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="766801C3-82CE-3E70-0358-96407A925CEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="169555D6-DD67-48F8-B22B-EF70DBADEEFB" name="Admission_Bed_FK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:57:32 UTC</createdTime>
+<generatorID>8D3AC149-F002-0BB8-8B67-96F5F03B0D3F</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0980EE2F-F7B7-E470-D50D-337B74199161"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39B5E357-CF0A-76E9-2FFD-8FCF180D9FDB" name="Admission_Patient_FK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 20:03:11 UTC</createdTime>
+<generatorID>21C3310E-24EA-467B-AB96-1400E5DB6834</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C208DCAA-A3AA-DAA0-F56C-1F9C53559AD4"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

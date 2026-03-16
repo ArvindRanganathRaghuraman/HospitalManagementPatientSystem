@@ -13,7 +13,6 @@
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>3DC2FE74-2B4D-FF9A-A88B-77C710101157</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -93,4 +92,18 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="94606AF7-90FA-A0D3-3613-862FE149596F" name="Room_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:54:20 UTC</createdTime>
+<generatorID>2FE8ACE2-49B7-AFBE-CC8E-404282734252</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="599F3A5E-364C-BAA4-6E64-F5FEAABB7AC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>

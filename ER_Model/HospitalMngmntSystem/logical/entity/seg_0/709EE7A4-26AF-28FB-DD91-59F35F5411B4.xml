@@ -27,31 +27,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Patient_Id" id="FC9EC552-0E86-AFCE-EB3F-C53D0476FBF2">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:15:48 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Bed_Id" id="C5ED6964-0542-612E-F948-7D27D235C6BC">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:16:03 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Doctor_Id" id="5784B4CB-55B0-7AB0-1F78-392C09A80B66">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:16:12 UTC</createdTime>
@@ -154,6 +129,34 @@
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bed_Id" id="C4101E05-4ACD-16BD-A73F-2C71AEC52578">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:57:08 UTC</createdTime>
+<generatorID>8D3AC149-F002-0BB8-8B67-96F5F03B0D3F</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>8C8C9323-A536-32D8-33F4-9D9731737948</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Patient_id" id="6B565658-5DA2-0C57-27C3-EC90D5709444">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 20:02:44 UTC</createdTime>
+<generatorID>21C3310E-24EA-467B-AB96-1400E5DB6834</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

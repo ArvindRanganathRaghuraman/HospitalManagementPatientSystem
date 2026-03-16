@@ -151,18 +151,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Insurance_Id" id="4FB8FC50-62B5-F212-501E-6981B74E9EC5">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>00C851F7-BCDC-0698-DE09-6FC7AC06C1CE</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Status" id="608AA77B-E939-1E8E-E22E-01DDF0DD0525">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
@@ -174,6 +162,22 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Insurance_Id" id="B58751D5-070A-76D3-6F0D-571DC9019E9B">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:09:45 UTC</createdTime>
+<generatorID>892ACDF0-F8D2-0A05-5F5F-C0F4E86130C6</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A99394F2-A10E-7B32-2D8E-D4A420DAAFF2" referredColumn="EDF92FB1-2531-BDA6-816E-175867172557"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -187,6 +191,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="9768D49E-DFE4-59F5-C0D0-6F25422E02C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C5AE5D9-AD72-C8EA-5A45-B251B2DFE8AA" name="Patient_Insurance_FK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:09:45 UTC</createdTime>
+<generatorID>E3DC23E5-BC3B-8B88-2056-911D51275810</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B58751D5-070A-76D3-6F0D-571DC9019E9B"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -22,10 +22,9 @@
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Provider_name" id="EFAD43D2-DD4B-D5BA-419B-B983C87D65B9">
@@ -77,7 +76,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Policy_Expiry_Date" id="96C76502-8F71-F64D-13D3-073CC315123E">
@@ -88,7 +87,9 @@
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Status" id="21DF6584-9F98-995E-8C31-779ADD889969">
@@ -103,4 +104,19 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6027C186-120A-0B53-C59E-45CF2E1FEC80" name="Insurance PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 12:18:31 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>48573871-13BA-CDAF-6BF2-5D7AC84D4481</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

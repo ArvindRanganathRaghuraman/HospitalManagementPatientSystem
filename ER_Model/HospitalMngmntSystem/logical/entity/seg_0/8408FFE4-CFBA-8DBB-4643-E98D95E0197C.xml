@@ -22,7 +22,6 @@
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -107,4 +106,19 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2FE8ACE2-49B7-AFBE-CC8E-404282734252" name="Room PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:53:37 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3DC2FE74-2B4D-FF9A-A88B-77C710101157</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -22,20 +22,6 @@
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Appointment_Id" id="6F35DFC5-31A7-B3ED-99DC-E6F0947112FE">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 19:53:30 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -165,8 +151,39 @@
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Appointment_Id" id="57A7ABDF-538B-3958-0D29-CCFCDB9A5D7E">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:44:15 UTC</createdTime>
+<generatorID>31C22E8B-5ABE-4B37-65F0-933C10D29DC7</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>7F4CACAC-1807-702B-6580-860FD00B2751</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ACF6A906-0796-62E9-7F56-3ED3E70E5481" name="Appointment_History PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:42:53 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2ED2F23F-3C73-6EB7-F966-FBD8046F7DCE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
