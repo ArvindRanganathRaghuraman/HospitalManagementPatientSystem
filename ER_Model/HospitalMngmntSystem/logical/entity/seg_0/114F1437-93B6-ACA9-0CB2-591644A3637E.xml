@@ -70,32 +70,6 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Doctor_Id" id="8F82F804-A76C-3604-E57C-A83CD60171A4">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:57:35 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Staff_Id" id="A0D2CDB0-6042-F2A7-0D62-72BB5D19D661">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:57:49 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Created_Date" id="42DB4C95-2BA6-BF4A-184E-AEBD5594072A">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:57:58 UTC</createdTime>

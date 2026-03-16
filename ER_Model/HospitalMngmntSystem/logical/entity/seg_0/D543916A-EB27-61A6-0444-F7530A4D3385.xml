@@ -28,19 +28,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Bill_Id" id="F2B407B6-1D74-ADED-007E-52F4C898A0D1">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:44:15 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Payment_Date" id="8D625C36-9E3F-5C49-C05E-35386C61ED49">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:44:25 UTC</createdTime>

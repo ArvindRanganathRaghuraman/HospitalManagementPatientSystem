@@ -19,18 +19,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Prescription_Id" id="3174E0D0-6ED9-A910-FC47-4A29FBE52A33">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>23BC344C-D773-A601-0546-D47568750A4A</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Medication_Name" id="66578A29-C0BA-4AB4-547B-28D696059343">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
@@ -95,6 +83,21 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Prescription_Prescription_Id" id="30C30BE3-7B87-6F8E-13F5-676E10C3F5F4">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:27:08 UTC</createdTime>
+<generatorID>0AD56BC2-6F28-4383-0A12-291439212D77</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C2E68ADD-A77C-1593-088B-856AAB63761E" referredColumn="7F8D0CFB-7710-C00B-8FD8-2D3F43DA13EC"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="829223A2-A43F-BE4F-FD1C-85713FED60EA" name="Prescription_Item_PK">
@@ -107,6 +110,28 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="117EB64A-B84E-38FD-C637-C5E4C13779F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD78F986-3C6D-1495-453E-5E32293BC8D3" name="Prescription_Item__IDX">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:27:08 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>49876216-AF8D-69D7-9380-0ED73B7B8139</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="30C30BE3-7B87-6F8E-13F5-676E10C3F5F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="346495AF-9126-05AC-8653-338F09F40626" name="Prescription_Item_Prescription_FK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:27:08 UTC</createdTime>
+<generatorID>49876216-AF8D-69D7-9380-0ED73B7B8139</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30C30BE3-7B87-6F8E-13F5-676E10C3F5F4"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

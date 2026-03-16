@@ -22,20 +22,6 @@
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Patient_Id" id="86CF3D2A-8213-FF00-C427-D5D58B93D43F">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:35:51 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -212,4 +198,19 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FFEBAE86-F59B-C222-F175-47C0DD4AF203" name="Bill PK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:34:28 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BAF99966-AFA6-1B33-99AD-B90E6A9188D8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

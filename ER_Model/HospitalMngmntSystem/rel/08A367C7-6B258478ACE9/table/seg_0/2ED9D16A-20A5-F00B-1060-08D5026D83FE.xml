@@ -20,18 +20,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Bill_Id" id="604BF30C-8201-EC32-0F51-8CFE6C542E89">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>F2B407B6-1D74-ADED-007E-52F4C898A0D1</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Payment_Date" id="24A40690-C452-F5F7-62F2-CE966F6E0A18">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
@@ -94,5 +82,33 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Bill_Bill_Id" id="3ED858EA-F982-37A8-F17C-5B0072509AA9">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:38:05 UTC</createdTime>
+<generatorID>6F7ECDB6-EE49-D99F-89B2-EEE124D17282</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A6CC8E5-242A-0F5D-1C9E-53F0B592D9EE" referredColumn="5123E787-91DB-0D52-7E30-5332A22EE164"/>
+</associations>
+</Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B8260835-9589-67DA-1CEC-9951A05B3C07" name="Payment_Bill_FKv1">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:38:05 UTC</createdTime>
+<generatorID>3BD376C0-E34D-B79F-FA42-8A40ADF89FAF</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3ED858EA-F982-37A8-F17C-5B0072509AA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>

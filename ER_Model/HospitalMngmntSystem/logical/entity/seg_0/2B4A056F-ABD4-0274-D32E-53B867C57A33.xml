@@ -66,18 +66,5 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Head_Doctor_Id" id="CA0A852A-C099-E909-F747-CF221B0EED47">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 19:31:53 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 </Entity>

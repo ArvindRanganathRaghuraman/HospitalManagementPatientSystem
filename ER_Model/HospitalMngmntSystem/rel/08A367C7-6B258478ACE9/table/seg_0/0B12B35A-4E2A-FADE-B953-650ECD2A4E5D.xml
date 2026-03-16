@@ -59,18 +59,6 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Department_Id" id="73A256A0-1D9D-DB13-D645-8DA0C31633A4">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>3AF11BF6-0305-68CA-DB4C-F7229FEED220</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Phone" id="6DD3E661-093C-A537-C9D7-E05EB1282C72">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
@@ -134,5 +122,42 @@
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Department_Id" id="14CFF470-6C23-1CAE-E094-CB3FBA5BF51F">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:48:03 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75D1DB03-FA6C-D81A-3FE0-1BCA8900C97F" referredColumn="2778A711-4502-23A1-11CC-CEADB29775A2"/>
+</associations>
+</Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="82180446-D1BF-9BD7-8BA3-937899CA877C" name="Staff_PK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 21:01:11 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="BB6C9FAD-3560-3783-880B-E97771653417"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71F1FF14-930B-5A35-6DE0-12FEEA8D227C" name="Staff_Department_FK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:48:03 UTC</createdTime>
+<generatorID>7CA38AC9-9686-E749-708D-89F66EB31894</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14CFF470-6C23-1CAE-E094-CB3FBA5BF51F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>
