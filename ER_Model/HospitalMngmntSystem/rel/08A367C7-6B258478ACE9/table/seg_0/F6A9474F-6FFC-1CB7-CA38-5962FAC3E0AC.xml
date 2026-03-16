@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6A9474F-6FFC-1CB7-CA38-5962FAC3E0AC" name="Admission_Histroy">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>DE345D55-8AB8-98B8-DC1A-04739D069CE3</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Transfer_Histroy_Id" id="FD69878A-1A8C-6ABC-1817-E609B4302AC7">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>34128608-348F-EEEA-F7F8-E5F6205F373D</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Admission_Id" id="B319AC3F-02D1-BF64-2FAF-1DFC35920460">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>2EB58600-F8B5-1D87-137E-C99067E93496</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Previous_Bed_Id" id="187E68DE-BC26-D934-FE1E-2C14CFAFAACA">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>864D7E9F-AC97-BC9E-AD10-E8D004FF0C80</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="New_Bed_Id" id="73E04E29-00A3-9051-C30A-2D37A720CE89">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>1C99071E-20A0-801E-A386-FA9E8DC05D6D</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transfer_Date" id="4D10B44E-9B98-684A-9D92-77C96A0E20B9">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>7561EF2A-A7B7-EFB0-6E21-38C124EE73DE</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transfer_Reason" id="63671AB6-F6A1-2817-E7A0-8F648586EE8C">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>52646CCD-2D0D-C820-A18F-1274A37DEEFE</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transferred_By" id="3581A1EB-45BA-A99D-90BA-E884EA00951F">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>46AE97C9-E6A1-43C7-1C36-94DD3C766BE7</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0E434775-BF6D-CC74-1490-5302FAD51AFC" name="Admission_Histroy_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>EFEC8F42-F190-CB9E-F5CE-383CB66647B4</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD69878A-1A8C-6ABC-1817-E609B4302AC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4E0C03CF-C75B-E965-12A4-D63009F5C633" name="Prescription">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>A33E56DF-5453-3D07-9BEA-374FC8A702C0</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Prescription_Id" id="7F8D0CFB-7710-C00B-8FD8-2D3F43DA13EC">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>38721BEB-39CE-5C65-32FF-5C9922844537</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Appointment_Id" id="B7B59A21-7167-939F-45F4-1B2181D3C1BE">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>74622F48-9831-F53F-D9CF-3ADAF0B00022</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Doctor_Id" id="C85D5B46-3873-808C-679E-BCB02A80BEE2">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>810C207C-D6CE-6B4E-C064-EB5A621CD802</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Patient_Id" id="91F336B0-E3F3-6A5D-1F69-C38744053AB9">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>5077DF8B-6305-8163-41AB-6BB5533E25E3</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Prescribed_Date" id="39E73159-E727-5DAF-3563-3E11382B737A">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>41792C28-3EE7-0DA5-51B4-3052FEE1BF73</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Notes" id="45CF320C-32A0-58B4-C8AF-56FDE6F47B4C">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>522FDC9B-E018-2AAC-CE3C-8634F87EB032</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F1D202C5-4C70-46C8-3261-2F263BBF7346" name="Prescription_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>4A3DAFFC-C5D1-EEC0-39C2-33EE89F06C7E</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F8D0CFB-7710-C00B-8FD8-2D3F43DA13EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

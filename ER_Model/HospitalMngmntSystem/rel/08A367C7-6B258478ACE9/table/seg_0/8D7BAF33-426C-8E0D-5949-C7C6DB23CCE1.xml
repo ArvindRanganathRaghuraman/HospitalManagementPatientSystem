@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D7BAF33-426C-8E0D-5949-C7C6DB23CCE1" name="Admission">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>709EE7A4-26AF-28FB-DD91-59F35F5411B4</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Admission_Id" id="766801C3-82CE-3E70-0358-96407A925CEA">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>4EE3FA9D-92EC-B8A8-DFF5-931CB7F7B091</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Patient_Id" id="CF52A11F-5887-6FE6-C9A0-FBD25BD971B3">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>FC9EC552-0E86-AFCE-EB3F-C53D0476FBF2</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bed_Id" id="DDC8668D-DB5E-BBE4-6FF3-73AF0A5D28BC">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>C5ED6964-0542-612E-F948-7D27D235C6BC</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Doctor_Id" id="E3C49146-6E0C-8D9E-09C9-E2B945BAE068">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>5784B4CB-55B0-7AB0-1F78-392C09A80B66</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Admission_Date" id="55C730A5-A2CF-875E-BB37-CF65D1BDA7C8">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>B321236F-B252-F9FF-190D-64E815237E4A</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Discharge_Date" id="0E812DC6-ED4E-3E22-4813-B790A7A92C24">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>17CECB23-F9F9-8DF9-1A77-FE968178D7DC</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Diagnosis" id="BCD8E4B9-6E78-7068-87CE-C50F2B3C8CAF">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>580A2FC0-C415-02FD-A3CE-272A9238FB6E</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Admission_Type" id="703F5D05-0278-4FE0-8251-3D3ABE1BD1C9">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>3C7F985A-FBCD-4B1F-307B-A57ECA7CFEB5</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Status" id="7C270926-4B9A-D29C-86A7-68488ED730DE">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>76D522DA-05F8-12E6-6077-6DCFEDE186EA</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ICU_Approved_By" id="CEE8EA76-EEB9-C61B-53B5-4280A81C51F0">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>935EC8B1-ED1B-D9A1-A423-E35BFDBF1CC8</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transfer_From_Bed_Id" id="AB9DA74E-B8D1-B576-DE34-C64AD4B57687">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>1B16F625-3CA1-C04A-02C7-6FE343B230AF</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ECABDAEC-98C6-2D2E-F0AF-C043CFA64150" name="Admission_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>08C296F4-48A6-C8E0-3A0C-03519EE59B51</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="766801C3-82CE-3E70-0358-96407A925CEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B3370ECB-8E1F-6FB2-EF9C-5882A3D14B81" name="Patient">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 16:53:03 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="73F6D039-1A51-0589-D738-9B4C413E927C" name="Bill">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:35:27 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -15,21 +15,22 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Patient_id" id="9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 16:54:12 UTC</createdTime>
+<Attribute name="Bill_Id" id="BAF99966-AFA6-1B33-99AD-B90E6A9188D8">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:35:36 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="first_name" id="B6AF3CBF-3DAA-AC66-755E-C729EB4A4C41">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 16:55:36 UTC</createdTime>
+<Attribute name="Patient_Id" id="86CF3D2A-8213-FF00-C427-D5D58B93D43F">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:35:51 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -37,12 +38,12 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="last_name" id="DC2D1A07-3D4E-DF70-3063-850D976FA235">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 16:56:52 UTC</createdTime>
+<Attribute name="Appointment_Id" id="77CD1BBE-C815-5EE9-5211-7D668630561A">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:36:02 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -50,12 +51,25 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="DOB" id="CB654018-E1B5-437E-813F-9F2108E8C85E">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 16:57:13 UTC</createdTime>
+<Attribute name="Admission_Id" id="39D8CB58-840C-0231-0F0E-79083705A019">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:36:13 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bill_Date" id="5B436657-201E-9324-6110-ACACF907F7A1">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:36:25 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -66,9 +80,113 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Gender" id="A844FCEE-4C30-3423-953E-E9BE878DFF5C">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 16:57:34 UTC</createdTime>
+<Attribute name="Service_Charges" id="3C2292A6-A46E-10F8-F748-E8F49ED51A9E">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:36:36 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Room_Charges" id="B38FF8CC-7B43-E9F7-1363-72EC04284CC1">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:37:01 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Medication_Charges" id="39A9D449-90D3-A4DC-EB4B-E9840B75E301">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:37:32 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Other_Charges" id="4691D733-8FE3-9BE4-E411-0988C8448F88">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:37:51 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Total_Amount" id="3AE499B6-FE46-E5E9-2373-79139B7890DD">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:38:30 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Insurance_Coverage_Amt" id="262F4D88-F084-7A18-85EC-188EFD1382BB">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:38:45 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Discount_Amount" id="DEF37AE8-DBC6-7A64-D4E0-8F73CAF0297A">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:40:11 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Net_Amount" id="B4493F70-B978-C94E-9436-C63DF5896CE9">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:40:37 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="750A90E1-5E0D-E13F-7278-254F41FF4BBE">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:40:50 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -77,11 +195,12 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Phone" id="7575AFB8-068B-5553-C2DE-ED9C5EC9FEB9">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:09:50 UTC</createdTime>
+<Attribute name="Generated_By" id="EB8BBB41-53BB-7943-3D38-F167A093A78B">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 00:41:09 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -89,127 +208,8 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Email" id="6F469B6F-1243-9B9B-7439-3A14678D96B6">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:11:02 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Address" id="EFD620A3-8AFD-7EBE-AE15-72326555B86F">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:11:25 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT040</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Blood_type" id="BDC7CFA3-343E-58CD-7583-36E6CD12D62A">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:12:00 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Registration_Date" id="B285A037-EC91-58E1-0A26-1038083483A5">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:13:01 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Is_Minor" id="FE470DC7-5346-7DB2-4D5A-9E5A05F15EAD">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:13:47 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Guardian_Id" id="A77E8BBD-D25A-5E0A-7F01-CA711642F95B">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:14:45 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Insurance_Id" id="00C851F7-BCDC-0698-DE09-6FC7AC06C1CE">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:15:26 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Status" id="D5D5078A-5AC2-097A-87D7-854769F0F897">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:15:50 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
-<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="6B2CD213-BC6D-C474-16C0-15B88E7BFDCB" name="Patient PK">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 16:54:41 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
-</engineerTo>
-<pk>true</pk>
-<usedAttributes>
-<attributeRef>9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0</attributeRef>
-</usedAttributes>
-</identifier>
-</identifiers>
 </Entity>

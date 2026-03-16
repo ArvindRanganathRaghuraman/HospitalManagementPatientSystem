@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4A393FF6-164C-C449-25FD-9D7DA66B1926" name="Doctor_Schedule">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>8D5209ED-BAFE-8B8A-5B9F-7CACDC39F005</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Schedule_Id" id="669F5C3F-9A71-EBC5-E7C2-BD07FDFAC2CE">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>ECD3AC89-30C5-CBA2-A74E-572D42D10FA0</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Doctor_Id" id="C4C936F0-4429-2CF9-4E6D-E7548ECEE1F5">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>8E1F5E45-BD86-B25A-A25B-FC8DD395B11E</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Day_Of_Week" id="BB79A57E-4398-5B1E-A988-7DA224BD1453">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>E24AB639-7255-4644-9167-0E576335E657</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Start_Time" id="302992DF-C523-19EC-C1BB-E9E11D58CB2E">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>B56BCD3B-C12E-CBCD-CEBA-B173348E226D</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="End_Time" id="407C2DFC-4477-26F6-3E21-2EC498668F3E">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>B0C2021D-6C34-049B-8664-C8F91679DE07</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Max_Appointments" id="AE490825-B67B-C329-B68C-15B73CF4B5FF">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 01:07:08 UTC</createdTime>
+<generatorID>0E0B22CD-C267-3109-5DEF-01E07940D885</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>
