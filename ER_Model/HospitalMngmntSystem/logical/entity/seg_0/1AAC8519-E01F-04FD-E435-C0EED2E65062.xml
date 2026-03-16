@@ -27,19 +27,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Prescription_Id" id="23BC344C-D773-A601-0546-D47568750A4A">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:32:47 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Medication_Name" id="279F0895-4AC3-5F9C-53D4-0AD9B109353C">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:33:11 UTC</createdTime>
@@ -108,6 +95,20 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>255</dataTypeSize>
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Prescription_Id" id="0AD56BC2-6F28-4383-0A12-291439212D77">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:27:02 UTC</createdTime>
+<generatorID>49876216-AF8D-69D7-9380-0ED73B7B8139</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>38721BEB-39CE-5C65-32FF-5C9922844537</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

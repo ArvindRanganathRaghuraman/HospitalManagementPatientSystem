@@ -138,7 +138,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Appointment_Id" id="5AF74379-0D13-4541-4A92-7BFF22D0F01C">
+<Column name="Appointment_Appointment_Id" id="5AF74379-0D13-4541-4A92-7BFF22D0F01C">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 19:46:13 UTC</createdTime>
 <generatorID>57A7ABDF-538B-3958-0D29-CCFCDB9A5D7E</generatorID>
@@ -152,6 +152,32 @@
 <associations>
 <colAssociation fkAssociation="1E90749E-CD93-5290-430E-4968DD0B7971" referredColumn="67F12569-EAA9-D620-3EC6-E3501C6A8F71"/>
 </associations>
+</Column>
+<Column name="Staff_Id" id="781BB5AB-8200-52C3-061A-F728AA26E20C">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 21:03:49 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3BE9C659-AFAA-F387-5299-211DFB3DEC1F" referredColumn="BB6C9FAD-3560-3783-880B-E97771653417"/>
+</associations>
+</Column>
+<Column name="History_Id1" id="500639AB-A6C2-AE8C-9B84-EDBA56D53B61">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 21:10:02 UTC</createdTime>
+<generatorID>A35E5C28-D637-BD0E-E325-1327634A24DA</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -176,6 +202,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="5AF74379-0D13-4541-4A92-7BFF22D0F01C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7D27B53-23AC-0370-724A-AE3518097E13" name="Appointment_History_Staff_FK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 21:01:11 UTC</createdTime>
+<generatorID>C86AF459-D0AB-7B2D-7B7D-FC718D0B0B73</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="781BB5AB-8200-52C3-061A-F728AA26E20C"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

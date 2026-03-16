@@ -163,7 +163,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Insurance_Id" id="B58751D5-070A-76D3-6F0D-571DC9019E9B">
+<Column name="Insurance_Insurance_Id" id="B58751D5-070A-76D3-6F0D-571DC9019E9B">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 19:09:45 UTC</createdTime>
 <generatorID>892ACDF0-F8D2-0A05-5F5F-C0F4E86130C6</generatorID>
@@ -177,6 +177,21 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="A99394F2-A10E-7B32-2D8E-D4A420DAAFF2" referredColumn="EDF92FB1-2531-BDA6-816E-175867172557"/>
+</associations>
+</Column>
+<Column name="Bill_Bill_Id" id="C7B9F44D-CB1B-C86A-10D1-50F517DCCADE">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:38:05 UTC</createdTime>
+<generatorID>AC176E74-44C2-8CD2-33F8-0FB6BD84C96B</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1328504D-AB19-CDAA-9CA7-C870AFA74299" referredColumn="5123E787-91DB-0D52-7E30-5332A22EE164"/>
 </associations>
 </Column>
 </columns>
@@ -202,6 +217,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="B58751D5-070A-76D3-6F0D-571DC9019E9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F1556ED-EB12-EE20-2E86-F513BA91E503" name="Patient_Bill_FK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:38:05 UTC</createdTime>
+<generatorID>346D3778-0369-B5F1-7D2C-004607FABDD4</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7B9F44D-CB1B-C86A-10D1-50F517DCCADE"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

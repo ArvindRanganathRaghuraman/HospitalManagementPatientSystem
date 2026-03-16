@@ -67,7 +67,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Doctor_Id" id="AFF1C9E0-6CA2-83D1-4BA1-6E4F6F87D4B5">
+<Column name="Doctor_Doctor_Id" id="AFF1C9E0-6CA2-83D1-4BA1-6E4F6F87D4B5">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 19:34:05 UTC</createdTime>
 <generatorID>E2070A13-99C0-EF06-F04C-51EBD311A38B</generatorID>

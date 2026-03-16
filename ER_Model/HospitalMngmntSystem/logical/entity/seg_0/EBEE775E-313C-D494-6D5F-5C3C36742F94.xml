@@ -70,19 +70,6 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Department_Id" id="3AF11BF6-0305-68CA-DB4C-F7229FEED220">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:50:10 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Phone" id="7E902C2C-15D3-C34F-1C57-62B55FEF8F0B">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:50:45 UTC</createdTime>

@@ -91,6 +91,32 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Transfer_Histroy_Id1" id="E01409F1-4E1C-E434-BC89-C56FA160512C">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 21:15:24 UTC</createdTime>
+<generatorID>72FF9725-8E45-F21B-C9DC-C0251377460C</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Admission_Admission_Id" id="E158F57C-7165-2C15-D440-FA3BAD8AD987">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 21:15:24 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="89D1B4AF-0DA6-8589-152A-86E542E0E466" referredColumn="766801C3-82CE-3E70-0358-96407A925CEA"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="0E434775-BF6D-CC74-1490-5302FAD51AFC" name="Admission_Histroy_PK">
@@ -103,6 +129,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="FD69878A-1A8C-6ABC-1817-E609B4302AC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89FFA743-8EC4-D185-93F4-3CE09B93BA82" name="Admission_Histroy_Admission_FK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 21:10:02 UTC</createdTime>
+<generatorID>3F9F5CA7-1E27-569B-65AA-5B769BC4561E</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E158F57C-7165-2C15-D440-FA3BAD8AD987"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

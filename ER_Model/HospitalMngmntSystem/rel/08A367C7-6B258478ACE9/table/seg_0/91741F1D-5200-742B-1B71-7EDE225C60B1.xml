@@ -13,7 +13,6 @@
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>BAF99966-AFA6-1B33-99AD-B90E6A9188D8</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -190,4 +189,18 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="00424712-D834-68EF-E97B-A6DAFCAEC687" name="Bill_PK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:34:51 UTC</createdTime>
+<generatorID>FFEBAE86-F59B-C222-F175-47C0DD4AF203</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5123E787-91DB-0D52-7E30-5332A22EE164"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>

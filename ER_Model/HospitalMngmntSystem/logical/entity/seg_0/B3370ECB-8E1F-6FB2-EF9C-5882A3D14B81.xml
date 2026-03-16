@@ -198,6 +198,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Bill_Id" id="AC176E74-44C2-8CD2-33F8-0FB6BD84C96B">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-16 20:37:57 UTC</createdTime>
+<generatorID>346D3778-0369-B5F1-7D2C-004607FABDD4</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>BAF99966-AFA6-1B33-99AD-B90E6A9188D8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="6B2CD213-BC6D-C474-16C0-15B88E7BFDCB" name="Patient PK">
