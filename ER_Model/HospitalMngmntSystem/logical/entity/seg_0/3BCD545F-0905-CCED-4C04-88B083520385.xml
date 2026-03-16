@@ -106,5 +106,20 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Patient_id" id="3034A820-E57A-3778-3AAC-F24196664447">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 18:56:21 UTC</createdTime>
+<generatorID>8616C94D-2228-916D-D2F7-4265F50C9469</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 </Entity>

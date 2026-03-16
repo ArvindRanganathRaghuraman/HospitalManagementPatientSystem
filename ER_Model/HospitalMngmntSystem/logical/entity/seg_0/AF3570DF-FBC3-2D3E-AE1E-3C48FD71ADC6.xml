@@ -22,20 +22,6 @@
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Room_Id" id="0F75E576-A17D-D929-A691-0999E80947F8">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 20:03:01 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -80,5 +66,34 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Room_Id" id="C728F783-E8D8-F617-D244-1D368129F116">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:54:06 UTC</createdTime>
+<generatorID>4EDC6AFD-F38F-1EC4-9835-F9CE4BD5CBBC</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>3DC2FE74-2B4D-FF9A-A88B-77C710101157</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A193A24A-9F0B-6F26-EE14-64F3084A691F" name="Bed PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:53:43 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8C8C9323-A536-32D8-33F4-9D9731737948</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

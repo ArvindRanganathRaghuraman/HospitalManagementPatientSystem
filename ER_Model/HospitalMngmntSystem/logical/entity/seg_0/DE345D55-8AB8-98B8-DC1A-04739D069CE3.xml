@@ -27,19 +27,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Admission_Id" id="2EB58600-F8B5-1D87-137E-C99067E93496">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:20:00 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Previous_Bed_Id" id="864D7E9F-AC97-BC9E-AD10-E8D004FF0C80">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:25:39 UTC</createdTime>

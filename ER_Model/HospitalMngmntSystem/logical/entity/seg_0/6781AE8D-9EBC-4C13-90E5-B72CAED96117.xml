@@ -22,7 +22,6 @@
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -106,19 +105,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Department_Id" id="1A9CE941-BF92-87DC-DF1F-18EE9CA4AA04">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 19:36:01 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Join_Date" id="E3C7C510-3E6E-C24F-4807-2749845BB1FE">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:36:16 UTC</createdTime>
@@ -146,4 +132,19 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="52CEDFE3-AB5B-A6B1-AA18-6F59C2BDCB43" name="Doctor PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 19:31:35 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

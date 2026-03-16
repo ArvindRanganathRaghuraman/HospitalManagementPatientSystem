@@ -13,10 +13,9 @@
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>48573871-13BA-CDAF-6BF2-5D7AC84D4481</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -64,7 +63,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -74,7 +73,9 @@
 <generatorID>96C76502-8F71-F64D-13D3-073CC315123E</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -89,4 +90,18 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5278955F-CA2E-6E4A-E031-EE083BF1E3AD" name="Insurance_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-16 12:19:27 UTC</createdTime>
+<generatorID>6027C186-120A-0B53-C59E-45CF2E1FEC80</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDF92FB1-2531-BDA6-816E-175867172557"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
 </Table>
