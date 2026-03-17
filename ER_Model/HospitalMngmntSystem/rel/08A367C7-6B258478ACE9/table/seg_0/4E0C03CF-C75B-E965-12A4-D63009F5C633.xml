@@ -83,19 +83,6 @@
 <ownDataTypeParameters>500,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Appointment_Id2" id="8EBE9126-551D-7231-6A19-404EDC6E469B">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-16 20:27:08 UTC</createdTime>
-<generatorID>6184989F-390A-18E6-982C-E9847C46E195</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="F1D202C5-4C70-46C8-3261-2F263BBF7346" name="Prescription_PK">

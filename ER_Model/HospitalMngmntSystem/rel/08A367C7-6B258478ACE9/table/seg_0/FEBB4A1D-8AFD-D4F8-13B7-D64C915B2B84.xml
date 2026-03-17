@@ -13,7 +13,6 @@
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>E7027ABB-69C8-1921-8D7D-C99905303B91</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -92,7 +91,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Patient_Patient_id" id="0190B212-0594-5E8A-B1C3-ACD4258DC713">
+<Column name="Patient_id" id="0190B212-0594-5E8A-B1C3-ACD4258DC713">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 18:57:38 UTC</createdTime>
 <generatorID>3034A820-E57A-3778-3AAC-F24196664447</generatorID>

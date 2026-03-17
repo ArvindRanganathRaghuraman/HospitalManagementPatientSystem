@@ -91,18 +91,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Transfer_Histroy_Id1" id="E01409F1-4E1C-E434-BC89-C56FA160512C">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-16 21:15:24 UTC</createdTime>
-<generatorID>72FF9725-8E45-F21B-C9DC-C0251377460C</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Admission_Admission_Id" id="E158F57C-7165-2C15-D440-FA3BAD8AD987">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-16 21:15:24 UTC</createdTime>

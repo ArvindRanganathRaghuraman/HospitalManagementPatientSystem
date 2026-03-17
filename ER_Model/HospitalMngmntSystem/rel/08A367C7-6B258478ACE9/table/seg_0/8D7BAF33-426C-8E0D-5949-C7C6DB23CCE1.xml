@@ -118,7 +118,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Bed_Bed_Id" id="0980EE2F-F7B7-E470-D50D-337B74199161">
+<Column name="Bed_Id" id="0980EE2F-F7B7-E470-D50D-337B74199161">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 19:57:32 UTC</createdTime>
 <generatorID>C4101E05-4ACD-16BD-A73F-2C71AEC52578</generatorID>
@@ -133,7 +133,7 @@
 <colAssociation fkAssociation="0CAF277D-F7D7-FAE7-0F5A-40280E5DF0EB" referredColumn="3198329E-A802-AED2-411F-D587A1C2E478"/>
 </associations>
 </Column>
-<Column name="Patient_Patient_id" id="C208DCAA-A3AA-DAA0-F56C-1F9C53559AD4">
+<Column name="Patient_id" id="C208DCAA-A3AA-DAA0-F56C-1F9C53559AD4">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 20:03:11 UTC</createdTime>
 <generatorID>6B565658-5DA2-0C57-27C3-EC90D5709444</generatorID>
