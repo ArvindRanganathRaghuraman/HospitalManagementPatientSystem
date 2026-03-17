@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Room_Room_Id" id="75E46478-4092-CBF6-C22C-D8EC6272F166">
+<Column name="Room_Id" id="75E46478-4092-CBF6-C22C-D8EC6272F166">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>0F75E576-A17D-D929-A691-0999E80947F8</generatorID>

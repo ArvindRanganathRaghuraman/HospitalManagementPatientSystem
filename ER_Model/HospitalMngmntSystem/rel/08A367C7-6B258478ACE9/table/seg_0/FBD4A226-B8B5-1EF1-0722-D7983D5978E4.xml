@@ -138,7 +138,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Appointment_Appointment_Id" id="5AF74379-0D13-4541-4A92-7BFF22D0F01C">
+<Column name="Appointment_Id" id="5AF74379-0D13-4541-4A92-7BFF22D0F01C">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 19:46:13 UTC</createdTime>
 <generatorID>57A7ABDF-538B-3958-0D29-CCFCDB9A5D7E</generatorID>
@@ -166,18 +166,6 @@
 <associations>
 <colAssociation fkAssociation="3BE9C659-AFAA-F387-5299-211DFB3DEC1F" referredColumn="BB6C9FAD-3560-3783-880B-E97771653417"/>
 </associations>
-</Column>
-<Column name="History_Id1" id="500639AB-A6C2-AE8C-9B84-EDBA56D53B61">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-16 21:10:02 UTC</createdTime>
-<generatorID>A35E5C28-D637-BD0E-E325-1327634A24DA</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

@@ -96,7 +96,7 @@
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Staff_Staff_Id" id="0D035203-06CD-FF95-0E97-CCE2D86D2738">
+<Column name="Staff_Id" id="0D035203-06CD-FF95-0E97-CCE2D86D2738">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-16 21:03:49 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
