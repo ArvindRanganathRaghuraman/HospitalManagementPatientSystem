@@ -83,7 +83,7 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Prescription_Id" id="30C30BE3-7B87-6F8E-13F5-676E10C3F5F4">
+<Column name="Prescription_Prescription_Id" id="30C30BE3-7B87-6F8E-13F5-676E10C3F5F4">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-16 20:27:08 UTC</createdTime>
 <generatorID>0AD56BC2-6F28-4383-0A12-291439212D77</generatorID>

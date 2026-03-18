@@ -121,5 +121,44 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="City" id="00EF25EC-62B6-BF9B-3C9E-2A0F206DE681">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-18 17:19:12 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="State" id="202ACA6F-0709-D3F9-6F3C-6DBAE0294EF4">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-18 17:19:24 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Zip" id="21B54DBC-07C6-99EA-0463-C6FBF04E3F46">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-18 17:19:41 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 </Entity>

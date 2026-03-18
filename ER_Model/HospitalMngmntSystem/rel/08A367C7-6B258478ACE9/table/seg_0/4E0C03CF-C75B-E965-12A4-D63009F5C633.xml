@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Appointment_Id" id="B7B59A21-7167-939F-45F4-1B2181D3C1BE">
+<Column name="Appointment_Appointment_Id" id="B7B59A21-7167-939F-45F4-1B2181D3C1BE">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>74622F48-9831-F53F-D9CF-3ADAF0B00022</generatorID>

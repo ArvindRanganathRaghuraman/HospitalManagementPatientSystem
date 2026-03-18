@@ -13,6 +13,7 @@
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>E7027ABB-69C8-1921-8D7D-C99905303B91</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -91,7 +92,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Patient_id" id="0190B212-0594-5E8A-B1C3-ACD4258DC713">
+<Column name="Patient_Patient_id" id="0190B212-0594-5E8A-B1C3-ACD4258DC713">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 18:57:38 UTC</createdTime>
 <generatorID>3034A820-E57A-3778-3AAC-F24196664447</generatorID>
@@ -106,6 +107,42 @@
 <associations>
 <colAssociation fkAssociation="1527F324-13DD-605C-C58F-FB86CEF7E690" referredColumn="9768D49E-DFE4-59F5-C0D0-6F25422E02C5"/>
 </associations>
+</Column>
+<Column name="City" id="7C0EB6E6-F011-A8F1-77BD-52D669EFC824">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-18 17:20:01 UTC</createdTime>
+<generatorID>00EF25EC-62B6-BF9B-3C9E-2A0F206DE681</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="State" id="28D54207-56D8-BE87-F155-DC7B3FF7805F">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-18 17:20:01 UTC</createdTime>
+<generatorID>202ACA6F-0709-D3F9-6F3C-6DBAE0294EF4</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Zip" id="6D149A97-5511-AC1D-FA36-7B85EE2E00E8">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-03-18 17:20:01 UTC</createdTime>
+<generatorID>21B54DBC-07C6-99EA-0463-C6FBF04E3F46</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
