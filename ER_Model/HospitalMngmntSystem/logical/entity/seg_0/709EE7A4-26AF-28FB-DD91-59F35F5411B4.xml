@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Admission_Id" id="4EE3FA9D-92EC-B8A8-DFF5-931CB7F7B091">
+<Attribute name="Admission Id" id="4EE3FA9D-92EC-B8A8-DFF5-931CB7F7B091">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:15:29 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -27,20 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Doctor_Id" id="5784B4CB-55B0-7AB0-1F78-392C09A80B66">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:16:12 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Admission_Date" id="B321236F-B252-F9FF-190D-64E815237E4A">
+<Attribute name="Admission Date" id="B321236F-B252-F9FF-190D-64E815237E4A">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:16:26 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -53,7 +40,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Discharge_Date" id="17CECB23-F9F9-8DF9-1A77-FE968178D7DC">
+<Attribute name="Discharge Date" id="17CECB23-F9F9-8DF9-1A77-FE968178D7DC">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:16:41 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -80,7 +67,7 @@
 <dataTypeSize>500</dataTypeSize>
 <ownDataTypeParameters>500,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Admission_Type" id="3C7F985A-FBCD-4B1F-307B-A57ECA7CFEB5">
+<Attribute name="Admission Type" id="3C7F985A-FBCD-4B1F-307B-A57ECA7CFEB5">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:17:12 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -108,7 +95,7 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ICU_Approved_By" id="935EC8B1-ED1B-D9A1-A423-E35BFDBF1CC8">
+<Attribute name="ICU Approved By" id="935EC8B1-ED1B-D9A1-A423-E35BFDBF1CC8">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:18:02 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -121,7 +108,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Transfer_From_Bed_Id" id="1B16F625-3CA1-C04A-02C7-6FE343B230AF">
+<Attribute name="Transfer From Bed Id" id="1B16F625-3CA1-C04A-02C7-6FE343B230AF">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:18:35 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -134,10 +121,24 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Bed_Id" id="C4101E05-4ACD-16BD-A73F-2C71AEC52578">
+<Attribute name="Patient id" id="55F716D0-449E-1323-A0F7-3E519EF7BBA8">
 <createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 19:57:08 UTC</createdTime>
-<generatorID>8D3AC149-F002-0BB8-8B67-96F5F03B0D3F</generatorID>
+<createdTime>2026-03-19 00:52:30 UTC</createdTime>
+<generatorID>66B6B3CD-08C8-2840-C57B-26F318A76E02</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bed Id" id="9BE5C178-8CCD-B2DE-EA5C-4B5732B35983">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 01:00:04 UTC</createdTime>
+<generatorID>95F85BAD-2697-8636-16CA-DC55EF2A1BE0</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -148,15 +149,15 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Patient_id" id="6B565658-5DA2-0C57-27C3-EC90D5709444">
+<Attribute name="Doctor Id" id="A7FF2E63-24AD-94E5-1EEE-3B93E0F55F6E">
 <createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 20:02:44 UTC</createdTime>
-<generatorID>21C3310E-24EA-467B-AB96-1400E5DB6834</generatorID>
+<createdTime>2026-03-19 01:01:38 UTC</createdTime>
+<generatorID>FC99DEBD-91C0-6DF7-17B0-7A3418D8B4AB</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<referedAttribute>9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0</referedAttribute>
+<referedAttribute>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

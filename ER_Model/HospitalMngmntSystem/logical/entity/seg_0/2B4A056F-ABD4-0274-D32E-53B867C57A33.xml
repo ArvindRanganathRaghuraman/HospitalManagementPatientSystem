@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Department_Id" id="5390FB3D-9DF6-BF8B-8CC5-B2287C8E10BB">
+<Attribute name="Department Id" id="5390FB3D-9DF6-BF8B-8CC5-B2287C8E10BB">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:28:32 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -24,10 +24,10 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Department_Name" id="8F296B69-3310-2559-43C3-35ACF5248763">
+<Attribute name="Department Name" id="8F296B69-3310-2559-43C3-35ACF5248763">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:28:50 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -66,5 +66,34 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Head Doctor Id" id="FFC11B9A-D74B-BE4F-7967-CFE16580C396">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 22:28:28 UTC</createdTime>
+<generatorID>BC344433-D2AF-B1E8-BAE0-21719AB8C6B9</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F7B4B2FF-7725-FB86-F8DF-08831B4B4E8B" name="Department PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 22:44:17 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5390FB3D-9DF6-BF8B-8CC5-B2287C8E10BB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

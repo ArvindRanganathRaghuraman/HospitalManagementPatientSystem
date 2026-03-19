@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BILL_to_PAYMENT" directorySegmentName="seg_0" id="13DC1B80-78D8-EC68-E874-E9532EC70D2D">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 01:22:13 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<sourcePk>FFEBAE86-F59B-C222-F175-47C0DD4AF203</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>73F6D039-1A51-0589-D738-9B4C413E927C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D543916A-EB27-61A6-0444-F7530A4D3385</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

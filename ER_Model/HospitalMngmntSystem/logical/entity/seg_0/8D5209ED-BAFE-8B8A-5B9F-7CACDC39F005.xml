@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D5209ED-BAFE-8B8A-5B9F-7CACDC39F005" name="Doctor_Schedule">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D5209ED-BAFE-8B8A-5B9F-7CACDC39F005" name="Doctor Schedule">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:36:52 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Schedule_Id" id="ECD3AC89-30C5-CBA2-A74E-572D42D10FA0">
+<Attribute name="Schedule Id" id="ECD3AC89-30C5-CBA2-A74E-572D42D10FA0">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:39:31 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Day_Of_Week" id="E24AB639-7255-4644-9167-0E576335E657">
+<Attribute name="Day Of Week" id="E24AB639-7255-4644-9167-0E576335E657">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:40:25 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -38,9 +38,10 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Start_Time" id="B56BCD3B-C12E-CBCD-CEBA-B173348E226D">
+<Attribute name="Start Time" id="B56BCD3B-C12E-CBCD-CEBA-B173348E226D">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:40:53 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -51,9 +52,10 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="End_Time" id="B0C2021D-6C34-049B-8664-C8F91679DE07">
+<Attribute name="End Time" id="B0C2021D-6C34-049B-8664-C8F91679DE07">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:41:18 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -64,9 +66,10 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Max_Appointments" id="0E0B22CD-C267-3109-5DEF-01E07940D885">
+<Attribute name="Max Appointments" id="0E0B22CD-C267-3109-5DEF-01E07940D885">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:41:32 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -76,13 +79,13 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Doctor_Id" id="E2070A13-99C0-EF06-F04C-51EBD311A38B">
+<Attribute name="Doctor Id" id="15941066-0B51-4DEE-1D66-B39B75C449A8">
 <createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 19:31:42 UTC</createdTime>
-<generatorID>1CC339AA-7C97-21C4-0D57-AE02C146C261</generatorID>
+<createdTime>2026-03-19 00:43:55 UTC</createdTime>
+<generatorID>CD50CD67-4707-2567-DDF0-73B55C7F2B7B</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -90,12 +93,12 @@
 <referedAttribute>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="2C32DAF9-ADFA-D4AE-CBE3-DFB3E8D2854D" name="Doctor_Schedule PK">
+<identifier id="2C32DAF9-ADFA-D4AE-CBE3-DFB3E8D2854D" name="Doctor_Schedule_PK">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 19:31:30 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>

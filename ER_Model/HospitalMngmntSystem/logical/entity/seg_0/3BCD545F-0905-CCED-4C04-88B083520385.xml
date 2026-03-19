@@ -15,20 +15,19 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Guardian_Id" id="E7027ABB-69C8-1921-8D7D-C99905303B91">
+<Attribute name="Guardian Id" id="E7027ABB-69C8-1921-8D7D-C99905303B91">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 17:17:07 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="First_Name" id="E1D8FDA4-B866-49BA-90C6-145023AB295F">
+<Attribute name="First Name" id="E1D8FDA4-B866-49BA-90C6-145023AB295F">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 17:17:25 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -41,7 +40,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Last_Name" id="329198AA-C9F8-2FE0-613D-F9600D5AE537">
+<Attribute name="Last Name" id="329198AA-C9F8-2FE0-613D-F9600D5AE537">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 17:18:24 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -106,21 +105,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Patient_id" id="3034A820-E57A-3778-3AAC-F24196664447">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 18:56:21 UTC</createdTime>
-<generatorID>8616C94D-2228-916D-D2F7-4265F50C9469</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="City" id="00EF25EC-62B6-BF9B-3C9E-2A0F206DE681">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-18 17:19:12 UTC</createdTime>
@@ -161,4 +145,20 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DAC2C9CE-73E7-5914-041A-7D0ACBBBD82E" name="Guardian PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 22:28:28 UTC</createdTime>
+<generatorID>A573D4D1-6E6A-A08A-782E-7316D873C90A</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E7027ABB-69C8-1921-8D7D-C99905303B91</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Room_Id" id="3DC2FE74-2B4D-FF9A-A88B-77C710101157">
+<Attribute name="Room Id" id="3DC2FE74-2B4D-FF9A-A88B-77C710101157">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 20:05:29 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Room_Number" id="AD884189-61C6-D2C7-CEAB-C2AFDAA21D16">
+<Attribute name="Room Number" id="AD884189-61C6-D2C7-CEAB-C2AFDAA21D16">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 20:05:38 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -37,10 +37,11 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Room_Type" id="2BEE887F-38E1-179F-9E03-02E695C794CB">
+<Attribute name="Room Type" id="2BEE887F-38E1-179F-9E03-02E695C794CB">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 20:06:03 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -51,24 +52,12 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Floor_Number" id="75E383F1-654E-9D60-8671-CA765281BE8B">
+<Attribute name="Floor Number" id="75E383F1-654E-9D60-8671-CA765281BE8B">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 20:06:25 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Department_Id" id="8E77337C-266C-E9B0-FD62-9134DCC504C3">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 20:06:42 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
@@ -79,7 +68,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Total_Beds" id="79F23757-C3C8-9A61-9D5A-DD77A02F6F4C">
+<Attribute name="Total Beds" id="79F23757-C3C8-9A61-9D5A-DD77A02F6F4C">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 20:07:02 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -89,7 +78,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Status" id="7363C25F-46E5-8DDC-94CA-F01305883C0A">
@@ -103,6 +92,22 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Department Id" id="861959C9-488B-A77A-8961-47848B3F958E">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 00:49:47 UTC</createdTime>
+<generatorID>CD20918E-DAE4-92CD-6CE0-746A5CD50C4E</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>5390FB3D-9DF6-BF8B-8CC5-B2287C8E10BB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
