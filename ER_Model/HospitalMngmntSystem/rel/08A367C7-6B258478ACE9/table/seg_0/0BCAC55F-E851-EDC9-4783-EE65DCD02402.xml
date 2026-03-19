@@ -15,7 +15,7 @@
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -99,7 +99,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -115,19 +115,19 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Department_Id" id="6F632EE2-A8D0-8904-8B4D-7DDAF947DBF2">
+<Column name="Department_Id" id="C719EB4D-4E12-C280-15B6-DBB511E0C03E">
 <createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 19:24:13 UTC</createdTime>
-<generatorID>7D6DB150-F97C-7B2A-39D5-6E182A158F47</generatorID>
+<createdTime>2026-03-19 00:41:53 UTC</createdTime>
+<generatorID>70C1E3EC-9874-8245-546B-828E1CAEDF9E</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="FC959B7D-2637-D98B-25D1-E210BC0F8983" referredColumn="2778A711-4502-23A1-11CC-CEADB29775A2"/>
+<colAssociation fkAssociation="2D4E4329-3207-F5E9-8789-29F8C765B379" referredColumn="B944A860-B3B8-E5CE-8C6E-10CAC9D67EAD"/>
 </associations>
 </Column>
 </columns>
@@ -144,15 +144,15 @@
 <colUsage columnID="0BD0ED34-EC26-4F06-EB66-B0FCAF422A76"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="C44D2EFA-6A8B-C278-C00D-09DE90368FBD" name="Doctor_Department_FK">
+<ind_PK_UK id="856CAF44-F60E-F277-7F70-D2CBC92DC5E0" name="Doctor_Department_FK">
 <createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 19:26:36 UTC</createdTime>
-<generatorID>47E4473C-0748-9B16-2E1E-4CC602FFBAF5</generatorID>
+<createdTime>2026-03-19 00:41:53 UTC</createdTime>
+<generatorID>137F0F96-FB0A-E7D8-985A-0931B1261A1D</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="6F632EE2-A8D0-8904-8B4D-7DDAF947DBF2"/>
+<colUsage columnID="C719EB4D-4E12-C280-15B6-DBB511E0C03E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

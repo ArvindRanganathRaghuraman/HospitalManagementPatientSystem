@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Prescription_Id" id="38721BEB-39CE-5C65-32FF-5C9922844537">
+<Attribute name="Prescription Id" id="38721BEB-39CE-5C65-32FF-5C9922844537">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:30:26 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -27,33 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Doctor_Id" id="810C207C-D6CE-6B4E-C064-EB5A621CD802">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:31:02 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Patient_Id" id="5077DF8B-6305-8163-41AB-6BB5533E25E3">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 00:31:16 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Prescribed_Date" id="41792C28-3EE7-0DA5-51B4-3052FEE1BF73">
+<Attribute name="Prescribed Date" id="41792C28-3EE7-0DA5-51B4-3052FEE1BF73">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:31:27 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -80,15 +54,42 @@
 <dataTypeSize>500</dataTypeSize>
 <ownDataTypeParameters>500,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Appointment_Id" id="6184989F-390A-18E6-982C-E9847C46E195">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-16 20:19:21 UTC</createdTime>
-<generatorID>48D16F57-3682-F9BC-953A-499D02C8B42D</generatorID>
+<Attribute name="Patient id" id="87F0C3EF-08FF-75E4-5221-356E8FA4D2A8">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 01:10:16 UTC</createdTime>
+<generatorID>187FCC04-9793-D914-86BB-D34B8AD4D20C</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Doctor Id" id="1CB3B91E-729F-4C74-E447-54B84E09B844">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 01:12:01 UTC</createdTime>
+<generatorID>6CEE2956-3E79-6B99-60F6-6BDAA3430D50</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Appointment Id" id="296363B1-E905-2024-A70F-E4F9D9B41816">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 01:13:19 UTC</createdTime>
+<generatorID>FEDBA719-9865-CBA0-895B-F5C2B77D05D4</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
 <referedAttribute>7F4CACAC-1807-702B-6580-860FD00B2751</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>

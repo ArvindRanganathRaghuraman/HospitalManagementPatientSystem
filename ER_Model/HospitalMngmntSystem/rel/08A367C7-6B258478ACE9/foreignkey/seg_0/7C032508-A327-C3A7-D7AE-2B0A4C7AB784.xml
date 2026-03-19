@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7C032508-A327-C3A7-D7AE-2B0A4C7AB784" containerWithKeyObject="D5269F42-E424-B37F-E11B-FAB948104347" localFKIndex="E187C3B2-9197-5E4B-ACAD-7E7ACDA6D36F" name="Payment_Bill_FK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 01:22:28 UTC</createdTime>
+<generatorID>13DC1B80-78D8-EC68-E874-E9532EC70D2D</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<referredTableLongName>Bill</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>78D933A3-BC43-1F28-C9BE-EF66096833E4</referredTableID>
+<keyObject>36E6D4F6-0E77-66D0-C029-14F49FFA73E5</keyObject>
+<referredKeyID>36E6D4F6-0E77-66D0-C029-14F49FFA73E5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Bill_Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

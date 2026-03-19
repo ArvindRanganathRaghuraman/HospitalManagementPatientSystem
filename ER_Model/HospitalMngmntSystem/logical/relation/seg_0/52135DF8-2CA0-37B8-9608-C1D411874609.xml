@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name=" GUARDIAN_to_PATIENT" directorySegmentName="seg_0" id="52135DF8-2CA0-37B8-9608-C1D411874609">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:48:01 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<sourcePk>DAC2C9CE-73E7-5914-041A-7D0ACBBBD82E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3BCD545F-0905-CCED-4C04-88B083520385</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B3370ECB-8E1F-6FB2-EF9C-5882A3D14B81</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

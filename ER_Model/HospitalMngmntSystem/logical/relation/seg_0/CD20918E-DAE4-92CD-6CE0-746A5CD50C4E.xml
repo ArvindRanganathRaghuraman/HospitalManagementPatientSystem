@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="STAFF_to_DOCTOR_VACATIONv1" directorySegmentName="seg_0" id="CD20918E-DAE4-92CD-6CE0-746A5CD50C4E">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 00:49:47 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<sourcePk>F7B4B2FF-7725-FB86-F8DF-08831B4B4E8B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2B4A056F-ABD4-0274-D32E-53B867C57A33</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8408FFE4-CFBA-8DBB-4643-E98D95E0197C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

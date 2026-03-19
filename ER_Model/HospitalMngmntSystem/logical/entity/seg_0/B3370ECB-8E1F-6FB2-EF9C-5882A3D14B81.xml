@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Patient_id" id="9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0">
+<Attribute name="Patient id" id="9DE5F2C2-2B7A-66A1-C808-A9ADCB0741E0">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 16:54:12 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="first_name" id="B6AF3CBF-3DAA-AC66-755E-C729EB4A4C41">
+<Attribute name="first name" id="B6AF3CBF-3DAA-AC66-755E-C729EB4A4C41">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 16:55:36 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -40,7 +40,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="last_name" id="DC2D1A07-3D4E-DF70-3063-850D976FA235">
+<Attribute name="last name" id="DC2D1A07-3D4E-DF70-3063-850D976FA235">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 16:56:52 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -105,7 +105,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Blood_type" id="BDC7CFA3-343E-58CD-7583-36E6CD12D62A">
+<Attribute name="Blood type" id="BDC7CFA3-343E-58CD-7583-36E6CD12D62A">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 17:12:00 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -118,7 +118,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Registration_Date" id="B285A037-EC91-58E1-0A26-1038083483A5">
+<Attribute name="Registration Date" id="B285A037-EC91-58E1-0A26-1038083483A5">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 17:13:01 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -131,7 +131,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Is_Minor" id="FE470DC7-5346-7DB2-4D5A-9E5A05F15EAD">
+<Attribute name="Is Minor" id="FE470DC7-5346-7DB2-4D5A-9E5A05F15EAD">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 17:13:47 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -141,21 +141,9 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Guardian_Id" id="A77E8BBD-D25A-5E0A-7F01-CA711642F95B">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 17:14:45 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Status" id="D5D5078A-5AC2-097A-87D7-854769F0F897">
 <createdBy>arvindranganathraghuraman</createdBy>
@@ -168,35 +156,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Insurance_Id" id="892ACDF0-F8D2-0A05-5F5F-C0F4E86130C6">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 19:09:32 UTC</createdTime>
-<generatorID>E3DC23E5-BC3B-8B88-2056-911D51275810</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>48573871-13BA-CDAF-6BF2-5D7AC84D4481</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Bill_Id" id="AC176E74-44C2-8CD2-33F8-0FB6BD84C96B">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-16 20:37:57 UTC</createdTime>
-<generatorID>346D3778-0369-B5F1-7D2C-004607FABDD4</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<referedAttribute>BAF99966-AFA6-1B33-99AD-B90E6A9188D8</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="City" id="B17C3740-8F94-C53B-D201-4777CE1FEAD3">
@@ -249,6 +208,37 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Guardian Id" id="286B571D-5F06-C10A-A048-7FFB8EDD87B1">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:48:01 UTC</createdTime>
+<generatorID>52135DF8-2CA0-37B8-9608-C1D411874609</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E7027ABB-69C8-1921-8D7D-C99905303B91</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Insurance Id" id="100AD7A4-717C-4E47-8458-C737C7A3EBBF">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 00:05:34 UTC</createdTime>
+<generatorID>34A1A94D-441B-7930-EFCC-4815271DD359</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>48573871-13BA-CDAF-6BF2-5D7AC84D4481</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

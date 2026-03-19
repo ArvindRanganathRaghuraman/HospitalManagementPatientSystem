@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Bed_Id" id="8C8C9323-A536-32D8-33F4-9D9731737948">
+<Attribute name="Bed Id" id="8C8C9323-A536-32D8-33F4-9D9731737948">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 20:02:30 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Bed_Number" id="CFE60530-F9D4-50D6-82ED-E02B883D9174">
+<Attribute name="Bed Number" id="CFE60530-F9D4-50D6-82ED-E02B883D9174">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 20:03:15 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -37,10 +37,11 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Bed_Type" id="48B51499-9EB6-22FC-5D27-E91E20D543E7">
+<Attribute name="Bed Type" id="48B51499-9EB6-22FC-5D27-E91E20D543E7">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 20:03:33 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -51,7 +52,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Status" id="E202C644-BA67-C59D-DC24-2918428FA134">
 <createdBy>arvindranganathraghuraman</createdBy>
@@ -64,12 +66,13 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Room_Id" id="C728F783-E8D8-F617-D244-1D368129F116">
+<Attribute name="Room Id" id="6F723B66-424F-ECC2-FED8-A1AD238D650A">
 <createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 19:54:06 UTC</createdTime>
-<generatorID>4EDC6AFD-F38F-1EC4-9835-F9CE4BD5CBBC</generatorID>
+<createdTime>2026-03-19 00:51:01 UTC</createdTime>
+<generatorID>1AA67260-394A-BD1A-DCE8-88FEB2ADD908</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>

@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E5D39AD-DAFB-8236-4865-806E113319EE" name="Bed">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:08:29 UTC</createdTime>
+<generatorID>AF3570DF-FBC3-2D3E-AE1E-3C48FD71ADC6</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Bed_Id" id="0CD4AF90-B8B4-7B49-D22E-3E0D6DA32117">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:08:29 UTC</createdTime>
+<generatorID>8C8C9323-A536-32D8-33F4-9D9731737948</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bed_Number" id="6BF92F29-CE45-B46A-E746-1392D4CE5AA8">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:08:29 UTC</createdTime>
+<generatorID>CFE60530-F9D4-50D6-82ED-E02B883D9174</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bed_Type" id="930885A0-59DB-7F3C-76D8-7C58C77FBD93">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:08:29 UTC</createdTime>
+<generatorID>48B51499-9EB6-22FC-5D27-E91E20D543E7</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Status" id="1246BACC-A332-B7DC-7B85-9C634834126C">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:08:29 UTC</createdTime>
+<generatorID>E202C644-BA67-C59D-DC24-2918428FA134</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Room_Id" id="67938011-76EE-8CC7-D141-2733905717C3">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 00:51:16 UTC</createdTime>
+<generatorID>6F723B66-424F-ECC2-FED8-A1AD238D650A</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4BE59CEE-D6A3-5D8A-1104-18723B9B1894" referredColumn="3CB00719-BED0-1E41-69DE-0590ED662844"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0AC72D4-1D04-D334-7D9F-1FAFDC4D8066" name="Bed_PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:08:29 UTC</createdTime>
+<generatorID>A193A24A-9F0B-6F26-EE14-64F3084A691F</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0CD4AF90-B8B4-7B49-D22E-3E0D6DA32117"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EAB97930-D18B-BCCD-8F41-2A84A5C0CEE3" name="Bed_Room_FK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 00:51:16 UTC</createdTime>
+<generatorID>1AA67260-394A-BD1A-DCE8-88FEB2ADD908</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67938011-76EE-8CC7-D141-2733905717C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

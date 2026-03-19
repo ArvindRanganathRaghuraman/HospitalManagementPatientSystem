@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="APPOINTMENT_to_APPOINTMENT_HISTORYv1" directorySegmentName="seg_0" id="C89235E7-EC5B-0FB7-6706-F05406B53FA1">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 01:24:50 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<sourcePk>6EA4D2B2-7940-28B3-9370-CC9546132C15</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>EBEE775E-313C-D494-6D5F-5C3C36742F94</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D8B6043F-F8A4-2920-D1ED-500E78388401</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="INSURANCE_PATIENT" directorySegmentName="seg_0" id="34A1A94D-441B-7930-EFCC-4815271DD359">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 00:05:34 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<sourcePk>6027C186-120A-0B53-C59E-45CF2E1FEC80</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>ABEAD8C1-32B8-641C-6690-BB06D4782522</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B3370ECB-8E1F-6FB2-EF9C-5882A3D14B81</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

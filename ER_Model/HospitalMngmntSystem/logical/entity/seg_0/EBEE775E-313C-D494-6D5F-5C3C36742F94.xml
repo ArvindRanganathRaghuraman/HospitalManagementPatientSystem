@@ -15,20 +15,19 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Staff_Id" id="F86ACD77-D638-A205-9054-029354C6DB6B">
+<Attribute name="Staff Id" id="F86ACD77-D638-A205-9054-029354C6DB6B">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:47:12 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="First_Name" id="42D9B2C0-12AC-063A-8B97-4278BBFF5044">
+<Attribute name="First Name" id="42D9B2C0-12AC-063A-8B97-4278BBFF5044">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:47:24 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -42,7 +41,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Last_Name" id="B4C36E23-F2C7-5A1F-F969-DBEC7745181C">
+<Attribute name="Last Name" id="B4C36E23-F2C7-5A1F-F969-DBEC7745181C">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:48:05 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -98,7 +97,7 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Hire_Date" id="841CA0B2-2CFE-83D9-EB72-956980052964">
+<Attribute name="Hire Date" id="841CA0B2-2CFE-83D9-EB72-956980052964">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-16 00:52:05 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -138,5 +137,34 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Department Id" id="54F679D8-D7E3-6823-8EA9-F688992BE870">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 01:27:01 UTC</createdTime>
+<generatorID>FFCCC3D3-8D33-3177-C13C-EB7121330852</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>5390FB3D-9DF6-BF8B-8CC5-B2287C8E10BB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6EA4D2B2-7940-28B3-9370-CC9546132C15" name="Staff PK">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-18 23:37:18 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F86ACD77-D638-A205-9054-029354C6DB6B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

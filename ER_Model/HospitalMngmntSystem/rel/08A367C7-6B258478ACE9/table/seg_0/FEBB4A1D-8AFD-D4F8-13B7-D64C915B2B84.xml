@@ -13,10 +13,9 @@
 <createdTime>2026-03-16 01:07:08 UTC</createdTime>
 <generatorID>E7027ABB-69C8-1921-8D7D-C99905303B91</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -92,22 +91,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Patient_Patient_id" id="0190B212-0594-5E8A-B1C3-ACD4258DC713">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 18:57:38 UTC</createdTime>
-<generatorID>3034A820-E57A-3778-3AAC-F24196664447</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="1527F324-13DD-605C-C58F-FB86CEF7E690" referredColumn="9768D49E-DFE4-59F5-C0D0-6F25422E02C5"/>
-</associations>
-</Column>
 <Column name="City" id="7C0EB6E6-F011-A8F1-77BD-52D669EFC824">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-18 17:20:01 UTC</createdTime>
@@ -155,17 +138,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="CD10C02F-F391-C93F-F728-842972DB6591"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="944D071A-804B-0A42-D164-5C68C3B0367B" name="Guardian_Patient_FK">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 18:57:38 UTC</createdTime>
-<generatorID>8616C94D-2228-916D-D2F7-4265F50C9469</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="0190B212-0594-5E8A-B1C3-ACD4258DC713"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
