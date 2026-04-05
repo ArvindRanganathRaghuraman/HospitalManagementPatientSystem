@@ -58,18 +58,6 @@
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Max_Appointments" id="78279CD2-FE4E-394B-22EE-79718A212384">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-18 22:56:39 UTC</createdTime>
-<generatorID>0E0B22CD-C267-3109-5DEF-01E07940D885</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Doctor_Id" id="28C46B6A-DD7C-44D5-0F59-93A5072B01F0">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 00:44:17 UTC</createdTime>
@@ -81,9 +69,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="A4DA4AF6-A5F0-425B-083B-306B5C512E4B" referredColumn="0BD0ED34-EC26-4F06-EB66-B0FCAF422A76"/>
-</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -97,17 +82,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="872175C1-F27F-D8EF-23B0-CF18ED688FC0"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="03B438BE-B921-DB02-5EA3-AF84F1BD5BC3" name="Doctor_Schedule_Doctor_FK">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 00:44:17 UTC</createdTime>
-<generatorID>CD50CD67-4707-2567-DDF0-73B55C7F2B7B</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="28C46B6A-DD7C-44D5-0F59-93A5072B01F0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

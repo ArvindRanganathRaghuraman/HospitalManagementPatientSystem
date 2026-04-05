@@ -151,6 +151,48 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Is Doctor" id="BEACFB34-AF3A-62E1-1BFB-0DD8728388E5">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:46:12 UTC</createdTime>
+<generatorID>C8A936F4-55C6-AA67-BD3E-11846E15C629</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Specialization" id="49D53531-4508-6624-4EF3-F55733FF8A44">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:46:12 UTC</createdTime>
+<generatorID>F27C7FB8-49B0-0997-C88C-D77AA87A70DD</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="License Number" id="D159CD51-07A5-940E-8A73-588B5BFD7AB2">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:46:12 UTC</createdTime>
+<generatorID>12F544C0-6DDB-9E68-B9A8-9D4192581A42</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="6EA4D2B2-7940-28B3-9370-CC9546132C15" name="Staff PK">

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA6E26EB-5788-B128-AEDC-36A7D1A25C23" name="DOCTOR_VACATION">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FA6E26EB-5788-B128-AEDC-36A7D1A25C23" name="DOCTOR VACATION">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-18 22:56:49 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Vacation_Id" id="CDF0468D-4E6E-1BBE-CF9B-6B73DF7633BF">
+<Attribute name="Vacation Id" id="CDF0468D-4E6E-1BBE-CF9B-6B73DF7633BF">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-18 22:56:59 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Vacation_Start_Date" id="BCC73E89-8993-F677-1212-10F2BB1594A4">
+<Attribute name="Vacation Start Date" id="BCC73E89-8993-F677-1212-10F2BB1594A4">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-18 22:57:15 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -40,7 +40,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Vacation_End_Date" id="EB620E12-9B2F-90E9-9E2E-366B8E267BB2">
+<Attribute name="Vacation End Date" id="EB620E12-9B2F-90E9-9E2E-366B8E267BB2">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-18 22:57:31 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -81,7 +81,7 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Approved_By" id="2EEF7F74-BC1F-00B0-627F-D6B11B268E24">
+<Attribute name="Approved By" id="2EEF7F74-BC1F-00B0-627F-D6B11B268E24">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-18 22:58:08 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -94,7 +94,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Created_Date" id="77065B2E-CDAB-0E1B-28DC-2190AA6B1CFA">
+<Attribute name="Created Date" id="77065B2E-CDAB-0E1B-28DC-2190AA6B1CFA">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-18 22:58:25 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -105,20 +105,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Doctor Id" id="FFF02623-47A2-A5BA-AF9D-E69CEBB4F7BD">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 00:46:15 UTC</createdTime>
-<generatorID>F68C5E82-F77A-6E46-90F0-92D99A633C59</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<referedAttribute>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Staff Id" id="EADD9FC3-6D3C-01D7-AF81-F934E4EFE703">
@@ -138,7 +124,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="0842154A-F0B5-A6D4-C549-4A47A110A9FA" name="DOCTOR_VACATION PK">
+<identifier id="0842154A-F0B5-A6D4-C549-4A47A110A9FA" name="DOCTOR_VACATION_PK">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-18 22:57:14 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>

@@ -158,20 +158,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Doctor Id" id="F2F1772A-49BD-F9AF-ABB3-898ADECFAF93">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 00:39:03 UTC</createdTime>
-<generatorID>AF41DD6A-3DA3-4C83-DABF-32CC0A2249A6</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<referedAttribute>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="EEAB2C4C-BE6C-639E-179B-E4E53F6002DE" name="Appointment PK">

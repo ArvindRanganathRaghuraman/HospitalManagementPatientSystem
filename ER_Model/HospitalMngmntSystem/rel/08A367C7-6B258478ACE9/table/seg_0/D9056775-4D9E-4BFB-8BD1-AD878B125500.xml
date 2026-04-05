@@ -104,9 +104,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="D62238A6-7860-6D88-4DE4-DE5B2E85F2E2" referredColumn="0BD0ED34-EC26-4F06-EB66-B0FCAF422A76"/>
-</associations>
 </Column>
 <Column name="Staff_Id" id="3F5B812C-951D-9993-6463-B3B9B0B5741B">
 <createdBy>poojadoddannavar</createdBy>
@@ -136,17 +133,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="29711A0C-1EFA-6AF8-C1EC-9C29C2C3EFE8"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="E80DCBEC-AAD8-F8DD-EAEF-6F11B5B9B9EC" name="DOCTOR_VACATION_Doctor_FK">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 00:46:35 UTC</createdTime>
-<generatorID>F68C5E82-F77A-6E46-90F0-92D99A633C59</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="D8143558-59DB-1126-BBAF-2D5692DEE79A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="BD1FEFFB-D0C6-CE71-9413-207FC60284C1" name="DOCTOR_VACATION_Staff_FK">

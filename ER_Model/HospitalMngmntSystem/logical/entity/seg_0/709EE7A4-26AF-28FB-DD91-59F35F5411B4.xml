@@ -149,20 +149,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Doctor Id" id="A7FF2E63-24AD-94E5-1EEE-3B93E0F55F6E">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 01:01:38 UTC</createdTime>
-<generatorID>FC99DEBD-91C0-6DF7-17B0-7A3418D8B4AB</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<referedAttribute>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="08C296F4-48A6-C8E0-3A0C-03519EE59B51" name="Admission PK">

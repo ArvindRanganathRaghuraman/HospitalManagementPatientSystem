@@ -70,9 +70,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="20C94077-4BB4-EC75-6E17-11470C548EA4" referredColumn="0BD0ED34-EC26-4F06-EB66-B0FCAF422A76"/>
-</associations>
 </Column>
 <Column name="Appointment_Id" id="600D6DCD-0107-44E9-648E-A805CC126988">
 <createdBy>poojadoddannavar</createdBy>
@@ -112,17 +109,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="4C32191F-4E81-5385-F826-C54689B566A4"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="5FAC892D-E6DE-B8C6-39C6-D305350E792A" name="Prescription_Doctor_FK">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 01:12:27 UTC</createdTime>
-<generatorID>6CEE2956-3E79-6B99-60F6-6BDAA3430D50</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="C5F78748-5509-E4EC-02D9-711E8A5335DE"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="F5D741BB-5FA8-5D9C-1180-B4E58354C14A" name="Prescription_Appointment_FK">

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="APPOINTMENT_to_PRESCRIPTION" directorySegmentName="seg_0" id="FEDBA719-9865-CBA0-895B-F5C2B77D05D4">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Prescription Appointment FK" directorySegmentName="seg_0" id="FEDBA719-9865-CBA0-895B-F5C2B77D05D4">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:13:19 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>

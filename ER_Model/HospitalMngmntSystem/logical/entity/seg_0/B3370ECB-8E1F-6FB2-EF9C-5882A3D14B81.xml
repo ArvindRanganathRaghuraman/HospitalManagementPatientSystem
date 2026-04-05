@@ -211,21 +211,6 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Guardian Id" id="286B571D-5F06-C10A-A048-7FFB8EDD87B1">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-18 23:48:01 UTC</createdTime>
-<generatorID>52135DF8-2CA0-37B8-9608-C1D411874609</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>E7027ABB-69C8-1921-8D7D-C99905303B91</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Insurance Id" id="100AD7A4-717C-4E47-8458-C737C7A3EBBF">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 00:05:34 UTC</createdTime>
@@ -239,6 +224,76 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Guardian FName" id="D04E7CA8-3AF9-C3A1-0405-194EA48EAFE0">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:46:12 UTC</createdTime>
+<generatorID>0FF2A549-F97F-19D1-ACF5-5B245287AB5B</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Guardian Relationship" id="563873E6-72AE-9884-6CAD-9E2F38FF42B4">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:46:12 UTC</createdTime>
+<generatorID>587FE06A-BBEC-7254-9309-FCFEF3141293</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Guardian Phone" id="DD0579F3-2F11-C9C9-757B-959C07418026">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:46:12 UTC</createdTime>
+<generatorID>E00749A1-7A04-F249-312C-064D1E8ECCC4</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Guardian Email" id="723433FC-42A2-1A47-0EDE-987939600CDC">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:46:12 UTC</createdTime>
+<generatorID>8D9725EC-DB3E-861C-75C6-D8F440007EC8</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Guardian Lname" id="7862224A-C04A-F51B-161A-08CF14A4AF7E">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:46:12 UTC</createdTime>
+<generatorID>36381905-041D-2BBC-5CEC-2AF4507442F3</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

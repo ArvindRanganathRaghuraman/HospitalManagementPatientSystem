@@ -136,6 +136,39 @@
 <colAssociation fkAssociation="CC160FD9-A3D1-00A5-8C4C-CA3681F25DE4" referredColumn="B944A860-B3B8-E5CE-8C6E-10CAC9D67EAD"/>
 </associations>
 </Column>
+<Column name="Is_Doctor" id="C8A936F4-55C6-AA67-BD3E-11846E15C629">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:07:52 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Specialization" id="F27C7FB8-49B0-0997-C88C-D77AA87A70DD">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:08:07 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="License_Number" id="12F544C0-6DDB-9E68-B9A8-9D4192581A42">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 02:08:36 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="052E5397-752D-D1B3-85D8-BFFF622D9BF6" name="Staff_PK">

@@ -124,21 +124,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Doctor Id" id="7BEA402F-1B2A-8767-78B2-80DE7E428FA6">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 01:29:35 UTC</createdTime>
-<generatorID>AE3D9B08-D8F6-83C5-BB7E-975C4782AAC3</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>8EB4F8EC-2E5B-F312-7086-0C7C82C69D41</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0E00E417-9A19-4D70-B731-DAFAF46F1E84" name="App User PK">

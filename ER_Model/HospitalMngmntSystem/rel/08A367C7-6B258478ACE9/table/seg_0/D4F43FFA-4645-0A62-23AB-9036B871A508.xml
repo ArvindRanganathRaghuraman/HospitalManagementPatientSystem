@@ -147,9 +147,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="F01B311B-A751-D05C-9F0D-1BAE3C70213F" referredColumn="0BD0ED34-EC26-4F06-EB66-B0FCAF422A76"/>
-</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -185,17 +182,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="7DC2E57F-2B6E-E9FD-6CA2-55131CAA0F9C"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="B11E9C1B-EB3A-5186-BA1B-6A69DCC8A7BA" name="Admission_Doctor_FK">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 01:01:55 UTC</createdTime>
-<generatorID>FC99DEBD-91C0-6DF7-17B0-7A3418D8B4AB</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="71C05198-3350-95DC-8C3C-348EB46C8312"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

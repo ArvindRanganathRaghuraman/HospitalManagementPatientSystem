@@ -201,9 +201,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="EFF69C28-3DF7-775A-047D-11620CD9A139" referredColumn="CD10C02F-F391-C93F-F728-842972DB6591"/>
-</associations>
 </Column>
 <Column name="Insurance_Id" id="1EE0A26B-CCCD-03AF-61E7-3C628052A243">
 <createdBy>poojadoddannavar</createdBy>
@@ -221,6 +218,61 @@
 <colAssociation fkAssociation="B629FDB9-369C-5E43-F3B7-25D83D198A21" referredColumn="EDF92FB1-2531-BDA6-816E-175867172557"/>
 </associations>
 </Column>
+<Column name="Guardian_FName" id="0FF2A549-F97F-19D1-ACF5-5B245287AB5B">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 01:50:52 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Guardian_Relationship" id="587FE06A-BBEC-7254-9309-FCFEF3141293">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 01:51:14 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Guardian_Phone" id="E00749A1-7A04-F249-312C-064D1E8ECCC4">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 01:51:36 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Guardian_Email" id="8D9725EC-DB3E-861C-75C6-D8F440007EC8">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 01:54:30 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Guardian_Lname" id="36381905-041D-2BBC-5CEC-2AF4507442F3">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 01:55:14 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="E25AA40E-818A-BFEB-455F-CF8114EF3EDA" name="Patient_PK">
@@ -233,17 +285,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="FC7C7E12-7A43-8F55-03EB-D1BC9EE1AD25"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="446A1E41-FA8A-8333-980F-B982A3EBBA7B" name="Patient_Guardian_FK">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-18 23:48:22 UTC</createdTime>
-<generatorID>52135DF8-2CA0-37B8-9608-C1D411874609</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="A20D9D82-60A1-51B0-E9AE-4FF1ADACBA6F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="3A245C1F-584B-1325-06EE-E78797BCF7F8" name="Patient_Insurance_FK">

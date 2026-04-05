@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DEPARTMENT_to_STAFF" directorySegmentName="seg_0" id="FFCCC3D3-8D33-3177-C13C-EB7121330852">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Staff Department FK" directorySegmentName="seg_0" id="FFCCC3D3-8D33-3177-C13C-EB7121330852">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:27:01 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
