@@ -69,7 +69,7 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Bill_Id" id="97ED34C5-DCCC-EED7-4B90-5973EE866E1D">
+<Column name="Bill_Bill_Id" id="97ED34C5-DCCC-EED7-4B90-5973EE866E1D">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:22:28 UTC</createdTime>
 <generatorID>6C0DDBFF-D93F-66BD-02D2-5F054B608F6A</generatorID>

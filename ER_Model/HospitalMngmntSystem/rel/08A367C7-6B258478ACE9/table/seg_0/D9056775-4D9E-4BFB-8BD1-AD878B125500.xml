@@ -18,6 +18,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_DOCTOR_VACATION_Vacation_Id</notNullConstraintName>
 </Column>
 <Column name="Vacation_Start_Date" id="5E74CD48-C59C-8D79-0557-9CB99A0606A3">
 <createdBy>poojadoddannavar</createdBy>
@@ -104,6 +105,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_DOCTOR_VACATION_Doctor_Id</notNullConstraintName>
 </Column>
 <Column name="Staff_Id" id="3F5B812C-951D-9993-6463-B3B9B0B5741B">
 <createdBy>poojadoddannavar</createdBy>

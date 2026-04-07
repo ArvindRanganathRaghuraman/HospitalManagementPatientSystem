@@ -202,7 +202,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Insurance_Id" id="1EE0A26B-CCCD-03AF-61E7-3C628052A243">
+<Column name="Insurance_Insurance_Id" id="1EE0A26B-CCCD-03AF-61E7-3C628052A243">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 00:06:49 UTC</createdTime>
 <generatorID>100AD7A4-717C-4E47-8458-C737C7A3EBBF</generatorID>

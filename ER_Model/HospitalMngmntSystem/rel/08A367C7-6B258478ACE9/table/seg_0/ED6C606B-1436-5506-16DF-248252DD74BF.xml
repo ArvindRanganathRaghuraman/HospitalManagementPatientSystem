@@ -70,6 +70,21 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Staff_Id" id="B7C9CB2D-1543-2595-5DE9-C179FA2A78D4">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 15:01:44 UTC</createdTime>
+<generatorID>307416E1-5252-3D17-CA54-0FF7DB0DB96C</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11304556-916B-BDDE-6463-5322922D6D2D" referredColumn="3B8AFC48-3EF7-F539-B33D-D3E0C0CBB052"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="578C7855-82D9-7184-65F7-FE3B032C73A5" name="Doctor_Schedule_PK">
@@ -82,6 +97,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="872175C1-F27F-D8EF-23B0-CF18ED688FC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BE9A18D1-6417-25E4-9922-81DC3F02E540" name="Doctor_Schedule_Staff_FK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 15:01:44 UTC</createdTime>
+<generatorID>88EBFA67-21A2-CE35-8387-6E539A705978</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7C9CB2D-1543-2595-5DE9-C179FA2A78D4"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

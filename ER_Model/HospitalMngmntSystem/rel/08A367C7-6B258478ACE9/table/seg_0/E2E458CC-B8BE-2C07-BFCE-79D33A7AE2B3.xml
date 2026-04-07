@@ -44,7 +44,7 @@
 <ownDataTypeParameters>500,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Patient_id" id="4C32191F-4E81-5385-F826-C54689B566A4">
+<Column name="Patient_Patient_id" id="4C32191F-4E81-5385-F826-C54689B566A4">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:10:27 UTC</createdTime>
 <generatorID>87F0C3EF-08FF-75E4-5221-356E8FA4D2A8</generatorID>
@@ -71,7 +71,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Appointment_Id" id="600D6DCD-0107-44E9-648E-A805CC126988">
+<Column name="Appointment_Appointment_Id" id="600D6DCD-0107-44E9-648E-A805CC126988">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:13:30 UTC</createdTime>
 <generatorID>296363B1-E905-2024-A70F-E4F9D9B41816</generatorID>

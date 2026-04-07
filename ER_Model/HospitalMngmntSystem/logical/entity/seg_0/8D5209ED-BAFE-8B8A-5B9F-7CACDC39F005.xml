@@ -14,6 +14,16 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<measurements itemClass="oracle.dbtools.crest.model.design.Measurement">
+<Measurement name="Measurement_1" id="BE91269F-A911-AC30-1AAD-7A02B7FFEB2E">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 15:18:36 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+</Measurement>
+</measurements>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Schedule Id" id="ECD3AC89-30C5-CBA2-A74E-572D42D10FA0">
 <createdBy>arvindranganathraghuraman</createdBy>
@@ -69,14 +79,15 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Max Appointments" id="0E0B22CD-C267-3109-5DEF-01E07940D885">
+<Attribute name="Staff Id" id="307416E1-5252-3D17-CA54-0FF7DB0DB96C">
 <createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 19:41:32 UTC</createdTime>
+<createdTime>2026-04-05 14:54:45 UTC</createdTime>
+<generatorID>88EBFA67-21A2-CE35-8387-6E539A705978</generatorID>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>F86ACD77-D638-A205-9054-029354C6DB6B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

@@ -1,19 +1,20 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="STAFF_to_APP_USER" directorySegmentName="seg_0" id="C985A32A-9FE4-7D3F-03C4-17481BE7534B">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 01:28:44 UTC</createdTime>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_21" directorySegmentName="seg_0" id="88EBFA67-21A2-CE35-8387-6E539A705978">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-05 14:53:39 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
 <engineerTo>
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
 </engineerTo>
 <sourcePk>6EA4D2B2-7940-28B3-9370-CC9546132C15</sourcePk>
+<targetPk>2C32DAF9-ADFA-D4AE-CBE3-DFB3E8D2854D</targetPk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
-<optionalTarget>true</optionalTarget>
+<optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>EBEE775E-313C-D494-6D5F-5C3C36742F94</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>114F1437-93B6-ACA9-0CB2-591644A3637E</targetEntity>
+<targetEntity>8D5209ED-BAFE-8B8A-5B9F-7CACDC39F005</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>
