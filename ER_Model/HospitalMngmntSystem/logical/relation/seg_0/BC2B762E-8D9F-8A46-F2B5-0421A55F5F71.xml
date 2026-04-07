@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="appuser-to-staff" directorySegmentName="seg_0" id="BC2B762E-8D9F-8A46-F2B5-0421A55F5F71">
+<createdBy>poojadoddannavar</createdBy>
+<createdTime>2026-03-19 19:57:07 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<sourcePk>0E00E417-9A19-4D70-B731-DAFAF46F1E84</sourcePk>
+<targetPk>6EA4D2B2-7940-28B3-9370-CC9546132C15</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>114F1437-93B6-ACA9-0CB2-591644A3637E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>EBEE775E-313C-D494-6D5F-5C3C36742F94</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
