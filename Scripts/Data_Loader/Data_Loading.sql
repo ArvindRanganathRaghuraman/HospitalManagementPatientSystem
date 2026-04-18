@@ -79,26 +79,30 @@ DECLARE
     ) IS
         v_id NUMBER;
     BEGIN
-        pkg_patient_mgmt.sp_register_patient(
-            p_first_name            => p_fname,
-            p_last_name             => p_lname,
-            p_dob                   => p_dob,
-            p_gender                => p_gender,
-            p_phone                 => p_phone,
-            p_email                 => p_email,
-            p_blood_type            => p_blood,
-            p_address               => p_city || ', MA',
-            p_city                  => p_city,
-            p_state                 => 'MA',
-            p_zip_code              => NULL,
-            p_insurance_id          => p_ins,
-            p_guardian_first_name   => p_gfname,
-            p_guardian_last_name    => p_glname,
-            p_guardian_relationship => p_grel,
-            p_guardian_phone        => p_gphone,
-            p_guardian_email        => NULL,
-            p_patient_id            => v_id
-        );
+        -- Direct INSERT instead of procedure call
+        -- is_minor = 'Y' set explicitly so constraint passes before trigger fires
+        INSERT INTO patient (
+            first_name, last_name, date_of_birth, gender,
+            phone, email, blood_type,
+            address, city, state, zip_code,
+            insurance_id,
+            is_minor,
+            guardian_first_name, guardian_last_name,
+            guardian_relationship, guardian_phone, guardian_email,
+            modified_by
+        ) VALUES (
+            p_fname, p_lname, p_dob, p_gender,
+            p_phone, p_email, p_blood,
+            p_city || ', MA', p_city, 'MA', NULL,
+            p_ins,
+            'Y',   -- explicitly set so constraint sees Y with guardian info
+            p_gfname, p_glname,
+            p_grel, p_gphone,
+            LOWER(p_gfname) || '.' || LOWER(p_glname) || '@gmail.com',
+            'HMS_OWNER'
+        ) RETURNING patient_id INTO v_id;
+
+        COMMIT;
         DBMS_OUTPUT.PUT_LINE('Minor inserted: ' || p_fname || ' ' || p_lname || ' | ID=' || v_id);
     EXCEPTION
         WHEN OTHERS THEN
