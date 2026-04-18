@@ -138,3 +138,162 @@ END;
 /
 
 
+
+-- =============================================================
+-- SECTION 3: 150 ADULT PATIENTS WITH INSURANCE
+-- =============================================================
+DECLARE
+    v_pid  NUMBER;
+    v_first VARCHAR2(50);
+    v_last  VARCHAR2(50);
+    v_dob   DATE;
+    v_ins   NUMBER;
+
+    TYPE t_names IS TABLE OF VARCHAR2(50);
+    v_fnames t_names := t_names(
+        'James','Mary','John','Patricia','Robert','Jennifer','Michael','Linda',
+        'David','Barbara','William','Elizabeth','Richard','Susan','Joseph','Jessica',
+        'Thomas','Sarah','Charles','Karen','Christopher','Lisa','Daniel','Nancy',
+        'Matthew','Betty','Anthony','Margaret','Mark','Sandra','Donald','Ashley',
+        'Steven','Dorothy','Paul','Kimberly','Andrew','Emily','Kenneth','Donna',
+        'George','Michelle','Joshua','Carol','Kevin','Amanda','Brian','Melissa',
+        'Edward','Deborah','Ronald','Stephanie','Timothy','Rebecca','Jason','Sharon',
+        'Jeffrey','Laura','Ryan','Cynthia','Jacob','Kathleen','Gary','Amy',
+        'Nicholas','Angela','Eric','Shirley','Jonathan','Anna','Stephen','Brenda',
+        'Larry','Pamela','Justin','Emma','Scott','Nicole','Brandon','Helen',
+        'Benjamin','Samantha','Samuel','Katherine','Raymond','Christine','Gregory',
+        'Debra','Frank','Rachel','Alexander','Carolyn','Patrick','Janet','Jack',
+        'Catherine','Dennis','Maria','Jerry','Heather','Tyler','Diane','Aaron',
+        'Julie','Henry','Joyce','Douglas','Victoria','Peter','Alice','Harold',
+        'Megan','Arthur','Theresa','Philip','Gloria','Walter','Doris','Eugene',
+        'Marie','Joe','Jean','Irene','Roger','Ann','Keith','Beverly',
+        'Terry','Rose','Carl','Lillian','Christian','Andrea','Willie','Alice',
+        'Lawrence','Judy','Sean','Judith','Gerald','Frances','Keith','Shirley',
+        'Jesse','Hannah','Bryan','Katharine','Billy','Tina','Bruce','Lori'
+    );
+    v_lnames t_names := t_names(
+        'Smith','Johnson','Williams','Brown','Jones','Garcia','Miller','Davis',
+        'Rodriguez','Martinez','Hernandez','Lopez','Gonzalez','Wilson','Anderson',
+        'Thomas','Taylor','Moore','Jackson','Martin','Lee','Perez','Thompson',
+        'White','Harris','Sanchez','Clark','Ramirez','Lewis','Robinson','Walker',
+        'Young','Allen','King','Wright','Scott','Torres','Nguyen','Hill','Flores',
+        'Green','Adams','Nelson','Baker','Hall','Rivera','Campbell','Mitchell',
+        'Carter','Roberts','Gomez','Phillips','Evans','Turner','Diaz','Parker',
+        'Cruz','Edwards','Collins','Reyes','Stewart','Morris','Morales','Murphy',
+        'Cook','Rogers','Gutierrez','Ortiz','Morgan','Cooper','Peterson','Bailey',
+        'Reed','Kelly','Howard','Ramos','Kim','Cox','Ward','Richardson','Watson',
+        'Brooks','Chavez','Wood','James','Bennett','Gray','Mendoza','Ruiz',
+        'Hughes','Price','Alvarez','Castillo','Sanders','Patel','Myers','Long',
+        'Ross','Foster','Jimenez','Powell','Jenkins','Perry','Russell','Sullivan',
+        'Bell','Coleman','Butler','Henderson','Barnes','Gonzales','Fisher','Vasquez',
+        'Simmons','Romero','Jordan','Patterson','Alexander','Hamilton','Graham',
+        'Reynolds','Griffin','Wallace','Moreno','West','Cole','Hayes','Bryant',
+        'Herrera','Gibson','Ellis','Tran','Medina','Aguilar','Stevens','Murray',
+        'Ford','Castro','Marshall','Owens','Harrison','Fernandez','Mcdonald','Woods'
+    );
+    v_bloods t_names := t_names('A+','A-','B+','B-','AB+','AB-','O+','O-');
+    v_cities t_names := t_names('Boston','Cambridge','Somerville','Quincy','Medford',
+                                 'Waltham','Newton','Brookline','Malden','Everett',
+                                 'Lynn','Salem','Lowell','Worcester','Springfield');
+    TYPE t_ids IS TABLE OF NUMBER;
+    v_ins_ids t_ids := t_ids(1,2,3,4,5,6,7,8,9,10,11,12);
+BEGIN
+    FOR i IN 1..150 LOOP
+        v_first := v_fnames(MOD(i-1, v_fnames.COUNT) + 1);
+        v_last  := v_lnames(MOD(i-1, v_lnames.COUNT) + 1);
+        -- Age 18-80: base 18 years back, spread by loop index
+        v_dob   := TRUNC(SYSDATE) - (365*18) - MOD(i * 173, 365*62);
+        v_ins   := v_ins_ids(MOD(i-1, v_ins_ids.COUNT) + 1);
+
+        BEGIN
+            pkg_patient_mgmt.sp_register_patient(
+                p_first_name   => v_first,
+                p_last_name    => v_last,
+                p_dob          => v_dob,
+                p_gender       => CASE WHEN MOD(i,2)=0 THEN 'M' ELSE 'F' END,
+                p_phone        => '617-300-' || LPAD(i, 4, '0'),
+                p_email        => LOWER(v_first) || '.' || LOWER(v_last) || i || '@hms.com',
+                p_blood_type   => v_bloods(MOD(i-1, 8) + 1),
+                p_address      => i || ' Main St, Boston MA',
+                p_city         => v_cities(MOD(i-1, v_cities.COUNT) + 1),
+                p_state        => 'MA',
+                p_zip_code     => '0' || LPAD(MOD(i, 9000) + 1000, 4, '0'),
+                p_insurance_id => v_ins,
+                p_patient_id   => v_pid
+            );
+        EXCEPTION
+            WHEN OTHERS THEN
+                DBMS_OUTPUT.PUT_LINE('ERROR adult #' || i || ': ' || SQLERRM);
+        END;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('--- Section 3 complete: 150 insured adults ---');
+END;
+/
+
+
+-- =============================================================
+-- SECTION 4: 25 UNINSURED ADULT PATIENTS
+-- =============================================================
+DECLARE
+    v_pid NUMBER;
+
+    PROCEDURE ins_adult (
+        p_fname  VARCHAR2, p_lname  VARCHAR2, p_dob  DATE,
+        p_gender CHAR,     p_blood  VARCHAR2, p_seq  NUMBER
+    ) IS
+        v_id NUMBER;
+    BEGIN
+        pkg_patient_mgmt.sp_register_patient(
+            p_first_name   => p_fname,
+            p_last_name    => p_lname,
+            p_dob          => p_dob,
+            p_gender       => p_gender,
+            p_phone        => '617-400-' || LPAD(p_seq, 4, '0'),
+            p_email        => LOWER(p_fname) || '.' || LOWER(p_lname) || p_seq || '@hms.com',
+            p_blood_type   => p_blood,
+            p_address      => (p_seq * 5) || ' Elm St, Boston MA',
+            p_city         => 'Boston',
+            p_state        => 'MA',
+            p_zip_code     => NULL,
+            p_insurance_id => NULL,
+            p_patient_id   => v_id
+        );
+        DBMS_OUTPUT.PUT_LINE('Uninsured inserted: ' || p_fname || ' ' || p_lname || ' | ID=' || v_id);
+    EXCEPTION
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('ERROR uninsured: ' || p_fname || ' ' || p_lname || ' | ' || SQLERRM);
+    END ins_adult;
+
+BEGIN
+    ins_adult('Aaron',    'Pierce',   DATE '1985-04-10', 'M', 'O+',  1);
+    ins_adult('Diana',    'Fletcher', DATE '1992-08-23', 'F', 'A+',  2);
+    ins_adult('Marcus',   'Stone',    DATE '1978-01-15', 'M', 'B-',  3);
+    ins_adult('Natalie',  'Fox',      DATE '1999-06-07', 'F', 'AB+', 4);
+    ins_adult('Derek',    'Hunt',     DATE '1965-11-30', 'M', 'O-',  5);
+    ins_adult('Tiffany',  'Warren',   DATE '1990-03-19', 'F', 'A-',  6);
+    ins_adult('Calvin',   'Moss',     DATE '1982-09-28', 'M', 'B+',  7);
+    ins_adult('Amber',    'Cole',     DATE '2000-05-14', 'F', 'O+',  8);
+    ins_adult('Travis',   'Simmons',  DATE '1975-12-03', 'M', 'AB-', 9);
+    ins_adult('Crystal',  'Norman',   DATE '1988-07-22', 'F', 'A+',  10);
+    ins_adult('Brett',    'Owen',     DATE '1970-02-11', 'M', 'B+',  11);
+    ins_adult('Melanie',  'Cross',    DATE '1995-10-05', 'F', 'O-',  12);
+    ins_adult('Randall',  'Barker',   DATE '1961-04-27', 'M', 'A-',  13);
+    ins_adult('Vanessa',  'Hicks',    DATE '2001-08-16', 'F', 'B-',  14);
+    ins_adult('Clifford', 'Sparks',   DATE '1979-01-09', 'M', 'AB+', 15);
+    ins_adult('Leah',     'Padilla',  DATE '1993-05-31', 'F', 'O+',  16);
+    ins_adult('Wendell',  'Walters',  DATE '1968-09-20', 'M', 'A+',  17);
+    ins_adult('Candace',  'Bradley',  DATE '1986-03-13', 'F', 'B+',  18);
+    ins_adult('Ruben',    'Chambers', DATE '2003-07-04', 'M', 'O+',  19);
+    ins_adult('Stacy',    'Obrien',   DATE '1977-11-25', 'F', 'A-',  20);
+    ins_adult('Evan',     'Larson',   DATE '1991-06-18', 'M', 'AB-', 21);
+    ins_adult('Tricia',   'Ingram',   DATE '1984-02-07', 'F', 'B-',  22);
+    ins_adult('Byron',    'Bridges',  DATE '1959-10-15', 'M', 'O-',  23);
+    ins_adult('Felicia',  'Nunez',    DATE '1996-04-02', 'F', 'A+',  24);
+    ins_adult('Grant',    'Vega',     DATE '1972-08-29', 'M', 'B+',  25);
+
+    DBMS_OUTPUT.PUT_LINE('--- Section 4 complete: 25 uninsured adults ---');
+END;
+/
+
+
+
