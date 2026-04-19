@@ -119,6 +119,97 @@ LEFT JOIN insurance i ON i.insurance_id = p.insurance_id
 WHERE p.insurance_id IS NULL
    OR i.status         IN ('EXPIRED', 'INACTIVE')
    OR i.policy_expiry_date < SYSDATE;
+   
+   
+CREATE OR REPLACE VIEW vw_patient_profile AS
+SELECT
+    p.patient_id,
+    p.first_name,
+    p.last_name,
+    p.first_name || ' ' || p.last_name          AS full_name,
+    p.date_of_birth,
+    TRUNC(MONTHS_BETWEEN(SYSDATE, p.date_of_birth) / 12) AS age,
+    p.gender,
+    p.blood_type,
+    p.phone,
+    p.email,
+    p.address,
+    p.city,
+    p.state,
+    p.zip_code,
+    p.is_minor,
+    p.status                                     AS patient_status,
+    p.registration_date,
+    -- Insurance details
+    i.insurance_id,
+    i.provider_name                              AS insurance_provider,
+    i.policy_number,
+    i.coverage_percentage,
+    i.policy_start_date,
+    i.policy_expiry_date,
+    i.status                                     AS insurance_status,
+    -- Coverage flag for billing
+    CASE
+        WHEN i.insurance_id IS NULL              THEN 'UNINSURED'
+        WHEN i.status != 'ACTIVE'                THEN 'INVALID INSURANCE'
+        WHEN i.policy_expiry_date < SYSDATE      THEN 'EXPIRED INSURANCE'
+        ELSE 'INSURED'
+    END                                          AS coverage_flag,
+    -- Guardian info (only populated for minors)
+    p.guardian_first_name,
+    p.guardian_last_name,
+    p.guardian_first_name || ' ' ||
+        p.guardian_last_name                     AS guardian_name,
+    p.guardian_relationship,
+    p.guardian_phone,
+    p.guardian_email
+FROM      patient   p
+LEFT JOIN insurance i ON i.insurance_id = p.insurance_id;
+
+
+-- =============================================================
+-- VIEW 5: VW_MINOR_PATIENTS
+-- Purpose : All minor patients with guardian contact details
+--           Used for compliance checks and guardian outreach
+--           Proves business rule: minors must have guardian info
+-- Usage   : SELECT * FROM vw_minor_patients;
+--           SELECT * FROM vw_minor_patients
+--           WHERE guardian_name IS NULL; -- should return 0 rows
+-- =============================================================
+CREATE OR REPLACE VIEW vw_minor_patients AS
+SELECT
+    p.patient_id,
+    p.first_name || ' ' || p.last_name           AS patient_name,
+    p.date_of_birth,
+    TRUNC(MONTHS_BETWEEN(SYSDATE, p.date_of_birth) / 12) AS age,
+    p.gender,
+    p.blood_type,
+    p.phone,
+    p.email,
+    p.status                                      AS patient_status,
+    p.city,
+    p.state,
+    -- Guardian details
+    p.guardian_first_name || ' ' ||
+        p.guardian_last_name                      AS guardian_name,
+    p.guardian_relationship,
+    p.guardian_phone,
+    p.guardian_email,
+    -- Insurance details
+    i.provider_name                               AS insurance_provider,
+    i.coverage_percentage,
+    i.policy_expiry_date,
+    i.status                                      AS insurance_status,
+    CASE
+        WHEN i.insurance_id IS NULL THEN 'UNINSURED'
+        WHEN i.status != 'ACTIVE'   THEN 'INVALID'
+        ELSE 'INSURED'
+    END                                           AS coverage_flag
+FROM      patient   p
+LEFT JOIN insurance i ON i.insurance_id = p.insurance_id
+WHERE p.is_minor = 'Y';
 
 
 COMMIT;
+
+
