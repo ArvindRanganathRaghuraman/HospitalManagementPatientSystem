@@ -300,4 +300,200 @@ END;
 /
 
 
+-- =============================================================
+-- SECTION 5: APPOINTMENTS (10 records)
+-- Mix of COMPLETED, SCHEDULED, CANCELLED across insured,
+-- uninsured, and minor patients — to support medical history view
+-- doctor_id is a manual integer (no FK, doctor table is separate module)
+-- =============================================================
+BEGIN
+    -- Minor patient 1 (Emma Smith, ins 80%) — COMPLETED annual checkup
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2025-12-10', '09:00 AM', 'COMPLETED', 'Annual checkup', 'Patient doing well, all vitals normal', 1, 3, 'HMS_OWNER');
+
+    -- Minor patient 2 (Liam Johnson, ins 90%) — COMPLETED fever visit
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-01-15', '10:30 AM', 'COMPLETED', 'Fever and cold', 'Temperature 101F, prescribed antibiotics and antihistamine', 2, 5, 'HMS_OWNER');
+
+    -- Minor patient 5 (Ava Davis) — SCHEDULED follow-up
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-05-20', '11:00 AM', 'SCHEDULED', 'Follow-up visit', NULL, 5, 3, 'HMS_OWNER');
+
+    -- Adult insured patient 26 (ins 80%) — COMPLETED hypertension
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-01-08', '02:00 PM', 'COMPLETED', 'Hypertension checkup', 'BP 145/90, adjusted medication dosage', 26, 7, 'HMS_OWNER');
+
+    -- Adult insured patient 27 (ins 70%) — COMPLETED diabetes
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-02-03', '09:30 AM', 'COMPLETED', 'Diabetes management', 'Blood sugar well controlled, continue current plan', 27, 7, 'HMS_OWNER');
+
+    -- Adult insured patient 28 — COMPLETED back pain
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-02-20', '03:00 PM', 'COMPLETED', 'Back pain', 'Muscle strain, physical therapy recommended', 28, 9, 'HMS_OWNER');
+
+    -- Adult insured patient 29 — CANCELLED
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, cancelled_date, cancellation_reason, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-03-05', '10:00 AM', 'CANCELLED', 'General checkup', DATE '2026-03-03', 'Patient unavailable', 29, 3, 'HMS_OWNER');
+
+    -- Adult insured patient 30 — SCHEDULED upcoming
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-05-25', '01:00 PM', 'SCHEDULED', 'Blood test review', NULL, 30, 7, 'HMS_OWNER');
+
+    -- Uninsured adult patient 176 — COMPLETED chest pain
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-01-22', '11:30 AM', 'COMPLETED', 'Chest pain evaluation', 'ECG normal, stress test ordered', 176, 12, 'HMS_OWNER');
+
+    -- Uninsured adult patient 177 — COMPLETED skin rash
+    INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-03-10', '04:00 PM', 'COMPLETED', 'Skin rash', 'Allergic reaction, antihistamine prescribed', 177, 5, 'HMS_OWNER');
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('SUCCESS: 10 appointments inserted.');
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('ERROR inserting appointments: ' || SQLERRM);
+END;
+/
+
+
+-- =============================================================
+-- SECTION 6: PRESCRIPTIONS + PRESCRIPTION ITEMS
+-- 5 prescriptions for COMPLETED appointments only
+-- appointment IDs: 1,2,4,5,9 are COMPLETED
+-- =============================================================
+BEGIN
+    -- Prescription 1: Appointment 1 — Emma Smith (annual checkup)
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
+    VALUES (prescription_seq.NEXTVAL, DATE '2025-12-10', 'Routine checkup prescription', 1, 3, 1, 'HMS_OWNER');
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Amoxicillin', '500mg', 'Twice daily', 7, 'Take with food', 1);
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Ibuprofen', '200mg', 'As needed', 5, 'Do not exceed 3 tablets per day', 1);
+
+    -- Prescription 2: Appointment 2 — Liam Johnson (fever and cold)
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
+    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-15', 'Fever treatment course', 2, 5, 2, 'HMS_OWNER');
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Cetirizine', '10mg', 'Once daily', 10, 'Take at bedtime', 2);
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Paracetamol', '500mg', 'Three times daily', 5, 'Take after meals', 2);
+
+    -- Prescription 3: Appointment 4 — Adult patient 26 (hypertension)
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
+    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-08', 'Hypertension medication adjusted', 26, 7, 4, 'HMS_OWNER');
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Lisinopril', '10mg', 'Once daily', 30, 'Take in the morning', 3);
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Amlodipine', '5mg', 'Once daily', 30, 'Monitor blood pressure daily', 3);
+
+    -- Prescription 4: Appointment 5 — Adult patient 27 (diabetes)
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
+    VALUES (prescription_seq.NEXTVAL, DATE '2026-02-03', 'Diabetes long-term management', 27, 7, 5, 'HMS_OWNER');
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Metformin', '1000mg', 'Twice daily', 90, 'Take with meals', 4);
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Glipizide', '5mg', 'Once daily', 90, 'Take 30 min before breakfast', 4);
+
+    -- Prescription 5: Appointment 9 — Uninsured patient 176 (chest pain)
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
+    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-22', 'Cardiac monitoring and preventive care', 176, 12, 9, 'HMS_OWNER');
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Aspirin', '81mg', 'Once daily', 30, 'Take with water', 5);
+
+    INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
+    VALUES (prescription_item_seq.NEXTVAL, 'Atorvastatin', '20mg', 'Once daily at night', 30, 'Avoid grapefruit juice', 5);
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('SUCCESS: 5 prescriptions with 10 medication items inserted.');
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('ERROR inserting prescriptions: ' || SQLERRM);
+END;
+/
+
+
+-- =============================================================
+-- SECTION 7: BILLS (5 records)
+-- Trigger trg_bill_bi auto-calculates insurance_coverage_amt
+-- and net_amount — net_amount=0 below is just a placeholder
+-- Patient 1  : ins 80%, total 250 → coverage 200, net 50
+-- Patient 2  : ins 90%, total 180 → coverage 162, net 18
+-- Patient 26 : ins 80%, total 400 → coverage 320, net 80
+-- Patient 27 : ins 70%, total 330 → coverage 231, net 99
+-- Patient 176: uninsured, total 450 → net 450
+-- =============================================================
+BEGIN
+    -- Bill 1: Patient 1 (Emma Smith) — appointment 1
+    INSERT INTO bill (bill_id, service_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 200, 50, 250, 0, 0, 'PENDING', 1, 1, 'HMS_OWNER');
+
+    -- Bill 2: Patient 2 (Liam Johnson) — appointment 2
+    INSERT INTO bill (bill_id, service_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 150, 30, 180, 0, 0, 'PENDING', 2, 2, 'HMS_OWNER');
+
+    -- Bill 3: Patient 26 (adult insured) — appointment 4
+    INSERT INTO bill (bill_id, service_charges, medication_charges, other_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 300, 80, 20, 400, 0, 0, 'PENDING', 26, 4, 'HMS_OWNER');
+
+    -- Bill 4: Patient 27 (adult insured) — appointment 5
+    INSERT INTO bill (bill_id, service_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 250, 80, 330, 0, 0, 'PENDING', 27, 5, 'HMS_OWNER');
+
+    -- Bill 5: Patient 176 (uninsured) — appointment 9, full amount owed
+    INSERT INTO bill (bill_id, service_charges, other_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 400, 50, 450, 0, 0, 'PENDING', 176, 9, 'HMS_OWNER');
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('SUCCESS: 5 bills inserted (trigger auto-applied insurance coverage).');
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('ERROR inserting bills: ' || SQLERRM);
+END;
+/
+
+
+-- =============================================================
+-- SECTION 8: PAYMENTS (3 records)
+-- Bill 1 net=50  → fully paid (PAID)
+-- Bill 2 net=18  → fully paid (PAID)
+-- Bill 5 net=450 → partially paid (PARTIALLY_PAID)
+-- =============================================================
+BEGIN
+    -- Payment 1: Bill 1 fully paid (Emma Smith, net_amount=50)
+    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id, modified_by)
+    VALUES (payment_seq.NEXTVAL, 50, 'CASH', 'TXN-2025-1201', 1, 'HMS_OWNER');
+    UPDATE bill SET status = 'PAID', modified_date = SYSDATE WHERE bill_id = 1;
+
+    -- Payment 2: Bill 2 fully paid (Liam Johnson, net_amount=18)
+    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id, modified_by)
+    VALUES (payment_seq.NEXTVAL, 18, 'INSURANCE', 'TXN-2026-0115', 2, 'HMS_OWNER');
+    UPDATE bill SET status = 'PAID', modified_date = SYSDATE WHERE bill_id = 2;
+
+    -- Payment 3: Bill 5 partial payment (uninsured patient 176, paying out of pocket)
+    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id, modified_by)
+    VALUES (payment_seq.NEXTVAL, 200, 'DEBIT_CARD', 'TXN-2026-0122', 5, 'HMS_OWNER');
+    UPDATE bill SET status = 'PARTIALLY_PAID', modified_date = SYSDATE WHERE bill_id = 5;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('SUCCESS: 3 payments inserted.');
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('ERROR inserting payments: ' || SQLERRM);
+END;
+/
+
+
 

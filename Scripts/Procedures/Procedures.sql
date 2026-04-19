@@ -210,7 +210,7 @@ CREATE OR REPLACE PACKAGE BODY pkg_patient_mgmt AS
             ROLLBACK;
             RAISE_APPLICATION_ERROR(-20011,
                 'ERROR: Patient is a minor (Age: ' || v_age || '). ' ||
-                'Guardian first name is mandatory.');
+                'Guardian details are mandatory.');
 
         WHEN e_ins_not_found THEN
             ROLLBACK;
