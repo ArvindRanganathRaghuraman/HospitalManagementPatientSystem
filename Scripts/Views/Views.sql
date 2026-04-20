@@ -13,6 +13,10 @@ BEGIN EXECUTE IMMEDIATE 'DROP VIEW vw_patient_visit_summary';  EXCEPTION WHEN OT
 /
 BEGIN EXECUTE IMMEDIATE 'DROP VIEW vw_uninsured_patients';     EXCEPTION WHEN OTHERS THEN NULL; END;
 /
+BEGIN EXECUTE IMMEDIATE 'DROP VIEW vw_patient_profile';        EXCEPTION WHEN OTHERS THEN NULL; END;
+/
+BEGIN EXECUTE IMMEDIATE 'DROP VIEW vw_minor_patients';         EXCEPTION WHEN OTHERS THEN NULL; END;
+/
 
 
 -- =============================================================

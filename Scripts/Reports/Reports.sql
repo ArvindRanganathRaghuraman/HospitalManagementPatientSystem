@@ -64,3 +64,56 @@ FROM      patient   p
 LEFT JOIN insurance i ON i.insurance_id = p.insurance_id
 WHERE p.is_minor = 'Y'
 ORDER BY age DESC;
+
+
+-- =============================================================
+-- REPORT 4: BLOOD TYPE DISTRIBUTION
+-- Purpose : Count and percentage of each blood type across all
+--           patients — emergency readiness and blood bank planning
+-- Business Value: Ensures hospital is prepared for transfusions
+-- Tables  : PATIENT (direct)
+-- =============================================================
+SELECT
+    blood_type,
+    COUNT(*)                                                  AS total_patients,
+    ROUND(COUNT(*) * 100.0 /
+        SUM(COUNT(*)) OVER (), 2)                            AS pct_of_total,
+    SUM(CASE WHEN is_minor = 'Y' THEN 1 ELSE 0 END)         AS minors,
+    SUM(CASE WHEN is_minor = 'N' THEN 1 ELSE 0 END)         AS adults
+FROM   patient
+WHERE  blood_type IS NOT NULL
+GROUP  BY blood_type
+ORDER  BY total_patients DESC;
+
+
+-- =============================================================
+-- REPORT 5: UNINSURED PATIENTS — REVENUE CYCLE
+-- Purpose : All patients with no, expired, or inactive insurance
+--           grouped by issue type for billing follow-up
+-- Business Value: Revenue cycle — identify patients needing
+--                 insurance enrollment or renewal outreach
+-- Tables  : VW_UNINSURED_PATIENTS
+-- =============================================================
+
+-- Summary by issue type
+SELECT
+    insurance_issue,
+    COUNT(*)                                                  AS total_patients,
+    ROUND(COUNT(*) * 100.0 /
+        SUM(COUNT(*)) OVER (), 2)                            AS pct_of_uninsured
+FROM   vw_uninsured_patients
+GROUP  BY insurance_issue
+ORDER  BY total_patients DESC;
+
+-- Full detail list
+SELECT
+    patient_id,
+    patient_name,
+    insurance_issue,
+    provider_name,
+    policy_number,
+    policy_expiry_date,
+    insurance_status,
+    patient_status
+FROM   vw_uninsured_patients
+ORDER  BY insurance_issue, patient_name;
