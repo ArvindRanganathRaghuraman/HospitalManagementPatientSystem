@@ -62,6 +62,17 @@ BEGIN
         :NEW.bill_id := bill_seq.NEXTVAL;
     END IF;
 
+    -- Auto-set due_date to 30 days from bill_date
+    :NEW.due_date := NVL(:NEW.due_date, NVL(:NEW.bill_date, SYSDATE) + 30);
+
+    -- Auto-calculate total_amount from line items if not provided
+    IF :NEW.total_amount IS NULL OR :NEW.total_amount = 0 THEN
+        :NEW.total_amount := NVL(:NEW.service_charges,    0)
+                           + NVL(:NEW.room_charges,       0)
+                           + NVL(:NEW.medication_charges, 0)
+                           + NVL(:NEW.other_charges,      0);
+    END IF;
+
     -- Auto-fetch and apply insurance coverage if not already provided
     IF NVL(:NEW.insurance_coverage_amt, 0) = 0 THEN
         BEGIN

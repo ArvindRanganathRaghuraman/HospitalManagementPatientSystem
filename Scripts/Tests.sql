@@ -9,13 +9,13 @@ SET SERVEROUTPUT ON;
 
 -- Remove any leftover records from prior test runs
 BEGIN
-    DELETE FROM payment  WHERE bill_id   IN (SELECT bill_id   FROM bill    WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '999-TEST-%'));
-    DELETE FROM bill     WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '999-TEST-%');
-    DELETE FROM prescription_item WHERE prescription_id IN (SELECT prescription_id FROM prescription WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '999-TEST-%'));
-    DELETE FROM prescription WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '999-TEST-%');
-    DELETE FROM admission    WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '999-TEST-%');
-    DELETE FROM appointment  WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '999-TEST-%');
-    DELETE FROM patient  WHERE phone LIKE '999-TEST-%';
+    DELETE FROM payment  WHERE bill_id   IN (SELECT bill_id   FROM bill    WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '9990000%'));
+    DELETE FROM bill     WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '9990000%');
+    DELETE FROM prescription_item WHERE prescription_id IN (SELECT prescription_id FROM prescription WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '9990000%'));
+    DELETE FROM prescription WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '9990000%');
+    DELETE FROM admission    WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '9990000%');
+    DELETE FROM appointment  WHERE patient_id IN (SELECT patient_id FROM patient WHERE phone LIKE '9990000%');
+    DELETE FROM patient  WHERE phone LIKE '9990000%';
     COMMIT;
 END;
 /
@@ -53,7 +53,7 @@ DECLARE
 BEGIN
     -- Insert an adult directly (trigger should set is_minor = 'N')
     INSERT INTO patient (first_name, last_name, date_of_birth, gender, phone)
-    VALUES ('Trigger', 'TestAdult', DATE '1990-06-15', 'M', '999-TEST-TRG1')
+    VALUES ('Trigger', 'TestAdult', DATE '1990-06-15', 'M', '9990000001')
     RETURNING patient_id, is_minor, modified_date INTO v_id, v_minor, v_mdate;
 
     IF v_id IS NOT NULL THEN
@@ -79,8 +79,8 @@ BEGIN
         first_name, last_name, date_of_birth, gender, phone,
         guardian_first_name, guardian_last_name, guardian_relationship, guardian_phone
     )
-    VALUES ('Trigger', 'TestMinor', DATE '2015-01-01', 'F', '999-TEST-TRG2',
-            'Guardian', 'TestGuardian', 'PARENT', '999-TEST-G001')
+    VALUES ('Trigger', 'TestMinor', DATE '2015-01-01', 'F', '9990000002',
+            'Guardian', 'TestGuardian', 'PARENT', '9990000003')
     RETURNING is_minor INTO v_minor;
 
     IF v_minor = 'Y' THEN
@@ -267,7 +267,7 @@ BEGIN
         p_last_name    => 'Turner',
         p_dob          => DATE '1992-08-21',
         p_gender       => 'M',
-        p_phone        => '999-TEST-0001',
+        p_phone        => '9990000005',
         p_email        => 'alex.turner@test.com',
         p_blood_type   => 'B+',
         p_city         => 'Boston',
@@ -283,7 +283,7 @@ BEGIN
         p_last_name             => 'Reed',
         p_dob                   => DATE '2012-04-10',
         p_gender                => 'F',
-        p_phone                 => '999-TEST-0002',
+        p_phone                 => '9990000006',
         p_blood_type            => 'A-',
         p_city                  => 'Cambridge',
         p_state                 => 'MA',
@@ -291,7 +291,7 @@ BEGIN
         p_guardian_first_name   => 'Jordan',
         p_guardian_last_name    => 'Reed',
         p_guardian_relationship => 'PARENT',
-        p_guardian_phone        => '999-TEST-G002',
+        p_guardian_phone        => '9990000004',
         p_patient_id            => v_id
     );
     DBMS_OUTPUT.PUT_LINE('PASS [SP_REGISTER_PATIENT] Minor with guardian registered. ID = ' || v_id);
@@ -302,7 +302,7 @@ END;
 SELECT patient_id, first_name || ' ' || last_name AS name,
        is_minor, insurance_id, guardian_first_name, guardian_relationship
 FROM   patient
-WHERE  phone IN ('999-TEST-0001', '999-TEST-0002')
+WHERE  phone IN ('9990000005', '9990000006')
 ORDER  BY patient_id;
 
 
@@ -313,7 +313,7 @@ ORDER  BY patient_id;
 DECLARE
     v_id NUMBER;
 BEGIN
-    SELECT patient_id INTO v_id FROM patient WHERE phone = '999-TEST-0001';
+    SELECT patient_id INTO v_id FROM patient WHERE phone = '9990000005';
 
     pkg_patient_mgmt.sp_update_patient(
         p_patient_id => v_id,
@@ -327,7 +327,7 @@ END;
 -- Verify updated fields
 SELECT patient_id, first_name, city, blood_type, modified_date
 FROM   patient
-WHERE  phone = '999-TEST-0001';
+WHERE  phone = '9990000005';
 
 
 -- =============================================================
@@ -337,7 +337,7 @@ WHERE  phone = '999-TEST-0001';
 DECLARE
     v_id NUMBER;
 BEGIN
-    SELECT patient_id INTO v_id FROM patient WHERE phone = '999-TEST-0001';
+    SELECT patient_id INTO v_id FROM patient WHERE phone = '9990000005';
 
     pkg_patient_mgmt.sp_link_insurance(
         p_patient_id   => v_id,
@@ -351,7 +351,7 @@ END;
 SELECT p.patient_id, p.first_name,
        i.provider_name, i.coverage_percentage, i.status AS ins_status
 FROM   patient p JOIN insurance i ON i.insurance_id = p.insurance_id
-WHERE  p.phone = '999-TEST-0001';
+WHERE  p.phone = '9990000005';
 
 
 -- =============================================================
@@ -362,7 +362,7 @@ WHERE  p.phone = '999-TEST-0001';
 DECLARE
     v_id NUMBER;
 BEGIN
-    SELECT patient_id INTO v_id FROM patient WHERE phone = '999-TEST-0001';
+    SELECT patient_id INTO v_id FROM patient WHERE phone = '9990000005';
 
     -- 12a: First deactivation — should succeed
     pkg_patient_mgmt.sp_deactivate_patient(
@@ -387,7 +387,7 @@ END;
 /
 
 -- Verify status is INACTIVE
-SELECT patient_id, first_name, status FROM patient WHERE phone = '999-TEST-0001';
+SELECT patient_id, first_name, status FROM patient WHERE phone = '9990000005';
 
 
 -- =============================================================
@@ -472,7 +472,7 @@ BEGIN
         pkg_patient_mgmt.sp_register_patient(
             p_first_name => 'NoGuardian', p_last_name => 'Minor',
             p_dob        => DATE '2015-05-05', p_gender => 'F',
-            p_phone      => '999-TEST-NEG01',
+            p_phone      => '9990000011',
             p_patient_id => v_id
         );
         expect_error('MINOR NO GUARDIAN', 20011);
@@ -487,7 +487,7 @@ BEGIN
         pkg_patient_mgmt.sp_register_patient(
             p_first_name   => 'Bad', p_last_name => 'Insurance',
             p_dob          => DATE '1980-01-01', p_gender => 'M',
-            p_phone        => '999-TEST-NEG02',
+            p_phone        => '9990000012',
             p_insurance_id => 9999,
             p_patient_id   => v_id
         );
@@ -503,7 +503,7 @@ BEGIN
         pkg_patient_mgmt.sp_register_patient(
             p_first_name   => 'Inactive', p_last_name => 'Ins',
             p_dob          => DATE '1975-03-10', p_gender => 'M',
-            p_phone        => '999-TEST-NEG03',
+            p_phone        => '9990000013',
             p_insurance_id => 15,
             p_patient_id   => v_id
         );
@@ -519,7 +519,7 @@ BEGIN
         pkg_patient_mgmt.sp_register_patient(
             p_first_name   => 'Expired', p_last_name => 'Ins',
             p_dob          => DATE '1988-07-20', p_gender => 'F',
-            p_phone        => '999-TEST-NEG04',
+            p_phone        => '9990000014',
             p_insurance_id => 13,
             p_patient_id   => v_id
         );
@@ -535,7 +535,7 @@ BEGIN
         pkg_patient_mgmt.sp_register_patient(
             p_first_name => 'Future', p_last_name => 'DOB',
             p_dob        => SYSDATE + 30, p_gender => 'M',
-            p_phone      => '999-TEST-NEG05',
+            p_phone      => '9990000015',
             p_patient_id => v_id
         );
         expect_error('FUTURE DOB', 20009);
