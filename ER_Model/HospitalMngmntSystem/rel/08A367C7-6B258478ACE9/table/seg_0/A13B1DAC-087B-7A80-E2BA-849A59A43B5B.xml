@@ -142,7 +142,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Appointment_Id" id="FFCF8575-30E1-EA34-A805-97868403E491">
+<Column name="Appointment_Appointment_Id" id="FFCF8575-30E1-EA34-A805-97868403E491">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:23:54 UTC</createdTime>
 <generatorID>45C963AA-8D99-6370-2F4A-77551DBBCD96</generatorID>
@@ -157,7 +157,7 @@
 <colAssociation fkAssociation="66EC13AC-1B67-757E-5EB6-99B79D575B3F" referredColumn="67F12569-EAA9-D620-3EC6-E3501C6A8F71"/>
 </associations>
 </Column>
-<Column name="Staff_Id" id="A4C5AEEB-4427-38FD-38A4-915482A1BAF2">
+<Column name="Staff_Staff_Id" id="A4C5AEEB-4427-38FD-38A4-915482A1BAF2">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:25:04 UTC</createdTime>
 <generatorID>38F16A55-3705-C7DF-59CD-91D9CE789E23</generatorID>

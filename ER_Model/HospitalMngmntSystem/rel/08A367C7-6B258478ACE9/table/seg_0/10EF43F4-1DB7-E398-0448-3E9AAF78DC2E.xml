@@ -115,19 +115,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Parent_Appointment_Id" id="E436A38B-8B80-56D8-A473-768D7AC25497">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-16 01:07:08 UTC</createdTime>
-<generatorID>05974826-C812-F348-49AE-8CD18E53FB1C</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="Patient_id" id="31B6CDAD-5A3C-0680-FD13-AACF96A7B083">
+<Column name="Patient_Patient_id" id="31B6CDAD-5A3C-0680-FD13-AACF96A7B083">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 00:36:32 UTC</createdTime>
 <generatorID>346D4B82-F1EA-3A2E-F6CF-4496A1525AE9</generatorID>
@@ -154,6 +142,20 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Admission_Id" id="A7E257A0-A7B2-AF59-57C9-998648D5F783">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-21 16:19:32 UTC</createdTime>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48B2B669-2D7C-4C14-5D04-D813E5C93D0D" referredColumn="7C90574A-5D08-4806-CED3-C07696AE97E2"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="DDD5833D-B3C1-2701-8E6A-D7F928003287" name="Appointment_PK">
@@ -177,6 +179,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="31B6CDAD-5A3C-0680-FD13-AACF96A7B083"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DCFE6ECB-2396-0EE9-44B7-B81CCC692EDF" name="Appointment_Admission_FK">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-21 16:15:04 UTC</createdTime>
+<generatorID>3FB2C3B8-9B9F-923D-4CC5-65CC608EF80B</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7E257A0-A7B2-AF59-57C9-998648D5F783"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

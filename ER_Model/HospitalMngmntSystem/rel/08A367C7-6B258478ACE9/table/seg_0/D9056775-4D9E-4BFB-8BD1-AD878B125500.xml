@@ -94,20 +94,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Doctor_Id" id="D8143558-59DB-1126-BBAF-2D5692DEE79A">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 00:46:35 UTC</createdTime>
-<generatorID>FFF02623-47A2-A5BA-AF9D-E69CEBB4F7BD</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_DOCTOR_VACATION_Doctor_Id</notNullConstraintName>
-</Column>
-<Column name="Staff_Id" id="3F5B812C-951D-9993-6463-B3B9B0B5741B">
+<Column name="Staff_Staff_Id" id="3F5B812C-951D-9993-6463-B3B9B0B5741B">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 00:48:25 UTC</createdTime>
 <generatorID>EADD9FC3-6D3C-01D7-AF81-F934E4EFE703</generatorID>

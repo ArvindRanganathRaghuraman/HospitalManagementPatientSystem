@@ -189,19 +189,6 @@
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Guardian_Id" id="A20D9D82-60A1-51B0-E9AE-4FF1ADACBA6F">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-18 23:48:22 UTC</createdTime>
-<generatorID>286B571D-5F06-C10A-A048-7FFB8EDD87B1</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="Insurance_Insurance_Id" id="1EE0A26B-CCCD-03AF-61E7-3C628052A243">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 00:06:49 UTC</createdTime>

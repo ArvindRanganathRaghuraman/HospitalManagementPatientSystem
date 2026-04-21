@@ -68,20 +68,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Appointment Id" id="296363B1-E905-2024-A70F-E4F9D9B41816">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 01:13:19 UTC</createdTime>
-<generatorID>FEDBA719-9865-CBA0-895B-F5C2B77D05D4</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<referedAttribute>7F4CACAC-1807-702B-6580-860FD00B2751</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="4A3DAFFC-C5D1-EEC0-39C2-33EE89F06C7E" name="Prescription PK">

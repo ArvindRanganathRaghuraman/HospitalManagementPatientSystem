@@ -121,7 +121,7 @@
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Department_Id" id="3D0A15EB-CD48-BBE9-6119-A77F47F46662">
+<Column name="Department_Department_Id" id="3D0A15EB-CD48-BBE9-6119-A77F47F46662">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:27:19 UTC</createdTime>
 <generatorID>54F679D8-D7E3-6823-8EA9-F688992BE870</generatorID>

@@ -117,3 +117,5 @@ SELECT
     patient_status
 FROM   vw_uninsured_patients
 ORDER  BY insurance_issue, patient_name;
+
+

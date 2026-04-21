@@ -15,18 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Appointment Id" id="7F4CACAC-1807-702B-6580-860FD00B2751">
-<createdBy>arvindranganathraghuraman</createdBy>
-<createdTime>2026-03-15 19:42:35 UTC</createdTime>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Appointment Date" id="AEE7BBF9-9F79-6EE6-124A-3446DA0AB955">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:43:26 UTC</createdTime>
@@ -131,7 +119,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Parent Appointment Id" id="05974826-C812-F348-49AE-8CD18E53FB1C">
+<Attribute name="Appointment Id" id="05974826-C812-F348-49AE-8CD18E53FB1C">
 <createdBy>arvindranganathraghuraman</createdBy>
 <createdTime>2026-03-15 19:45:59 UTC</createdTime>
 <ownerDesignName>HospitalMngmntSystem</ownerDesignName>
@@ -158,6 +146,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Appointment Id1" id="93255481-89EE-87D2-A12E-3FA0B64F5027">
+<createdBy>arvindranganathraghuraman</createdBy>
+<createdTime>2026-04-21 16:29:22 UTC</createdTime>
+<generatorID>3FB2C3B8-9B9F-923D-4CC5-65CC608EF80B</generatorID>
+<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
+<engineerTo>
+<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
+</engineerTo>
+<referedAttribute>8D698015-D30A-15CB-5620-E9E6B6450B9F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="EEAB2C4C-BE6C-639E-179B-E4E53F6002DE" name="Appointment PK">
@@ -169,9 +171,6 @@
 <item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="false"/>
 </engineerTo>
 <pk>true</pk>
-<usedAttributes>
-<attributeRef>7F4CACAC-1807-702B-6580-860FD00B2751</attributeRef>
-</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

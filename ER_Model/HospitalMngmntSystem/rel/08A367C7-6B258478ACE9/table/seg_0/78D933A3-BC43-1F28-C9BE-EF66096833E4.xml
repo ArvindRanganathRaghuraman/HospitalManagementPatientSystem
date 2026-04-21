@@ -156,7 +156,7 @@
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Patient_id" id="D5106A6B-0B88-D44A-8892-9F48790EA4F8">
+<Column name="Patient_Patient_id" id="D5106A6B-0B88-D44A-8892-9F48790EA4F8">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:16:36 UTC</createdTime>
 <generatorID>6D472C93-F984-17A3-49AC-CE4872F87118</generatorID>
@@ -171,7 +171,7 @@
 <colAssociation fkAssociation="A0DBE35D-18A4-AA38-716F-457C0AABD97F" referredColumn="FC7C7E12-7A43-8F55-03EB-D1BC9EE1AD25"/>
 </associations>
 </Column>
-<Column name="Admission_Id" id="CEFF8E80-A5B8-E8AC-9263-658DE84AA7D2">
+<Column name="Admission_Admission_Id" id="CEFF8E80-A5B8-E8AC-9263-658DE84AA7D2">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:22:28 UTC</createdTime>
 <generatorID>2AF7C615-7774-E4C0-8DF5-C555EA105BD8</generatorID>
@@ -187,7 +187,7 @@
 <colAssociation fkAssociation="4FF8C3D0-1BF0-98E7-3D19-FC1B5B5C2CE5" referredColumn="7C90574A-5D08-4806-CED3-C07696AE97E2"/>
 </associations>
 </Column>
-<Column name="Appointment_Id" id="1D97E6E2-D327-8F2A-1137-8ECC000F432C">
+<Column name="Appointment_Appointment_Id" id="1D97E6E2-D327-8F2A-1137-8ECC000F432C">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:39:07 UTC</createdTime>
 <generatorID>69D84279-A802-7CC8-7C6D-F6DBDD25F181</generatorID>

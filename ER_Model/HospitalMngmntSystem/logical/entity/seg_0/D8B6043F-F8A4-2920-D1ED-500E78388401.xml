@@ -161,20 +161,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Appointment Id" id="45C963AA-8D99-6370-2F4A-77551DBBCD96">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 01:23:39 UTC</createdTime>
-<generatorID>8B461318-0FEE-7E71-C0F1-A96E112CFC9B</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<referedAttribute>7F4CACAC-1807-702B-6580-860FD00B2751</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="Staff Id" id="38F16A55-3705-C7DF-59CD-91D9CE789E23">
 <createdBy>poojadoddannavar</createdBy>
 <createdTime>2026-03-19 01:24:50 UTC</createdTime>

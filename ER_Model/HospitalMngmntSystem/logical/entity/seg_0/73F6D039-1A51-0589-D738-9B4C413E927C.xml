@@ -203,21 +203,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Appointment Id" id="69D84279-A802-7CC8-7C6D-F6DBDD25F181">
-<createdBy>poojadoddannavar</createdBy>
-<createdTime>2026-03-19 01:37:50 UTC</createdTime>
-<generatorID>16B89F77-27CB-DA15-8103-EB528F367E23</generatorID>
-<ownerDesignName>HospitalMngmntSystem</ownerDesignName>
-<engineerTo>
-<item key="08A367C7-F2E9-8C83-C067-6B258478ACE9" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>7F4CACAC-1807-702B-6580-860FD00B2751</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="FFEBAE86-F59B-C222-F175-47C0DD4AF203" name="Bill PK">
