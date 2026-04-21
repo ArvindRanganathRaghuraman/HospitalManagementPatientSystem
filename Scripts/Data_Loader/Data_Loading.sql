@@ -317,25 +317,25 @@ BEGIN
     VALUES (appointment_seq.NEXTVAL, DATE '2026-05-20', '11:00 AM', 'SCHEDULED', 'Follow-up visit', NULL, 5, 3, 'HMS_OWNER');
 
     INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
-    VALUES (appointment_seq.NEXTVAL, DATE '2026-01-08', '02:00 PM', 'COMPLETED', 'Hypertension checkup', 'BP 145/90, adjusted medication dosage', 221, 7, 'HMS_OWNER');
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-01-08', '02:00 PM', 'COMPLETED', 'Hypertension checkup', 'BP 145/90, adjusted medication dosage', 26, 7, 'HMS_OWNER');
 
     INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
-    VALUES (appointment_seq.NEXTVAL, DATE '2026-02-03', '09:30 AM', 'COMPLETED', 'Diabetes management', 'Blood sugar well controlled, continue current plan', 222, 7, 'HMS_OWNER');
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-02-03', '09:30 AM', 'COMPLETED', 'Diabetes management', 'Blood sugar well controlled, continue current plan', 27, 7, 'HMS_OWNER');
 
     INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
-    VALUES (appointment_seq.NEXTVAL, DATE '2026-02-20', '03:00 PM', 'COMPLETED', 'Back pain', 'Muscle strain, physical therapy recommended', 223, 9, 'HMS_OWNER');
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-02-20', '03:00 PM', 'COMPLETED', 'Back pain', 'Muscle strain, physical therapy recommended', 28, 9, 'HMS_OWNER');
 
     INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, cancelled_date, cancellation_reason, patient_id, doctor_id, modified_by)
-    VALUES (appointment_seq.NEXTVAL, DATE '2026-03-05', '10:00 AM', 'CANCELLED', 'General checkup', DATE '2026-03-03', 'Patient unavailable', 224, 3, 'HMS_OWNER');
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-03-05', '10:00 AM', 'CANCELLED', 'General checkup', DATE '2026-03-03', 'Patient unavailable', 29, 3, 'HMS_OWNER');
 
     INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
-    VALUES (appointment_seq.NEXTVAL, DATE '2026-05-25', '01:00 PM', 'SCHEDULED', 'Blood test review', NULL, 225, 7, 'HMS_OWNER');
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-05-25', '01:00 PM', 'SCHEDULED', 'Blood test review', NULL, 30, 7, 'HMS_OWNER');
 
     INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
-    VALUES (appointment_seq.NEXTVAL, DATE '2026-01-22', '11:30 AM', 'COMPLETED', 'Chest pain evaluation', 'ECG normal, stress test ordered', 371, 12, 'HMS_OWNER');
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-01-22', '11:30 AM', 'COMPLETED', 'Chest pain evaluation', 'ECG normal, stress test ordered', 176, 12, 'HMS_OWNER');
 
     INSERT INTO appointment (appointment_id, appointment_date, appointment_time, status, reason, notes, patient_id, doctor_id, modified_by)
-    VALUES (appointment_seq.NEXTVAL, DATE '2026-03-10', '04:00 PM', 'COMPLETED', 'Skin rash', 'Allergic reaction, antihistamine prescribed', 372, 5, 'HMS_OWNER');
+    VALUES (appointment_seq.NEXTVAL, DATE '2026-03-10', '04:00 PM', 'COMPLETED', 'Skin rash', 'Allergic reaction, antihistamine prescribed', 177, 5, 'HMS_OWNER');
 
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('SUCCESS: 10 appointments inserted.');
@@ -425,9 +425,9 @@ END;
 DECLARE
     v_appt_1   NUMBER;  -- Emma Smith (patient 1)
     v_appt_2   NUMBER;  -- Liam Johnson (patient 2)
-    v_appt_221 NUMBER;  -- insured adult 221
-    v_appt_222 NUMBER;  -- insured adult 222
-    v_appt_371 NUMBER;  -- uninsured 371
+    v_appt_26  NUMBER;  -- insured adult 26
+    v_appt_27  NUMBER;  -- insured adult 27
+    v_appt_176 NUMBER;  -- uninsured 176
     v_prx1     NUMBER;
     v_prx2     NUMBER;
     v_prx3     NUMBER;
@@ -441,18 +441,18 @@ BEGIN
     SELECT appointment_id INTO v_appt_2
     FROM appointment WHERE patient_id = 2 AND status = 'COMPLETED' AND ROWNUM = 1;
 
-    SELECT appointment_id INTO v_appt_221
-    FROM appointment WHERE patient_id = 221 AND status = 'COMPLETED' AND ROWNUM = 1;
+    SELECT appointment_id INTO v_appt_26
+    FROM appointment WHERE patient_id = 26 AND status = 'COMPLETED' AND ROWNUM = 1;
 
-    SELECT appointment_id INTO v_appt_222
-    FROM appointment WHERE patient_id = 222 AND status = 'COMPLETED' AND ROWNUM = 1;
+    SELECT appointment_id INTO v_appt_27
+    FROM appointment WHERE patient_id = 27 AND status = 'COMPLETED' AND ROWNUM = 1;
 
-    SELECT appointment_id INTO v_appt_371
-    FROM appointment WHERE patient_id = 371 AND status = 'COMPLETED' AND ROWNUM = 1;
+    SELECT appointment_id INTO v_appt_176
+    FROM appointment WHERE patient_id = 176 AND status = 'COMPLETED' AND ROWNUM = 1;
 
     -- Prescription 1: Emma Smith
-    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
-    VALUES (prescription_seq.NEXTVAL, DATE '2025-12-10', 'Routine checkup prescription', 1, 3, v_appt_1, 'HMS_OWNER')
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id)
+    VALUES (prescription_seq.NEXTVAL, DATE '2025-12-10', 'Routine checkup prescription', 1, 3, v_appt_1)
     RETURNING prescription_id INTO v_prx1;
 
     INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
@@ -462,8 +462,8 @@ BEGIN
     VALUES (prescription_item_seq.NEXTVAL, 'Ibuprofen', '200mg', 'As needed', 5, 'Do not exceed 3 tablets per day', v_prx1);
 
     -- Prescription 2: Liam Johnson
-    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
-    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-15', 'Fever treatment course', 2, 5, v_appt_2, 'HMS_OWNER')
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id)
+    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-15', 'Fever treatment course', 2, 5, v_appt_2)
     RETURNING prescription_id INTO v_prx2;
 
     INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
@@ -472,9 +472,9 @@ BEGIN
     INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
     VALUES (prescription_item_seq.NEXTVAL, 'Paracetamol', '500mg', 'Three times daily', 5, 'Take after meals', v_prx2);
 
-    -- Prescription 3: Patient 221 (hypertension)
-    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
-    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-08', 'Hypertension medication adjusted', 221, 7, v_appt_221, 'HMS_OWNER')
+    -- Prescription 3: Patient 26 (hypertension)
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id)
+    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-08', 'Hypertension medication adjusted', 26, 7, v_appt_26)
     RETURNING prescription_id INTO v_prx3;
 
     INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
@@ -483,9 +483,9 @@ BEGIN
     INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
     VALUES (prescription_item_seq.NEXTVAL, 'Amlodipine', '5mg', 'Once daily', 30, 'Monitor blood pressure daily', v_prx3);
 
-    -- Prescription 4: Patient 222 (diabetes)
-    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
-    VALUES (prescription_seq.NEXTVAL, DATE '2026-02-03', 'Diabetes long-term management', 222, 7, v_appt_222, 'HMS_OWNER')
+    -- Prescription 4: Patient 27 (diabetes)
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id)
+    VALUES (prescription_seq.NEXTVAL, DATE '2026-02-03', 'Diabetes long-term management', 27, 7, v_appt_27)
     RETURNING prescription_id INTO v_prx4;
 
     INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
@@ -494,9 +494,9 @@ BEGIN
     INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
     VALUES (prescription_item_seq.NEXTVAL, 'Glipizide', '5mg', 'Once daily', 90, 'Take 30 min before breakfast', v_prx4);
 
-    -- Prescription 5: Patient 371 (chest pain)
-    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id, modified_by)
-    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-22', 'Cardiac monitoring and preventive care', 371, 12, v_appt_371, 'HMS_OWNER')
+    -- Prescription 5: Patient 176 (chest pain)
+    INSERT INTO prescription (prescription_id, prescribed_date, notes, patient_id, doctor_id, appointment_id)
+    VALUES (prescription_seq.NEXTVAL, DATE '2026-01-22', 'Cardiac monitoring and preventive care', 176, 12, v_appt_176)
     RETURNING prescription_id INTO v_prx5;
 
     INSERT INTO prescription_item (item_id, medication_name, dosage, frequency, duration_days, instructions, prescription_id)
@@ -522,26 +522,26 @@ END;
 DECLARE
     v_appt_1   NUMBER;
     v_appt_2   NUMBER;
-    v_appt_221 NUMBER;
-    v_appt_222 NUMBER;
-    v_appt_371 NUMBER;
+    v_appt_26  NUMBER;
+    v_appt_27  NUMBER;
+    v_appt_176 NUMBER;
     v_adm_2    NUMBER;
-    v_adm_221  NUMBER;
-    v_adm_222  NUMBER;
-    v_adm_371  NUMBER;
+    v_adm_26   NUMBER;
+    v_adm_27   NUMBER;
+    v_adm_176  NUMBER;
 BEGIN
     -- Fetch appointment IDs
     SELECT appointment_id INTO v_appt_1   FROM appointment WHERE patient_id = 1   AND status = 'COMPLETED' AND ROWNUM = 1;
     SELECT appointment_id INTO v_appt_2   FROM appointment WHERE patient_id = 2   AND status = 'COMPLETED' AND ROWNUM = 1;
-    SELECT appointment_id INTO v_appt_221 FROM appointment WHERE patient_id = 221 AND status = 'COMPLETED' AND ROWNUM = 1;
-    SELECT appointment_id INTO v_appt_222 FROM appointment WHERE patient_id = 222 AND status = 'COMPLETED' AND ROWNUM = 1;
-    SELECT appointment_id INTO v_appt_371 FROM appointment WHERE patient_id = 371 AND status = 'COMPLETED' AND ROWNUM = 1;
+    SELECT appointment_id INTO v_appt_26  FROM appointment WHERE patient_id = 26  AND status = 'COMPLETED' AND ROWNUM = 1;
+    SELECT appointment_id INTO v_appt_27  FROM appointment WHERE patient_id = 27  AND status = 'COMPLETED' AND ROWNUM = 1;
+    SELECT appointment_id INTO v_appt_176 FROM appointment WHERE patient_id = 176 AND status = 'COMPLETED' AND ROWNUM = 1;
 
     -- Fetch admission IDs for admitted patients (NULL if no admission exists)
     BEGIN SELECT admission_id INTO v_adm_2   FROM admission WHERE patient_id = 2   AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_2   := NULL; END;
-    BEGIN SELECT admission_id INTO v_adm_221 FROM admission WHERE patient_id = 221 AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_221 := NULL; END;
-    BEGIN SELECT admission_id INTO v_adm_222 FROM admission WHERE patient_id = 222 AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_222 := NULL; END;
-    BEGIN SELECT admission_id INTO v_adm_371 FROM admission WHERE patient_id = 371 AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_371 := NULL; END;
+    BEGIN SELECT admission_id INTO v_adm_26  FROM admission WHERE patient_id = 26  AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_26  := NULL; END;
+    BEGIN SELECT admission_id INTO v_adm_27  FROM admission WHERE patient_id = 27  AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_27  := NULL; END;
+    BEGIN SELECT admission_id INTO v_adm_176 FROM admission WHERE patient_id = 176 AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_176 := NULL; END;
 
     -- Bill 1: Patient 1 (Emma Smith) — outpatient only, no admission from this appointment
     INSERT INTO bill (bill_id, service_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
@@ -551,17 +551,17 @@ BEGIN
     INSERT INTO bill (bill_id, service_charges, room_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
     VALUES (bill_seq.NEXTVAL, 150, 500, 30, 680, 0, 0, 'PENDING', 2, v_appt_2, v_adm_2, 'HMS_OWNER');
 
-    -- Bill 3: Patient 221 (insured adult) — appointment + admission
+    -- Bill 3: Patient 26 (insured adult) — appointment + admission
     INSERT INTO bill (bill_id, service_charges, room_charges, medication_charges, other_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
-    VALUES (bill_seq.NEXTVAL, 300, 800, 80, 20, 1200, 0, 0, 'PENDING', 221, v_appt_221, v_adm_221, 'HMS_OWNER');
+    VALUES (bill_seq.NEXTVAL, 300, 800, 80, 20, 1200, 0, 0, 'PENDING', 26, v_appt_26, v_adm_26, 'HMS_OWNER');
 
-    -- Bill 4: Patient 222 (insured adult) — appointment + admission
+    -- Bill 4: Patient 27 (insured adult) — appointment + admission
     INSERT INTO bill (bill_id, service_charges, room_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
-    VALUES (bill_seq.NEXTVAL, 250, 600, 80, 930, 0, 0, 'PENDING', 222, v_appt_222, v_adm_222, 'HMS_OWNER');
+    VALUES (bill_seq.NEXTVAL, 250, 600, 80, 930, 0, 0, 'PENDING', 27, v_appt_27, v_adm_27, 'HMS_OWNER');
 
-    -- Bill 5: Patient 371 (uninsured) — appointment + admission, full amount owed
+    -- Bill 5: Patient 176 (uninsured) — appointment + admission, full amount owed
     INSERT INTO bill (bill_id, service_charges, room_charges, other_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
-    VALUES (bill_seq.NEXTVAL, 400, 900, 50, 1350, 0, 0, 'PENDING', 371, v_appt_371, v_adm_371, 'HMS_OWNER');
+    VALUES (bill_seq.NEXTVAL, 400, 900, 50, 1350, 0, 0, 'PENDING', 176, v_appt_176, v_adm_176, 'HMS_OWNER');
 
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('SUCCESS: 5 bills inserted.');
@@ -579,7 +579,7 @@ END;
 DECLARE
     v_bill_1   NUMBER;
     v_bill_2   NUMBER;
-    v_bill_371 NUMBER;
+    v_bill_176 NUMBER;
     v_net_1    NUMBER;
     v_net_2    NUMBER;
 BEGIN
@@ -590,23 +590,23 @@ BEGIN
     SELECT bill_id, net_amount INTO v_bill_2, v_net_2
     FROM bill WHERE patient_id = 2 AND ROWNUM = 1;
 
-    SELECT bill_id INTO v_bill_371
-    FROM bill WHERE patient_id = 371 AND ROWNUM = 1;
+    SELECT bill_id INTO v_bill_176
+    FROM bill WHERE patient_id = 176 AND ROWNUM = 1;
 
     -- Payment 1: Patient 1 — fully paid (exact net amount)
-    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id, modified_by)
-    VALUES (payment_seq.NEXTVAL, v_net_1, 'CASH', 'TXN-2025-1201', v_bill_1, 'HMS_OWNER');
+    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id)
+    VALUES (payment_seq.NEXTVAL, v_net_1, 'CASH', 'TXN-2025-1201', v_bill_1);
     UPDATE bill SET status = 'PAID', modified_date = SYSDATE WHERE bill_id = v_bill_1;
 
     -- Payment 2: Patient 2 — fully paid (exact net amount)
-    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id, modified_by)
-    VALUES (payment_seq.NEXTVAL, v_net_2, 'INSURANCE', 'TXN-2026-0115', v_bill_2, 'HMS_OWNER');
+    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id)
+    VALUES (payment_seq.NEXTVAL, v_net_2, 'INSURANCE', 'TXN-2026-0115', v_bill_2);
     UPDATE bill SET status = 'PAID', modified_date = SYSDATE WHERE bill_id = v_bill_2;
 
-    -- Payment 3: Patient 371 — partial payment
-    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id, modified_by)
-    VALUES (payment_seq.NEXTVAL, 200, 'DEBIT_CARD', 'TXN-2026-0122', v_bill_371, 'HMS_OWNER');
-    UPDATE bill SET status = 'PARTIALLY_PAID', modified_date = SYSDATE WHERE bill_id = v_bill_371;
+    -- Payment 3: Patient 176 — partial payment
+    INSERT INTO payment (payment_id, amount_paid, payment_method, transaction_reference, bill_id)
+    VALUES (payment_seq.NEXTVAL, 200, 'DEBIT_CARD', 'TXN-2026-0122', v_bill_176);
+    UPDATE bill SET status = 'PARTIALLY_PAID', modified_date = SYSDATE WHERE bill_id = v_bill_176;
 
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('SUCCESS: 3 payments inserted.');

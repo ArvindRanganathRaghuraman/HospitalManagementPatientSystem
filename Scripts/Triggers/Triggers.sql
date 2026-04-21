@@ -33,7 +33,6 @@ BEGIN
 
     -- Stamp audit dates
     :NEW.registration_date := NVL(:NEW.registration_date, SYSDATE);
-    :NEW.created_date       := NVL(:NEW.created_date, SYSDATE);
     :NEW.modified_date      := SYSDATE;
 
 EXCEPTION
