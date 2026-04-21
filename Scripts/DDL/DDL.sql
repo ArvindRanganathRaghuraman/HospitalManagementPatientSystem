@@ -30,6 +30,13 @@ END;
 /
 
 BEGIN
+    EXECUTE IMMEDIATE 'DROP TABLE admission';
+EXCEPTION
+    WHEN OTHERS THEN NULL;
+END;
+/
+
+BEGIN
     EXECUTE IMMEDIATE 'DROP TABLE appointment';
 EXCEPTION
     WHEN OTHERS THEN NULL;
@@ -50,6 +57,13 @@ EXCEPTION
 END;
 /
 
+
+BEGIN
+    EXECUTE IMMEDIATE 'DROP SEQUENCE admission_seq';
+EXCEPTION
+    WHEN OTHERS THEN NULL;
+END;
+/
 
 BEGIN
     EXECUTE IMMEDIATE 'DROP SEQUENCE insurance_seq';
@@ -121,6 +135,12 @@ CREATE SEQUENCE appointment_seq
     START WITH 1
     INCREMENT BY 1
     NOCYCLE;
+
+-- SEQUENCE FOR ADMISSION IDs
+CREATE SEQUENCE admission_seq
+    START WITH 1
+    INCREMENT BY 1
+    NOCYCLE;
     
 
 -- SEQUENCE FOR  PRESCRIPTION IDs
@@ -188,15 +208,15 @@ CREATE TABLE patient (
     guardian_relationship   VARCHAR2(30),
     guardian_phone          VARCHAR2(15),
     guardian_email          VARCHAR2(100),
-    created_date            DATE DEFAULT SYSDATE NOT NULL,
     modified_date           DATE DEFAULT SYSDATE NOT NULL,
     modified_by             VARCHAR2(30),
-    
+
     -- COLUMN-LEVEL CONSTRAINTS
     CONSTRAINT patient_gender_check CHECK (gender IN ('M', 'F', 'O')),
     CONSTRAINT patient_blood_type_check CHECK (blood_type IN ('O+', 'O-', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-')),
     CONSTRAINT patient_is_minor_check CHECK (is_minor IN ('Y', 'N')),
-    CONSTRAINT patient_status_check CHECK (status IN ('ACTIVE', 'INACTIVE', 'DISCHARGED', 'DECEASED')),
+    CONSTRAINT patient_status_check CHECK (status IN ('ACTIVE', 'INACTIVE', 'DECEASED')),
+    CONSTRAINT patient_guardian_rel_check CHECK (guardian_relationship IN ('PARENT', 'LEGAL_GUARDIAN', 'SIBLING', 'SPOUSE', 'OTHER')),
     
     -- TABLE-LEVEL CONSTRAINTS
     -- Email format validation (must contain @ and .)
@@ -224,14 +244,13 @@ CREATE TABLE appointment (
     created_date          DATE DEFAULT SYSDATE NOT NULL,
     cancelled_date        DATE,
     cancellation_reason   VARCHAR2(255),
-    parent_appointment_id INTEGER,
     patient_id            INTEGER NOT NULL,
     doctor_id             INTEGER,
     modified_date         DATE DEFAULT SYSDATE NOT NULL,
     modified_by           VARCHAR2(30),
     
     -- COLUMN-LEVEL CONSTRAINTS
-    CONSTRAINT appointment_status_check CHECK (status IN ('SCHEDULED', 'COMPLETED', 'CANCELLED', 'NO_SHOW', 'RESCHEDULED')),
+    CONSTRAINT appointment_status_check CHECK (status IN ('SCHEDULED', 'COMPLETED', 'CANCELLED', 'NO_SHOW')),
     
     
     -- FOREIGN KEY: Link appointment to patient
@@ -242,24 +261,54 @@ CREATE TABLE appointment (
 
 
 
+-- =============================================================
+-- ADMISSION table
+-- Links back to appointment (nullable) — planned admissions
+-- reference the appointment they came from; emergency admissions
+-- have appointment_id = NULL
+-- doctor_id and bed_id are plain integers (no FK — owned by
+-- Doctor/Bed modules respectively)
+-- =============================================================
+CREATE TABLE admission (
+    admission_id          INTEGER PRIMARY KEY,
+    admission_date        DATE NOT NULL,
+    discharge_date        DATE,
+    diagnosis             VARCHAR2(500),
+    admission_type        VARCHAR2(20) NOT NULL,
+    status                VARCHAR2(20) DEFAULT 'ACTIVE' NOT NULL,
+    icu_approved_by       INTEGER,
+    transfer_from_bed_id  INTEGER,
+    bed_id                INTEGER,
+    doctor_id             INTEGER,
+    patient_id            INTEGER NOT NULL,
+    appointment_id        INTEGER,
+    created_date          DATE DEFAULT SYSDATE NOT NULL,
+    modified_date         DATE DEFAULT SYSDATE NOT NULL,
+    modified_by           VARCHAR2(30),
+
+    CONSTRAINT admission_type_check   CHECK (admission_type IN ('EMERGENCY', 'PLANNED', 'TRANSFER')),
+    CONSTRAINT admission_status_check CHECK (status IN ('ACTIVE', 'DISCHARGED', 'TRANSFERRED')),
+    CONSTRAINT admission_dates_check  CHECK (discharge_date IS NULL OR discharge_date >= admission_date),
+
+    CONSTRAINT admission_patient_fk     FOREIGN KEY (patient_id)     REFERENCES patient(patient_id),
+    CONSTRAINT admission_appointment_fk FOREIGN KEY (appointment_id) REFERENCES appointment(appointment_id)
+);
+
+
 CREATE TABLE prescription (
     prescription_id INTEGER PRIMARY KEY,
     prescribed_date DATE DEFAULT SYSDATE NOT NULL,
     notes           VARCHAR2(500),
     patient_id      INTEGER NOT NULL,
     doctor_id       INTEGER,
-    appointment_id  INTEGER NOT NULL,
+    appointment_id  INTEGER,
+    admission_id    INTEGER,
     created_date    DATE DEFAULT SYSDATE NOT NULL,
     modified_date   DATE DEFAULT SYSDATE NOT NULL,
-    modified_by     VARCHAR2(30),
-    
-    -- FOREIGN KEY: Link prescription to patient
-    CONSTRAINT prescription_patient_fk FOREIGN KEY (patient_id) 
-        REFERENCES patient(patient_id),
-    
-    -- FOREIGN KEY: Link prescription to appointment
-    CONSTRAINT prescription_appointment_fk FOREIGN KEY (appointment_id) 
-        REFERENCES appointment(appointment_id)
+
+    CONSTRAINT prescription_patient_fk      FOREIGN KEY (patient_id)     REFERENCES patient(patient_id),
+    CONSTRAINT prescription_appointment_fk  FOREIGN KEY (appointment_id) REFERENCES appointment(appointment_id),
+    CONSTRAINT prescription_admission_fk    FOREIGN KEY (admission_id)   REFERENCES admission(admission_id)
 );
 
 
@@ -300,23 +349,17 @@ CREATE TABLE bill (
     status                 VARCHAR2(20) DEFAULT 'PENDING' NOT NULL,
     patient_id             INTEGER NOT NULL,
     appointment_id         INTEGER,
+    admission_id           INTEGER,
     created_date           DATE DEFAULT SYSDATE NOT NULL,
     modified_date          DATE DEFAULT SYSDATE NOT NULL,
     modified_by            VARCHAR2(30),
-    
-    -- COLUMN-LEVEL CONSTRAINTS
-    CONSTRAINT bill_status_check CHECK (status IN ('PENDING', 'PAID', 'PARTIALLY_PAID', 'CANCELLED')),
-    
-    -- TABLE-LEVEL CONSTRAINTS
-    CONSTRAINT bill_amount_check CHECK (total_amount >= 0 AND net_amount >= 0 AND insurance_coverage_amt >= 0),
-    
-    -- FOREIGN KEY: Link bill to patient
-    CONSTRAINT bill_patient_fk FOREIGN KEY (patient_id) 
-        REFERENCES patient(patient_id),
-    
-    -- FOREIGN KEY: Link bill to appointment
-    CONSTRAINT bill_appointment_fk FOREIGN KEY (appointment_id) 
-        REFERENCES appointment(appointment_id)
+
+    CONSTRAINT bill_status_check  CHECK (status IN ('PENDING', 'PAID', 'PARTIALLY_PAID', 'CANCELLED')),
+    CONSTRAINT bill_amount_check  CHECK (total_amount >= 0 AND net_amount >= 0 AND insurance_coverage_amt >= 0),
+
+    CONSTRAINT bill_patient_fk     FOREIGN KEY (patient_id)     REFERENCES patient(patient_id),
+    CONSTRAINT bill_appointment_fk FOREIGN KEY (appointment_id) REFERENCES appointment(appointment_id),
+    CONSTRAINT bill_admission_fk   FOREIGN KEY (admission_id)   REFERENCES admission(admission_id)
 );
 
 
@@ -330,8 +373,7 @@ CREATE TABLE payment (
     bill_id               INTEGER NOT NULL,
     created_date          DATE DEFAULT SYSDATE NOT NULL,
     modified_date         DATE DEFAULT SYSDATE NOT NULL,
-    modified_by           VARCHAR2(30),
-    
+
     -- COLUMN-LEVEL CONSTRAINTS
     CONSTRAINT payment_method_check CHECK (payment_method IN ('CASH', 'CREDIT_CARD', 'DEBIT_CARD', 'CHEQUE', 'INSURANCE')),
     CONSTRAINT payment_amount_check CHECK (amount_paid > 0),

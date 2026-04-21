@@ -348,7 +348,77 @@ END;
 
 
 -- =============================================================
--- SECTION 6: PRESCRIPTIONS + PRESCRIPTION ITEMS
+-- SECTION 6: ADMISSIONS (6 records)
+-- 5 linked to appointments (planned), 1 emergency (no appointment)
+-- doctor_id and bed_id are manual integers (no FK)
+-- =============================================================
+BEGIN
+    -- Admission 1: Liam Johnson (patient 2) — from appointment 2 (fever)
+    -- Planned, now DISCHARGED
+    INSERT INTO admission (admission_id, admission_date, discharge_date, diagnosis,
+                           admission_type, status, doctor_id, bed_id,
+                           patient_id, appointment_id, modified_by)
+    VALUES (admission_seq.NEXTVAL, DATE '2026-01-15', DATE '2026-01-20',
+            'Acute Respiratory Infection', 'PLANNED', 'DISCHARGED',
+            5, 101, 2, 2, 'HMS_OWNER');
+
+    -- Admission 2: Adult patient 26 — from appointment 4 (hypertension)
+    -- Planned, DISCHARGED
+    INSERT INTO admission (admission_id, admission_date, discharge_date, diagnosis,
+                           admission_type, status, doctor_id, bed_id,
+                           patient_id, appointment_id, modified_by)
+    VALUES (admission_seq.NEXTVAL, DATE '2026-01-08', DATE '2026-01-12',
+            'Hypertensive Crisis — BP 180/110', 'PLANNED', 'DISCHARGED',
+            7, 204, 26, 4, 'HMS_OWNER');
+
+    -- Admission 3: Adult patient 27 — from appointment 5 (diabetes)
+    -- Planned, still ACTIVE (currently admitted)
+    INSERT INTO admission (admission_id, admission_date, discharge_date, diagnosis,
+                           admission_type, status, doctor_id, bed_id,
+                           patient_id, appointment_id, modified_by)
+    VALUES (admission_seq.NEXTVAL, DATE '2026-02-03', NULL,
+            'Diabetic Ketoacidosis', 'PLANNED', 'ACTIVE',
+            7, 205, 27, 5, 'HMS_OWNER');
+
+    -- Admission 4: Uninsured patient 176 — from appointment 9 (chest pain)
+    -- Emergency, DISCHARGED
+    INSERT INTO admission (admission_id, admission_date, discharge_date, diagnosis,
+                           admission_type, status, doctor_id, bed_id,
+                           patient_id, appointment_id, modified_by)
+    VALUES (admission_seq.NEXTVAL, DATE '2026-01-22', DATE '2026-01-25',
+            'Chest Pain — Cardiac Evaluation, ECG Normal', 'EMERGENCY', 'DISCHARGED',
+            12, 310, 176, 9, 'HMS_OWNER');
+
+    -- Admission 5: Adult patient 28 — from appointment 6 (back pain)
+    -- Planned, DISCHARGED
+    INSERT INTO admission (admission_id, admission_date, discharge_date, diagnosis,
+                           admission_type, status, doctor_id, bed_id,
+                           patient_id, appointment_id, modified_by)
+    VALUES (admission_seq.NEXTVAL, DATE '2026-02-20', DATE '2026-02-23',
+            'Severe Lumbar Strain — Physical Therapy Required', 'PLANNED', 'DISCHARGED',
+            9, 108, 28, 6, 'HMS_OWNER');
+
+    -- Admission 6: Emma Smith (patient 1, minor) — EMERGENCY, no prior appointment
+    -- Came directly to ER, appointment_id = NULL
+    INSERT INTO admission (admission_id, admission_date, discharge_date, diagnosis,
+                           admission_type, status, doctor_id, bed_id,
+                           patient_id, appointment_id, modified_by)
+    VALUES (admission_seq.NEXTVAL, DATE '2026-03-15', DATE '2026-03-17',
+            'Acute Appendicitis — Emergency Surgery', 'EMERGENCY', 'DISCHARGED',
+            3, 402, 1, NULL, 'HMS_OWNER');
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('SUCCESS: 6 admissions inserted (5 from appointments, 1 emergency).');
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('ERROR inserting admissions: ' || SQLERRM);
+END;
+/
+
+
+-- =============================================================
+-- SECTION 7: PRESCRIPTIONS + PRESCRIPTION ITEMS
 -- appointment IDs 1,2,4,5,9 are COMPLETED
 -- patient IDs updated to match actual DB
 -- =============================================================
@@ -455,32 +525,43 @@ DECLARE
     v_appt_221 NUMBER;
     v_appt_222 NUMBER;
     v_appt_371 NUMBER;
+    v_adm_2    NUMBER;
+    v_adm_221  NUMBER;
+    v_adm_222  NUMBER;
+    v_adm_371  NUMBER;
 BEGIN
+    -- Fetch appointment IDs
     SELECT appointment_id INTO v_appt_1   FROM appointment WHERE patient_id = 1   AND status = 'COMPLETED' AND ROWNUM = 1;
     SELECT appointment_id INTO v_appt_2   FROM appointment WHERE patient_id = 2   AND status = 'COMPLETED' AND ROWNUM = 1;
     SELECT appointment_id INTO v_appt_221 FROM appointment WHERE patient_id = 221 AND status = 'COMPLETED' AND ROWNUM = 1;
     SELECT appointment_id INTO v_appt_222 FROM appointment WHERE patient_id = 222 AND status = 'COMPLETED' AND ROWNUM = 1;
     SELECT appointment_id INTO v_appt_371 FROM appointment WHERE patient_id = 371 AND status = 'COMPLETED' AND ROWNUM = 1;
 
-    -- Bill 1: Patient 1 (Emma Smith, ins 80%)
-    INSERT INTO bill (bill_id, service_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
-    VALUES (bill_seq.NEXTVAL, 200, 50, 250, 0, 0, 'PENDING', 1, v_appt_1, 'HMS_OWNER');
+    -- Fetch admission IDs for admitted patients (NULL if no admission exists)
+    BEGIN SELECT admission_id INTO v_adm_2   FROM admission WHERE patient_id = 2   AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_2   := NULL; END;
+    BEGIN SELECT admission_id INTO v_adm_221 FROM admission WHERE patient_id = 221 AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_221 := NULL; END;
+    BEGIN SELECT admission_id INTO v_adm_222 FROM admission WHERE patient_id = 222 AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_222 := NULL; END;
+    BEGIN SELECT admission_id INTO v_adm_371 FROM admission WHERE patient_id = 371 AND ROWNUM = 1; EXCEPTION WHEN NO_DATA_FOUND THEN v_adm_371 := NULL; END;
 
-    -- Bill 2: Patient 2 (Liam Johnson)
-    INSERT INTO bill (bill_id, service_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
-    VALUES (bill_seq.NEXTVAL, 150, 30, 180, 0, 0, 'PENDING', 2, v_appt_2, 'HMS_OWNER');
+    -- Bill 1: Patient 1 (Emma Smith) — outpatient only, no admission from this appointment
+    INSERT INTO bill (bill_id, service_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 200, 50, 250, 0, 0, 'PENDING', 1, v_appt_1, NULL, 'HMS_OWNER');
 
-    -- Bill 3: Patient 221 (insured adult)
-    INSERT INTO bill (bill_id, service_charges, medication_charges, other_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
-    VALUES (bill_seq.NEXTVAL, 300, 80, 20, 400, 0, 0, 'PENDING', 221, v_appt_221, 'HMS_OWNER');
+    -- Bill 2: Patient 2 (Liam Johnson) — appointment + admission (room charges included)
+    INSERT INTO bill (bill_id, service_charges, room_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 150, 500, 30, 680, 0, 0, 'PENDING', 2, v_appt_2, v_adm_2, 'HMS_OWNER');
 
-    -- Bill 4: Patient 222 (insured adult)
-    INSERT INTO bill (bill_id, service_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
-    VALUES (bill_seq.NEXTVAL, 250, 80, 330, 0, 0, 'PENDING', 222, v_appt_222, 'HMS_OWNER');
+    -- Bill 3: Patient 221 (insured adult) — appointment + admission
+    INSERT INTO bill (bill_id, service_charges, room_charges, medication_charges, other_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 300, 800, 80, 20, 1200, 0, 0, 'PENDING', 221, v_appt_221, v_adm_221, 'HMS_OWNER');
 
-    -- Bill 5: Patient 371 (uninsured)
-    INSERT INTO bill (bill_id, service_charges, other_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, modified_by)
-    VALUES (bill_seq.NEXTVAL, 400, 50, 450, 0, 0, 'PENDING', 371, v_appt_371, 'HMS_OWNER');
+    -- Bill 4: Patient 222 (insured adult) — appointment + admission
+    INSERT INTO bill (bill_id, service_charges, room_charges, medication_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 250, 600, 80, 930, 0, 0, 'PENDING', 222, v_appt_222, v_adm_222, 'HMS_OWNER');
+
+    -- Bill 5: Patient 371 (uninsured) — appointment + admission, full amount owed
+    INSERT INTO bill (bill_id, service_charges, room_charges, other_charges, total_amount, discount_amount, net_amount, status, patient_id, appointment_id, admission_id, modified_by)
+    VALUES (bill_seq.NEXTVAL, 400, 900, 50, 1350, 0, 0, 'PENDING', 371, v_appt_371, v_adm_371, 'HMS_OWNER');
 
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('SUCCESS: 5 bills inserted.');

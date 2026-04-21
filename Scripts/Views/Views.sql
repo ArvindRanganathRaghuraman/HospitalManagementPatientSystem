@@ -28,30 +28,64 @@ BEGIN EXECUTE IMMEDIATE 'DROP VIEW vw_minor_patients';         EXCEPTION WHEN OT
 -- =============================================================
 CREATE OR REPLACE VIEW v_patient_medical_history AS
 SELECT
+    -- ── Patient Info ─────────────────────────────────────────
     p.patient_id,
-    p.first_name || ' ' || p.last_name  AS patient_name,
+    p.first_name || ' ' || p.last_name              AS patient_name,
     p.date_of_birth,
+    TRUNC(MONTHS_BETWEEN(SYSDATE, p.date_of_birth) / 12) AS age,
+    p.gender,
     p.blood_type,
     p.is_minor,
+    p.status                                         AS patient_status,
+
+    -- ── Guardian Info (only populated for minors) ────────────
+    p.guardian_first_name || ' ' ||
+        p.guardian_last_name                         AS guardian_name,
+    p.guardian_relationship,
+    p.guardian_phone,
+    p.guardian_email,
+
+    -- ── Insurance Info ───────────────────────────────────────
+    i.provider_name                                  AS insurance_provider,
+    i.coverage_percentage,
+    i.status                                         AS insurance_status,
+
+    -- ── Visit (Appointment) Info ─────────────────────────────
     a.appointment_id,
     a.appointment_date,
     a.appointment_time,
-    a.reason                             AS visit_reason,
-    a.status                             AS appointment_status,
-    a.notes                              AS visit_notes,
+    a.reason                                         AS visit_reason,
+    a.status                                         AS appointment_status,
+    a.notes                                          AS visit_notes,
     a.doctor_id,
+
+    -- ── Admission Info (NULL if visit did not lead to admission)
+    adm.admission_id,
+    adm.admission_date,
+    adm.discharge_date,
+    adm.diagnosis,
+    adm.admission_type,
+    adm.status                                       AS admission_status,
+    CASE
+        WHEN adm.admission_id IS NOT NULL THEN 'YES'
+        ELSE 'NO'
+    END                                              AS was_admitted,
+
+    -- ── Prescription & Medication Info ───────────────────────
     pr.prescription_id,
     pr.prescribed_date,
-    pr.notes                             AS prescription_notes,
     pi.medication_name,
     pi.dosage,
     pi.frequency,
     pi.duration_days,
     pi.instructions
+
 FROM       patient           p
-LEFT JOIN  appointment       a  ON a.patient_id       = p.patient_id
-LEFT JOIN  prescription      pr ON pr.appointment_id  = a.appointment_id
-LEFT JOIN  prescription_item pi ON pi.prescription_id = pr.prescription_id;
+LEFT JOIN  insurance         i   ON i.insurance_id     = p.insurance_id
+LEFT JOIN  appointment       a   ON a.patient_id        = p.patient_id
+LEFT JOIN  admission         adm ON adm.appointment_id  = a.appointment_id
+LEFT JOIN  prescription      pr  ON pr.appointment_id   = a.appointment_id
+LEFT JOIN  prescription_item pi  ON pi.prescription_id  = pr.prescription_id;
 
 
 -- =============================================================
@@ -121,8 +155,8 @@ SELECT
 FROM      patient   p
 LEFT JOIN insurance i ON i.insurance_id = p.insurance_id
 WHERE p.insurance_id IS NULL
-   OR i.status         IN ('EXPIRED', 'INACTIVE')
-   OR i.policy_expiry_date < SYSDATE;
+   OR i.status                IN ('EXPIRED', 'INACTIVE')
+   OR (i.policy_expiry_date IS NOT NULL AND i.policy_expiry_date < SYSDATE);
    
    
 CREATE OR REPLACE VIEW vw_patient_profile AS
