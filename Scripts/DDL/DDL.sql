@@ -192,7 +192,7 @@ CREATE TABLE patient (
     last_name               VARCHAR2(50) NOT NULL,
     date_of_birth           DATE NOT NULL,
     gender                  CHAR(1) NOT NULL,
-    phone                   VARCHAR2(15) NOT NULL UNIQUE,
+    phone                   VARCHAR2(10) NOT NULL UNIQUE,
     email                   VARCHAR2(100),
     blood_type              VARCHAR2(5),
     registration_date       DATE DEFAULT SYSDATE NOT NULL,
@@ -206,7 +206,7 @@ CREATE TABLE patient (
     guardian_first_name     VARCHAR2(50),
     guardian_last_name      VARCHAR2(50),
     guardian_relationship   VARCHAR2(30),
-    guardian_phone          VARCHAR2(15),
+    guardian_phone          VARCHAR2(10),
     guardian_email          VARCHAR2(100),
     modified_date           DATE DEFAULT SYSDATE NOT NULL,
     modified_by             VARCHAR2(30),
@@ -220,7 +220,8 @@ CREATE TABLE patient (
     
     -- TABLE-LEVEL CONSTRAINTS
     -- Email format validation (must contain @ and .)
-    CONSTRAINT patient_email_check CHECK (email IS NULL OR email LIKE '%@%'),
+    CONSTRAINT patient_phone_check CHECK (REGEXP_LIKE(phone, '^\d{10}$')),
+    CONSTRAINT patient_email_check CHECK (email IS NULL OR REGEXP_LIKE(email, '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')),
     
     -- Guardian validation: Minor patients must have guardian info, adults should not
     CONSTRAINT patient_guardian_check CHECK (
@@ -251,6 +252,7 @@ CREATE TABLE appointment (
     
     -- COLUMN-LEVEL CONSTRAINTS
     CONSTRAINT appointment_status_check CHECK (status IN ('SCHEDULED', 'COMPLETED', 'CANCELLED', 'NO_SHOW')),
+    CONSTRAINT appointment_time_check   CHECK (REGEXP_LIKE(appointment_time, '^\d{2}:\d{2} (AM|PM)$')),
     
     
     -- FOREIGN KEY: Link appointment to patient
@@ -273,7 +275,7 @@ CREATE TABLE admission (
     admission_id          INTEGER PRIMARY KEY,
     admission_date        DATE NOT NULL,
     discharge_date        DATE,
-    diagnosis             VARCHAR2(500),
+    diagnosis             VARCHAR2(500) NOT NULL,
     admission_type        VARCHAR2(20) NOT NULL,
     status                VARCHAR2(20) DEFAULT 'ACTIVE' NOT NULL,
     icu_approved_by       INTEGER,
@@ -300,7 +302,7 @@ CREATE TABLE prescription (
     prescribed_date DATE DEFAULT SYSDATE NOT NULL,
     notes           VARCHAR2(500),
     patient_id      INTEGER NOT NULL,
-    doctor_id       INTEGER,
+    doctor_id       INTEGER NOT NULL,
     appointment_id  INTEGER,
     admission_id    INTEGER,
     created_date    DATE DEFAULT SYSDATE NOT NULL,
@@ -338,11 +340,12 @@ CREATE TABLE prescription_item (
 CREATE TABLE bill (
     bill_id                INTEGER PRIMARY KEY,
     bill_date              DATE DEFAULT SYSDATE NOT NULL,
+    due_date               DATE,
     service_charges        NUMBER(10,2),
     room_charges           NUMBER(10,2),
     medication_charges     NUMBER(10,2),
     other_charges          NUMBER(10,2),
-    total_amount           NUMBER(10,2) NOT NULL,
+    total_amount           NUMBER(10,2),
     insurance_coverage_amt NUMBER(10,2) DEFAULT 0,
     discount_amount        NUMBER(10,2) DEFAULT 0,
     net_amount             NUMBER(10,2) NOT NULL,
@@ -354,8 +357,13 @@ CREATE TABLE bill (
     modified_date          DATE DEFAULT SYSDATE NOT NULL,
     modified_by            VARCHAR2(30),
 
-    CONSTRAINT bill_status_check  CHECK (status IN ('PENDING', 'PAID', 'PARTIALLY_PAID', 'CANCELLED')),
-    CONSTRAINT bill_amount_check  CHECK (total_amount >= 0 AND net_amount >= 0 AND insurance_coverage_amt >= 0),
+    CONSTRAINT bill_status_check           CHECK (status IN ('PENDING', 'PAID', 'PARTIALLY_PAID', 'CANCELLED')),
+    CONSTRAINT bill_amount_check           CHECK (total_amount >= 0 AND net_amount >= 0 AND insurance_coverage_amt >= 0),
+    CONSTRAINT bill_service_charges_check  CHECK (service_charges    IS NULL OR service_charges    >= 0),
+    CONSTRAINT bill_room_charges_check     CHECK (room_charges        IS NULL OR room_charges        >= 0),
+    CONSTRAINT bill_med_charges_check      CHECK (medication_charges  IS NULL OR medication_charges  >= 0),
+    CONSTRAINT bill_other_charges_check    CHECK (other_charges       IS NULL OR other_charges       >= 0),
+    CONSTRAINT bill_due_date_check         CHECK (due_date IS NULL OR due_date >= bill_date),
 
     CONSTRAINT bill_patient_fk     FOREIGN KEY (patient_id)     REFERENCES patient(patient_id),
     CONSTRAINT bill_appointment_fk FOREIGN KEY (appointment_id) REFERENCES appointment(appointment_id),

@@ -258,6 +258,7 @@ CREATE OR REPLACE PACKAGE BODY pkg_patient_mgmt AS
         v_count        NUMBER;
         e_not_found    EXCEPTION;
         e_dup_phone    EXCEPTION;
+        e_bad_status   EXCEPTION;
 
     BEGIN
         -- ── Validate patient exists ───────────────────────────
@@ -267,6 +268,11 @@ CREATE OR REPLACE PACKAGE BODY pkg_patient_mgmt AS
 
         IF v_count = 0 THEN
             RAISE e_not_found;
+        END IF;
+
+        -- ── Validate status value ─────────────────────────────
+        IF p_status IS NOT NULL AND p_status NOT IN ('ACTIVE', 'INACTIVE', 'DECEASED') THEN
+            RAISE e_bad_status;
         END IF;
 
         -- ── Validate new phone is not duplicate ───────────────
@@ -307,6 +313,12 @@ CREATE OR REPLACE PACKAGE BODY pkg_patient_mgmt AS
             RAISE_APPLICATION_ERROR(-20021,
                 'ERROR: Phone number ' || p_phone ||
                 ' is already used by another patient.');
+
+        WHEN e_bad_status THEN
+            ROLLBACK;
+            RAISE_APPLICATION_ERROR(-20022,
+                'ERROR: Invalid status value: ' || p_status ||
+                '. Must be ACTIVE, INACTIVE, or DECEASED.');
 
         WHEN OTHERS THEN
             ROLLBACK;
@@ -414,8 +426,10 @@ CREATE OR REPLACE PACKAGE BODY pkg_patient_mgmt AS
         p_reason     IN VARCHAR2 DEFAULT 'Deactivated by operator'
     ) IS
         v_status       patient.status%TYPE;
-        e_not_found    EXCEPTION;
+        v_count        NUMBER;
+        e_not_found        EXCEPTION;
         e_already_inactive EXCEPTION;
+        e_active_admission EXCEPTION;
 
     BEGIN
         -- ── Fetch current status ──────────────────────────────
@@ -430,6 +444,16 @@ CREATE OR REPLACE PACKAGE BODY pkg_patient_mgmt AS
 
         IF v_status = 'INACTIVE' THEN
             RAISE e_already_inactive;
+        END IF;
+
+        -- ── Block deactivation if patient has active admission ─
+        SELECT COUNT(*) INTO v_count
+        FROM   admission
+        WHERE  patient_id = p_patient_id
+        AND    status     = 'ACTIVE';
+
+        IF v_count > 0 THEN
+            RAISE e_active_admission;
         END IF;
 
         -- ── Deactivate ────────────────────────────────────────
@@ -453,6 +477,12 @@ CREATE OR REPLACE PACKAGE BODY pkg_patient_mgmt AS
             RAISE_APPLICATION_ERROR(-20041,
                 'ERROR: Patient ID ' || p_patient_id ||
                 ' is already INACTIVE.');
+
+        WHEN e_active_admission THEN
+            ROLLBACK;
+            RAISE_APPLICATION_ERROR(-20042,
+                'ERROR: Patient ID ' || p_patient_id ||
+                ' has an active admission. Discharge patient before deactivating.');
 
         WHEN OTHERS THEN
             ROLLBACK;
