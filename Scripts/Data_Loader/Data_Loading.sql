@@ -515,7 +515,7 @@ END;
 /
 
 -- =============================================================
--- SECTION 7: BILLS (5 records)
+-- SECTION 8: BILLS (5 records)
 -- Patient IDs updated to match actual DB
 -- Trigger trg_bill_bi auto-calculates insurance coverage
 -- =============================================================
@@ -573,7 +573,7 @@ END;
 /
 
 -- =============================================================
--- SECTION 8: PAYMENTS (3 records)
+-- SECTION 9: PAYMENTS (3 records)
 -- Bill IDs 1,2,5 match the bills inserted above
 -- =============================================================
 DECLARE

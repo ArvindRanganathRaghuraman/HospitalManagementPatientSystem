@@ -18,7 +18,7 @@ BEGIN
         phone, city, state, is_minor, modified_by
     ) VALUES (
         'Pos', 'AutoPK', DATE '1985-01-01', 'M',
-        '999-POS-001', 'Boston', 'MA', 'N', 'HMS_ADMIN_USER'
+        '9990000001', 'Boston', 'MA', 'N', 'HMS_ADMIN_USER'
     ) RETURNING patient_id INTO v_pid;
     ROLLBACK;
     DBMS_OUTPUT.PUT_LINE('PT-01 PASS: PK auto-assigned = ' || v_pid);
@@ -39,7 +39,7 @@ BEGIN
         phone, city, state, is_minor, modified_by
     ) VALUES (
         'Pos', 'AdultTest', DATE '1990-06-15', 'F',
-        '999-POS-002', 'Boston', 'MA', 'N', 'HMS_ADMIN_USER'
+        '9990000002', 'Boston', 'MA', 'N', 'HMS_ADMIN_USER'
     ) RETURNING patient_id INTO v_pid;
     SELECT is_minor INTO v_is_minor FROM hms_owner.patient WHERE patient_id = v_pid;
     ROLLBACK;
@@ -63,8 +63,8 @@ BEGIN
         guardian_relationship, guardian_phone, modified_by
     ) VALUES (
         'Pos', 'MinorTest', DATE '2015-03-10', 'M',
-        '999-POS-003', 'Boston', 'MA', 'Y',
-        'Pos', 'Guardian', 'PARENT', '999-POS-G01', 'HMS_ADMIN_USER'
+        '9990000003', 'Boston', 'MA', 'Y',
+        'Pos', 'Guardian', 'PARENT', '9990001001', 'HMS_ADMIN_USER'
     ) RETURNING patient_id INTO v_pid;
     SELECT is_minor INTO v_is_minor FROM hms_owner.patient WHERE patient_id = v_pid;
     ROLLBACK;
@@ -151,7 +151,7 @@ BEGIN
     hms_owner.pkg_patient_mgmt.sp_register_patient(
         p_first_name   => 'Pos',     p_last_name    => 'ValidAdult',
         p_dob          => DATE '1985-05-15', p_gender => 'M',
-        p_phone        => '999-POS-006',     p_email  => 'pos.adult@hms.com',
+        p_phone        => '9990000006',        p_email  => 'pos.adult@hms.com',
         p_blood_type   => 'O+',      p_city   => 'Boston',
         p_state        => 'MA',      p_insurance_id => v_ins_id,
         p_patient_id   => v_pid
@@ -177,8 +177,8 @@ BEGIN
         guardian_relationship, guardian_phone, modified_by
     ) VALUES (
         'Pos', 'ValidMinor', DATE '2014-03-10', 'F',
-        '999-POS-007', 'pos.minor@hms.com', 'A+', 'Boston', 'MA', 'Y',
-        'Pos', 'Guardian', 'PARENT', '999-POS-G07', 'HMS_ADMIN_USER'
+        '9990000007', 'pos.minor@hms.com', 'A+', 'Boston', 'MA', 'Y',
+        'Pos', 'Guardian', 'PARENT', '9990001007', 'HMS_ADMIN_USER'
     ) RETURNING patient_id INTO v_pid;
     SELECT is_minor INTO v_is_minor FROM hms_owner.patient WHERE patient_id = v_pid;
     ROLLBACK;

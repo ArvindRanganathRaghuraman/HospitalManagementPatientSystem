@@ -31,6 +31,7 @@ CREATE ROLE hms_admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.insurance         TO hms_admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.patient           TO hms_admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.appointment       TO hms_admin_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.admission         TO hms_admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.prescription      TO hms_admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.prescription_item TO hms_admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.bill              TO hms_admin_role;
