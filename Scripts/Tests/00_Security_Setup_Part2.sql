@@ -17,6 +17,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.prescription      TO hms_admin
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.prescription_item TO hms_admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.bill              TO hms_admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.payment           TO hms_admin_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON hms_owner.admission          TO hms_admin_role;
 
 -- Grant sequence usage so admin can insert with NEXTVAL
 GRANT SELECT ON hms_owner.insurance_seq         TO hms_admin_role;
@@ -26,6 +27,7 @@ GRANT SELECT ON hms_owner.prescription_seq      TO hms_admin_role;
 GRANT SELECT ON hms_owner.prescription_item_seq TO hms_admin_role;
 GRANT SELECT ON hms_owner.bill_seq              TO hms_admin_role;
 GRANT SELECT ON hms_owner.payment_seq           TO hms_admin_role;
+GRANT SELECT ON hms_owner.admission_seq         TO hms_admin_role;
 
 -- Execute on package
 GRANT EXECUTE ON hms_owner.pkg_patient_mgmt TO hms_admin_role;
@@ -52,7 +54,7 @@ GRANT EXECUTE ON hms_owner.pkg_patient_mgmt TO hms_operator_role;
 GRANT SELECT ON hms_owner.vw_patient_profile         TO hms_operator_role;
 GRANT SELECT ON hms_owner.vw_minor_patients          TO hms_operator_role;
 GRANT SELECT ON hms_owner.vw_uninsured_patients      TO hms_operator_role;
-GRANT SELECT ON hms_owner.vw_patient_medical_history TO hms_operator_role;
+GRANT SELECT ON hms_owner.v_patient_medical_history TO hms_operator_role;
 GRANT SELECT ON hms_owner.vw_patient_visit_summary   TO hms_operator_role;
 
 
