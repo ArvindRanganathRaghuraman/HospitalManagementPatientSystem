@@ -129,12 +129,14 @@ ORDER  BY total DESC;
 -- REPORT 8: ROW COUNTS ACROSS ALL TABLES
 -- ============================================================
 
-SELECT 'insurance'         AS entity, COUNT(*) AS rows FROM insurance        UNION ALL
-SELECT 'patient'           AS entity, COUNT(*) AS rows FROM patient          UNION ALL
-SELECT 'appointment'       AS entity, COUNT(*) AS rows FROM appointment      UNION ALL
-SELECT 'admission'         AS entity, COUNT(*) AS rows FROM admission        UNION ALL
-SELECT 'prescription'      AS entity, COUNT(*) AS rows FROM prescription     UNION ALL
-SELECT 'prescription_item' AS entity, COUNT(*) AS rows FROM prescription_item UNION ALL
-SELECT 'bill'              AS entity, COUNT(*) AS rows FROM bill             UNION ALL
-SELECT 'payment'           AS entity, COUNT(*) AS rows FROM payment
-ORDER  BY entity;
+SELECT * FROM (
+    SELECT 'insurance'         AS entity, COUNT(*) AS rec_count FROM insurance         UNION ALL
+    SELECT 'patient'           AS entity, COUNT(*) AS rec_count FROM patient            UNION ALL
+    SELECT 'appointment'       AS entity, COUNT(*) AS rec_count FROM appointment        UNION ALL
+    SELECT 'admission'         AS entity, COUNT(*) AS rec_count FROM admission          UNION ALL
+    SELECT 'prescription'      AS entity, COUNT(*) AS rec_count FROM prescription       UNION ALL
+    SELECT 'prescription_item' AS entity, COUNT(*) AS rec_count FROM prescription_item  UNION ALL
+    SELECT 'bill'              AS entity, COUNT(*) AS rec_count FROM bill               UNION ALL
+    SELECT 'payment'           AS entity, COUNT(*) AS rec_count FROM payment
+)
+ORDER BY entity;

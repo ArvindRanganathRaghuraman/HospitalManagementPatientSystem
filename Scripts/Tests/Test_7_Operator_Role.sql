@@ -44,7 +44,7 @@ BEGIN
         p_last_name  => 'UserTest',
         p_dob        => DATE '1995-03-10',
         p_gender     => 'M',
-        p_phone      => '6177000002',
+        p_phone      => '6177000005',
         p_city       => 'Boston',
         p_state      => 'MA',
         p_patient_id => v_id
@@ -58,7 +58,8 @@ DECLARE
     v_id NUMBER;
 BEGIN
     SELECT patient_id INTO v_id
-    FROM   patient WHERE phone = '6177000002';
+    FROM hms_owner.vw_patient_profile 
+    WHERE phone = '6177000005';
 
     pkg_patient_mgmt.sp_update_patient(
         p_patient_id => v_id,
