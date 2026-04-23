@@ -11,70 +11,41 @@ An Oracle PL/SQL database system for managing hospital patient operations includ
 This module covers the full patient lifecycle from registration through discharge and billing. It is one component of a larger Hospital Management System, implemented as an independent Oracle schema (`HMS_OWNER`) with role-based access control.
 
 ---
-┌─────────────────────────────────────────────────────────────┐
-│                  PATIENT MANAGEMENT MODULE                   │
-│                                         │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-                   ┌──────────────────┐
-                   │   New Patient?   │
-                   └────────┬─────────┘
-                            │
-                            ▼
-              ┌─────────────────────────────┐
-              │     register_patient      │
-              └─────────────┬───────────────┘
-                            │
-              ┌─────────────▼───────────────┐
-              │        VALIDATIONS           │
-              │  ✓ DOB not in future         │
-              │  ✓ Phone unique              │
-              │  ✓ Insurance ACTIVE (if any) │
-              │  ✓ Guardian info if minor    │
-              └─────────────┬───────────────┘
-                            │
-                            ▼
-              ┌─────────────────────────────┐
-              │     TRG_PATIENT_BI fires     │
-              │  → assigns patient_id (seq)  │
-              │  → sets is_minor (Y/N)       │
-              │                              │
-              └─────────────┬───────────────┘
-                            │
-                    ┌───────┴────────┐
-                    ▼                ▼
-             ┌────────────┐   ┌───────────────┐
-             │   ADULT    │   │     MINOR      │
-             │ registered │   │ + guardian     │
-             └─────┬──────┘   └──────┬─────────┘
-                   └────────┬────────┘
-                            │
-                            ▼
-              ┌─────────────────────────────┐
-              │     Patient is ACTIVE        │
-              └──┬──────────┬───────────────┘
-                 │          │
-                 ▼          ▼
-   ┌─────────────────┐  ┌─────────────────────┐
-   │ sp_update_      │  │  sp_link_insurance   │
-   │ patient         │  │                      │
-   │                 │  │  ✓ Policy is ACTIVE? │
-   │ city, phone,    │  │  → update insurance  │
-   │ email,          │  │    on patient record │
-   │ blood type      │  └─────────────────────┘
-   └─────────────────┘
-                 │
-                 ▼
-   ┌─────────────────────────────────────────┐
-   │         sp_deactivate_patient            │
-   │                                          │
-   │  ✓ Active admission exists? → BLOCKED    │
-   │  ✗ No active admission    → INACTIVE     │
-   └─────────────────────────────────────────┘
 
+## Patient Management Workflow
 
+```mermaid
+flowchart TD
+    A([Start]) --> B[sp_register_patient]
 
+    B --> V1{DOB in future?}
+    V1 -- Yes --> E1([Error: Invalid DOB])
+    V1 -- No --> V2{Phone duplicate?}
+
+    V2 -- Yes --> E2([Error: Phone already registered])
+    V2 -- No --> V3{Insurance provided?}
+
+    V3 -- Yes --> V4{Insurance ACTIVE?}
+    V4 -- No --> E3([Error: Invalid insurance])
+    V4 -- Yes --> V5
+
+    V3 -- No --> V5{Age under 18?}
+
+    V5 -- Yes --> V6{Guardian info provided?}
+    V6 -- No --> E4([Error: Guardian required])
+    V6 -- Yes --> T1
+
+    V5 -- No --> T1[TRG_PATIENT_BI fires\nassigns patient_id\nsets is_minor\nsets modified_date]
+
+    T1 --> P([Patient ACTIVE])
+
+    P --> U[sp_update_patient\ncity · phone · email · blood type]
+    P --> L[sp_link_insurance\nverifies policy is ACTIVE]
+    P --> D{sp_deactivate_patient}
+
+    D -- Active admission exists --> E5([Error: Cannot deactivate])
+    D -- No active admission --> IN([Patient INACTIVE])
+```
 
 ## Database Schema
 
