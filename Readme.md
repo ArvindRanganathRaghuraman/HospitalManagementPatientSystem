@@ -11,6 +11,70 @@ An Oracle PL/SQL database system for managing hospital patient operations includ
 This module covers the full patient lifecycle from registration through discharge and billing. It is one component of a larger Hospital Management System, implemented as an independent Oracle schema (`HMS_OWNER`) with role-based access control.
 
 ---
+┌─────────────────────────────────────────────────────────────┐
+│                  PATIENT MANAGEMENT MODULE                   │
+│                                         │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+                   ┌──────────────────┐
+                   │   New Patient?   │
+                   └────────┬─────────┘
+                            │
+                            ▼
+              ┌─────────────────────────────┐
+              │     register_patient      │
+              └─────────────┬───────────────┘
+                            │
+              ┌─────────────▼───────────────┐
+              │        VALIDATIONS           │
+              │  ✓ DOB not in future         │
+              │  ✓ Phone unique              │
+              │  ✓ Insurance ACTIVE (if any) │
+              │  ✓ Guardian info if minor    │
+              └─────────────┬───────────────┘
+                            │
+                            ▼
+              ┌─────────────────────────────┐
+              │     TRG_PATIENT_BI fires     │
+              │  → assigns patient_id (seq)  │
+              │  → sets is_minor (Y/N)       │
+              │                              │
+              └─────────────┬───────────────┘
+                            │
+                    ┌───────┴────────┐
+                    ▼                ▼
+             ┌────────────┐   ┌───────────────┐
+             │   ADULT    │   │     MINOR      │
+             │ registered │   │ + guardian     │
+             └─────┬──────┘   └──────┬─────────┘
+                   └────────┬────────┘
+                            │
+                            ▼
+              ┌─────────────────────────────┐
+              │     Patient is ACTIVE        │
+              └──┬──────────┬───────────────┘
+                 │          │
+                 ▼          ▼
+   ┌─────────────────┐  ┌─────────────────────┐
+   │ sp_update_      │  │  sp_link_insurance   │
+   │ patient         │  │                      │
+   │                 │  │  ✓ Policy is ACTIVE? │
+   │ city, phone,    │  │  → update insurance  │
+   │ email,          │  │    on patient record │
+   │ blood type      │  └─────────────────────┘
+   └─────────────────┘
+                 │
+                 ▼
+   ┌─────────────────────────────────────────┐
+   │         sp_deactivate_patient            │
+   │                                          │
+   │  ✓ Active admission exists? → BLOCKED    │
+   │  ✗ No active admission    → INACTIVE     │
+   └─────────────────────────────────────────┘
+
+
+
 
 ## Database Schema
 
