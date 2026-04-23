@@ -94,9 +94,6 @@ insurance → patient → appointment → admission
 - Net amount cannot go negative — bills that result in a negative net are blocked
 - A bill with status PAID cannot be modified
 
-### Admissions
-- A patient cannot be deactivated while they have an active (non-discharged) admission
-- Admissions can be planned (linked to a prior appointment) or emergency (no appointment)
 
 ---
 
