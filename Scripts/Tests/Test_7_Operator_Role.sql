@@ -18,12 +18,12 @@ ALTER SESSION SET CURRENT_SCHEMA = hms_owner;
 
 -- ── WHAT FAILS — Direct table access is blocked ──────────────
 
--- SELECT on base table → ORA-01031: insufficient privileges
+-- SELECT on base table → Error
 SELECT patient_id, first_name, last_name
 FROM   patient WHERE ROWNUM <= 5;
 
 
--- INSERT on base table → ORA-01031: insufficient privileges
+-- INSERT on base table → Error
 INSERT INTO patient (
     patient_id, first_name, last_name, date_of_birth,
     gender, phone, city, state, is_minor
